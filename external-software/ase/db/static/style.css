@@ -1,0 +1,43 @@
+
+.myrow {
+font-size: 0;
+}
+.myrow > * {
+float: none;
+display: inline-block;
+font-size: 14px; /* if using LESS it's quicker to just use @font-size-base */
+cursor: pointer;
+}
+.myrow > *:nth-last-child(2) {
+vertical-align: bottom;
+}
+.myrow p:nth-last-child(2) {
+margin-bottom: 0; /* optional */
+}
+
+.col-centered{
+float: none;
+margin: 0 auto;
+}
+
+.ui-autocomplete {
+        max-height: 200px;
+        overflow-y: auto;
+        /* prevent horizontal scrollbar */
+        overflow-x: hidden;
+}
+
+.item:hover .media-object {
+    height: 70px;
+    width: 140px;
+}
+
+#rowentry {background-color: #FFFFFF;}
+#rowentry:hover {background-color: #DDDDDD;}
+tr.rowentry > td > a {
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}

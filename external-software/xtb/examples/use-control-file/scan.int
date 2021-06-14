@@ -1,0 +1,8 @@
+$constrain
+   distance: 1,5,auto
+   dihedral: 8,5,1,4,60.0
+$scan
+   2: 60.0,780.0,100
+$opt
+   maxcycle=5
+$end

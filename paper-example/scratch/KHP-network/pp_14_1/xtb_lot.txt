@@ -1,0 +1,5 @@
+# set up parameters
+charge 		0
+spin 		0
+namespace 	pp_14_1
+calc_type 	grad

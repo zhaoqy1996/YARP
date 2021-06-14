@@ -1,0 +1,262 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+{{proj}} - Search
+{% endblock %}
+
+
+{% block content %}
+
+{% set columns = md['default_columns'] %}
+{% set meta = md['key_descriptions'] or { } %}
+{% set ctrl = md['special_keys'] or [] %}
+
+<div class="container">
+<div class="row">
+  <h1>{{proj}}</h1>
+</div>
+
+
+
+<div class="well mt-2">
+  <form id="mainFormID" class="navbar-form navbar-default mt-2" role="search" action="/{{ project }}/">
+    <input type="hidden" name="x" value="{{ x }}">
+    <div class="form-group" style="margin-top:5px;">
+      <input type="text" name="query" value="{{ con.query[0] }}" id="formula-result"
+             class="form-control mt-2" placeholder="Search formula e.g. MoS2" size="60">
+      <button type="submit" class="btn btn-default">
+        <i class="fa fa-search fa-1x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="row">
+    {% for control in ctrl %}
+      <div class="col-md-10" style="margin-top:5px">
+        {% if control[0] == 'SELECT' %}
+            {{ select(control) }}
+        {% elif control[0] == 'BOOL' %}
+            {{ boolean(control) }}
+        {% elif control[0] == 'RANGE' %}
+            {{ myrange(control) }}
+        {% endif %}
+      </div>
+    {% endfor %}
+    </div>
+    <div class="form-group" style="margin-bottom:0px;">
+      <small class="form-text text-muted">
+        <a href="https://wiki.fysik.dtu.dk/ase/ase/db/db.html#querying" target="_blank">
+          Help with constructing advanced search queries ...
+        </a>
+      </small>
+    </div><br/>
+
+{# Flash query messages #}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class="list-group">
+    {% for message in messages %}
+      <li class="list-group-item list-group-item-warning">{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <small lcass="form-text text-muted">
+    <a data-toggle="collapse" href="#collapse1">Toggle list of keys ...</a>
+    </small><br/>
+    <div id="collapse1" class="collapse">
+      <table class="table table-striped">
+{% for key, description, unit in md.all_keys %}
+        <tr><td>{{ key }}</td><td>{{ description }}</td><td>{{ unit|safe }}</td></tr>
+{% endfor %}
+      </table>
+    </div>
+  </form>
+</div>
+
+<div class="row">
+<div class="panel panel-default">
+<div class="panel-heading">
+
+<!-- Database Table -->
+
+<div class="row">
+    <div class="col-xs-6">
+        <h5><b>
+        Displaying rows {{ row1 }}-{{ row2 }} out of {{ nrows }}</b></h5>
+    </div>
+
+    <div class="col-xs-6">
+        {% if download_button %}
+        <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Download <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="/{{ project }}/sqlite?x={{ x }}">Database file</a></li>
+                <li><a href="/{{ project }}/json?x={{ x }}">JSON file</a></li>
+            </ul>
+        </div>
+        {% endif %}
+        <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Add Column <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+{% for key in addcolumns %}
+    {% if key in meta %}
+                <li><a href="/{{ project }}/?x={{ x }}&amp;toggle={{ key }}">
+                    {{ meta[key][1] }} ({{key}})
+                </a></li>
+    {% else %}
+                <li><a href="/{{ project }}/?x={{ x }}&toggle={{ key }}">
+                    {{ key }}
+                </a></li>
+    {% endif %}
+{% endfor %}
+            </ul>
+        </div>
+
+        <div class="btn-group pull-right">
+            <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Rows: {{ con.limit }} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="/{{ project }}/?x={{ x }}&limit=10">10</a></li>
+                <li><a href="/{{ project }}/?x={{ x }}&limit=25">25</a></li>
+                <li><a href="/{{ project }}/?x={{ x }}&limit=50">50</a></li>
+                <li><a href="/{{ project }}/?x={{ x }}&limit=100">100</a></li>
+                <li><a href="/{{ project }}/?x={{ x }}&limit=200">200</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<div class="panel-body">
+</div>
+
+<!-- Table -->
+<table id="rows" class="table table-striped">
+
+<tr>
+{%- for c in t.columns %}
+<th class="text-center">
+
+{% set colDisplay = { 'col' : c } %}
+{% if c in meta %}
+{% set _dummy = colDisplay.update({'col' : meta[c][0]}) %}
+{% endif %}
+
+{% if con.sort == c %}&#x2193;
+{% elif con.sort == '-' + c %}&#x2191;
+{% endif -%}
+
+{% if c == 'formula' %}
+<span data-toggle="tooltip" title="key: formul">Formula</span>
+{% else %}
+<a href="/{{ project }}/?x={{ x }}&amp;sort={{ c }}"
+  data-toggle="tooltip" title="key: {{c}}">{{ colDisplay['col'] }}</a>
+{% endif %}
+<a href="/{{ project }}/?x={{ x }}&amp;toggle={{ c }}">&#x2715;</a>
+</th>
+{%- endfor %}
+</tr>
+
+{% for row in t.rows -%}
+
+<tr id="rowentry" class="rowentry">
+{%- autoescape false -%}
+{%- for s in row.strings -%}
+<td class="text-center">
+  <a href='/{{ project }}/row/{{ row.uid }}'>
+    {%- if s != "" -%}{{ s }}{% else %}-{% endif %}
+  </a>
+</td>
+{% endfor %}
+{% endautoescape %}
+</tr>
+
+{% set dct=row.dct %}
+{% set id=dct.id %}
+
+{% endfor %}
+</table>
+</div>
+
+</div>
+
+
+<div class="text-center">
+    <nav aria-label="Page navigation">
+        <ul class="pagination pagination-sm">
+
+{% for page, name in pages %}
+    {% set hrefstr="#" %}
+    {% if page >= 0 %}
+        {% set hrefstr= '/' + project|string + '/?x=' + x|string + '&page=' + page|string  %}
+    {% endif %}
+    {% if name=="previous" %}
+        <li>
+            <a href="{{hrefstr}}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+    {% elif name=="next" %}
+        <li>
+            <a href="{{hrefstr}}" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    {% elif name=="..." %}
+        <li class="inactive"><a href="{{hrefstr}}">{{ name }}</a></li>
+    {% elif page < 0 %}
+        <li class="active"><a href="{{hrefstr}}">{{ name }}</a></li>
+    {% else %}
+        <li><a href="{{hrefstr}}">{{ name }}</a></li>
+    {% endif %}
+{% endfor %}
+
+        </ul>
+    </nav>
+</div>
+</div> <!-- class="container" -->
+
+{% endblock content %}
+
+{% macro select(control) %}
+{% set key, text, choises = control[1:] %}
+{% set choise = con.query[1][key] %}
+{{ text }}:
+<select name="select_{{ key }}">
+  <option value="">-</option>
+  {% for val in choises %}
+  <option value="{{ val }}" {% if val == con.query[1][key] %} selected {% endif %}>
+    {{ val }}
+  </option>
+  {% endfor %}
+</select>
+{% endmacro %}
+
+{% macro boolean(control) %}
+            {% set key, text = control[1:] %}
+            {% set choise = con.query[1][key] %}
+                {{ text }}:<select name="bool_{{ key }}">
+            <option value="" {% if '' == choise %} selected {% endif %}>-</option>
+            <option value="1" {% if '1' == choise %} selected {% endif %}>Yes</option>
+            <option value="0" {% if '0' == choise %} selected {% endif %}>No</option>
+            </select>
+{% endmacro %}
+
+{% macro myrange(control) %}
+            {% set id, text, choises = control[1:] %}
+            {% set v1, v2, var = con.query[1].get(id, ['', '', '']) %}
+                {{ text }}:
+                <input type="text" name="from_{{ id }}" value="{{ v1 }}" size="6"> -
+                <input type="text" name="to_{{ id }}" value="{{ v2 }}" size="6">
+                <select name="range_{{ id }}">
+            {% for txt, key in choises %}
+                <option value="{{ key }}" {% if key == var %} selected {% endif %}>{{ txt }}</option>
+            {% endfor %}
+                </select>
+                <br/>
+{% endmacro %}

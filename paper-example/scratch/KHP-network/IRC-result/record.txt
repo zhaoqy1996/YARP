@@ -1,0 +1,36 @@
+product    Node1                                    Node2                                    
+pp_1_0     OOCCC=O                                  OOCOC=C                                  Intended            
+pp_3_0     COO.CC=O                                 C=C=O.COO                                Intended (1 bond diff)
+pp_5_0     OCOCC=O                                  OOCCC=O                                  Intended            
+pp_7_0     OOC=O.C=C                                OOCCC=O                                  Intended
+pp_8_0     C=CC=O.OO                                OOCCC=O                                  Intended            
+pp_8_1     C=CC=O.OO                                OOCCC=O                                  Intended            
+pp_9_0     OOCCC=O                                  C[C@@H](C=O)OO                           Intended            
+pp_12_0    OOCCC=O                                  OOC=C.C=O                                Intended            
+pp_12_1    OOCCC=O                                  OOC=C.C=O                                Intended            
+pp_13_1    OOCCC=O                                  OO/C=C/C=O.[H][H]                        Intended            
+pp_13_2    OOCCC=O                                  OO/C=C/C=O.[H][H]                        Intended            
+pp_13_3    OO/C=C/C=O.[H][H]                        OOCCC=O                                  Intended            
+pp_14_0    O=CCC=O.O                                OOCCC=O                                  Intended            
+pp_14_1    OOCCC=O                                  O=CCC=O.O                                Intended            
+pp_16_0    OOCCC=O                                  CCOO.C#[O]                               Intended            
+pp_19_0    OOC/C=C/O                                OOCCC=O                                  Intended            
+pp_20_0    OOCC=C=O.[H][H]                          OOCCC=O                                  Intended            
+pp_22_1    O[C@@H]1CCOO1                            OOCCC=O                                  Intended            
+pp_23_0    C1COOOC1                                 OOCCC=O                                  Intended            
+pp_25_0    O=C1CCOO1.[H][H]                         OOCCC=O                                  Intended            
+
+pp_2_0     OOCCC=O                                  O=CCC=O.O                                Unintended          
+pp_4_0     OCC=O.C=O                                CC=O.C=O.O                               Unintended          
+pp_6_0     COOCC=O                                  OCC=O.C=O                                Unintended          
+pp_9_1     O=CC=O.O.C                               C[C@H](C=O)OO                            Unintended          
+pp_9_2     OOC/C=C/O                                OOCCC=O                                  Unintended          
+pp_10_0    CCC(=O)OO                                C=C=O.COO                                Unintended          
+pp_15_0    O=CCC=O.O                                OOCCC=O                                  Unintended          
+pp_15_1    O=CCC=O.O                                OOCCC=O                                  Unintended          
+pp_17_0    OCOCC=O                                  OOCCC=O                                  Unintended          
+pp_20_1    OOC[C@H]1[O]=C1.[H][H]                   OOCC=C=O.[H][H]                          Unintended          
+pp_21_0    C1O[C@@H]1C=O.O                          C=CC=O.OO                                Unintended          
+pp_21_1    C1O[C@@H]1C=O.O                          C=CC=O.OO                                Unintended          
+pp_22_0    OC=O.CC=O                                OOCCC=O                                  Unintended          
+pp_24_0    CC(=O)O.C=O                              CC(=O)O.C=[OH]                           Unintended          

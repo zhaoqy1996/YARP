@@ -1,0 +1,626 @@
+'\" t
+.\"     Title: xtb
+.\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 03/11/2020
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "XTB" "1" "03/11/2020" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+xtb \- performs semiempirical quantummechanical calculations, for version 6\&.0 and newer
+.SH "SYNOPSIS"
+.sp
+\fBxtb\fR [\fIOPTIONS\fR] \fIFILE\fR [\fIOPTIONS\fR]
+.SH "DESCRIPTION"
+.sp
+The xtb(1) program performs semiempirical quantummechanical calculations\&. The underlying effective Hamiltonian is derived from density functional tight binding (DFTB)\&. This implementation of the xTB Hamiltonian is currently compatible with the zeroth (6\&.1 only), first and second level parametrisation for geometries, frequencies and non\-covalent interactions (GFN) as well as with the ionisation potential and electron affinity (IPEA) parametrisation of the GFN1 Hamiltonian\&. The generalized born (GB) model with solvent accessable surface area (SASA) is also available available in this version\&. Ground state calculations for the simplified Tamm\-Danceoff approximation (sTDA) with the vTB model are currently not implemented\&.
+.SS "GEOMETRY INPUT"
+.sp
+The input coordinates can be presented in XMOL format and in Turbomole format\&. For most calculations no specific changes to these formats have to be made\&. The file type is determined automatically and the file extension can be freely chosen\&. XMOL coordinates must be given in Ångström, while in Turbomole format they can be given in Ångström as well as in Bohr (default)\&. The corresponding keyword is given in the first line as ang or bohr instead of the $coord keyword\&.
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+This implementation of xtb(1) can only identify and read coordinate files in Turbomole, if the $coord is in the first line of the file, valid Turbomole coordinate files with the $coord datagroup elsewhere will not be read in correctly and lead to abnormal termination of the program\&.
+.sp .5v
+.RE
+.sp
+xtb(1) reads additionally \&.CHRG and \&.UHF files if present\&.
+.SH "INPUT SOURCES"
+.sp
+xtb(1) gets its information from different sources\&. The one with highest priority is the commandline with all allowed flags and arguments described below\&. The secondary source is the xcontrol(7) system, which can in principle use as many input files as wished\&. The xcontrol(7) system is the successor of the set\-block as present in version 5\&.8\&.2 and earlier\&. This implementation of xtb(1) reads the xcontrol(7) from two of three possible sources, the local xcontrol file or the \fIFILE\fR used to specify the geometry and the global configuration file found in the XTBPATH\&.
+.SH "OPTIONS"
+.PP
+\fB\-c, \-\-chrg\fR \fIINT\fR
+.RS 4
+specify molecular charge as
+\fIINT\fR, overrides
+\&.CHRG
+file and
+xcontrol
+option
+.RE
+.PP
+\fB\-u, \-\-uhf\fR \fIINT\fR
+.RS 4
+specify Nalpha\-Nbeta as
+\fIINT\fR, overrides
+\&.UHF
+file and
+xcontrol
+option
+.RE
+.PP
+\fB\-\-gfn\fR \fIINT\fR
+.RS 4
+specify parametrisation of GFN\-xTB (default = 2)
+.RE
+.PP
+\fB\-\-etemp\fR \fIREAL\fR
+.RS 4
+electronic temperature (default = 300K)
+.RE
+.PP
+\fB\-\-esp\fR
+.RS 4
+calculate electrostatic potential on VdW\-grid
+.RE
+.PP
+\fB\-\-stm\fR
+.RS 4
+calculate STM image
+.RE
+.PP
+\fB\-a, \-\-acc\fR \fIREAL\fR
+.RS 4
+accuracy for SCC calculation, lower is better (default = 1\&.0)
+.RE
+.PP
+\fB\-\-vparam\fR \fIFILE\fR
+.RS 4
+Parameter file for vTB calculation
+.RE
+.PP
+\fB\-\-xparam\fR \fIFILE\fR
+.RS 4
+Parameter file for xTB calculation (not used)
+.RE
+.PP
+\fB\-g, \-\-gbsa\fR [\fISOLVENT\fR [\fISTATE\fR]]
+.RS 4
+generalized born (GB) model with solvent accessable surface (SASA) model, available solvents are
+\fIacetone\fR,
+\fIacetonitrile\fR,
+\fIbenzene\fR
+(only GFN1\-xTB),
+\fICH2Cl2\fR,
+\fICHCl3\fR,
+\fICS2\fR,
+\fIDMF\fR
+(only GFN2\-xTB),
+\fIDMSO\fR,
+\fIether\fR,
+\fIH2O\fR,
+\fImethanol\fR,
+\fIn\-hexane\fR
+(only GFN2\-xTB),
+\fITHF\fR
+and
+\fItoluene\fR\&. The solvent input is not case\-sensitive\&. The Gsolv reference state can be chosen as
+\fIreference\fR
+or
+\fIbar1M\fR
+(default)\&.
+.RE
+.PP
+\fB\-\-cma\fR
+.RS 4
+shifts molecule to center of mass and transforms cartesian coordinates into the coordinate system of the principle axis (not affected by \(oqisotopes\(cq\-file)\&.
+.RE
+.PP
+\fB\-\-pop\fR
+.RS 4
+requests printout of Mulliken population analysis
+.RE
+.PP
+\fB\-\-molden\fR
+.RS 4
+requests printout of molden file
+.RE
+.PP
+\fB\-\-dipole\fR
+.RS 4
+requests dipole printout
+.RE
+.PP
+\fB\-\-wbo\fR
+.RS 4
+requests Wiberg bond order printout
+.RE
+.PP
+\fB\-\-lmo\fR
+.RS 4
+requests localization of orbitals
+.RE
+.PP
+\fB\-\-fod\fR
+.RS 4
+requests FOD calculation
+.RE
+.SS "RUNTYPS"
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+You can only select \fBone\fR runtyp, only the first runtyp will be used from the program, use implemented composite runtyps to perform several operations at once\&.
+.sp .5v
+.RE
+.PP
+\fB\-\-scc, \-\-sp\fR
+.RS 4
+performs a single point calculation
+.RE
+.PP
+\fB\-\-vip\fR
+.RS 4
+performs calculation of ionisation potential\&. This needs the \&.param_ipea\&.xtb parameters and a GFN1 Hamiltonian\&.
+.RE
+.PP
+\fB\-\-vea\fR
+.RS 4
+performs calculation of electron affinity\&. This needs the \&.param_ipea\&.xtb parameters and a GFN1 Hamiltonian\&.
+.RE
+.PP
+\fB\-\-vipea\fR
+.RS 4
+performs calculation of electron affinity and ionisation potential\&. This needs the \&.param_ipea\&.xtb parameters and a GFN1 Hamiltonian\&.
+.RE
+.PP
+\fB\-\-vfukui\fR
+.RS 4
+performs calculation of Fukui indices\&.
+.RE
+.PP
+\fB\-\-vomega\fR
+.RS 4
+performs calculation of electrophilicity index\&. This needs the \&.param_ipea\&.xtb parameters and a GFN1 Hamiltonian\&.
+.RE
+.PP
+\fB\-\-grad\fR
+.RS 4
+performs a gradient calculation
+.RE
+.PP
+\fB\-o, \-\-opt\fR [\fILEVEL\fR]
+.RS 4
+call
+ancopt(3)
+to perform a geometry optimization, levels from crude, sloppy, loose, normal (default), tight, verytight to extreme can be chosen
+.RE
+.PP
+\fB\-\-optts\fR [\fILEVEL\fR] [\fIROOT\fR]
+.RS 4
+call
+ancopt(3)
+to perform a transition state optimization, may need to perform a hessian calculation first
+.RE
+.PP
+\fB\-\-hess\fR
+.RS 4
+perform a numerical hessian calculation on input geometry
+.RE
+.PP
+\fB\-\-ohess\fR [\fILEVEL\fR]
+.RS 4
+perform a numerical hessian calculation on an
+ancopt(3)
+optimized geometry
+.RE
+.PP
+\fB\-\-md\fR
+.RS 4
+molecular dynamics simulation on start geometry
+.RE
+.PP
+\fB\-\-metadyn\fR [\fIint\fR]
+.RS 4
+meta dynamics simulation on start geometry, saving
+\fIint\fR
+snapshots of the trajectory to bias the simulation (6\&.1 only)
+.RE
+.PP
+\fB\-\-omd\fR
+.RS 4
+molecular dynamics simulation on
+ancopt(3)
+optimized geometry, a loose optimization level will be chosen
+.RE
+.PP
+\fB\-\-metaopt\fR [\fILEVEL\fR]
+.RS 4
+call
+ancopt(3)
+to perform a geometry optimization, then try to find other minimas by meta dynamics (6\&.1 only)
+.RE
+.PP
+\fB\-\-path\fR [\fIFILE\fR]
+.RS 4
+use meta dynamics to calculate a path from the input geometry to the given product structure (6\&.1 only)
+.RE
+.PP
+\fB\-\-reactor\fR
+.RS 4
+experimental (6\&.1 only)
+.RE
+.PP
+\fB\-\-siman\fR
+.RS 4
+conformational search by simulated annealing based on molecular dynamics\&. Conformers are optimized with
+ancopt(3)\&.
+.RE
+.PP
+\fB\-\-modef\fR \fIINT\fR
+.RS 4
+modefollowing algorithm\&.
+\fIINT\fR
+specifies the mode that should be used for the modefollowing\&.
+.RE
+.SS "GENERAL"
+.PP
+\fB\-I, \-\-input\fR \fIFILE\fR
+.RS 4
+use
+\fIFILE\fR
+as input source for
+xcontrol(7)
+instructions
+.RE
+.PP
+\fB\-\-namespace\fR \fISTRING\fR
+.RS 4
+give this
+xtb(1)
+run a namespace\&. All files, even temporary ones, will be named according to
+\fISTRING\fR
+(might not work everywhere)\&.
+.RE
+.PP
+\fB\-\-[no]copy\fR
+.RS 4
+copies the
+xcontrol
+file at startup (default = true)
+.RE
+.PP
+\fB\-\-[no]restart\fR
+.RS 4
+restarts calculation from
+xtbrestart
+(default = true)
+.RE
+.PP
+\fB\-P, \-\-parallel\fR \fIINT\fR
+.RS 4
+number of parallel processes
+.RE
+.PP
+\fB\-\-define\fR
+.RS 4
+performs automatic check of input and terminate
+.RE
+.PP
+\fB\-\-citation\fR
+.RS 4
+print citation and terminate
+.RE
+.PP
+\fB\-\-license\fR
+.RS 4
+print license and terminate
+.RE
+.PP
+\fB\-v, \-\-verbose\fR
+.RS 4
+be more verbose (not supported in every unit)
+.RE
+.PP
+\fB\-s, \-\-silent\fR
+.RS 4
+clutter the screen less (not supported in every unit)
+.RE
+.PP
+\fB\-\-strict\fR
+.RS 4
+turns all warnings into hard errors
+.RE
+.PP
+\fB\-h, \-\-help\fR
+.RS 4
+show help page
+.RE
+.SH "ENVIRONMENT VARIABLES"
+.sp
+xtb(1) accesses a path\-like variable to determine the location of its parameter files, you have to provide the XTBPATH variable in the same syntax as the system PATH variable\&. If this variable is not set, xtb(1) will try to generate the XTBPATH from the deprecated XTBHOME variable\&. In case the XTBHOME variable is not set it will be generated from the HOME variable\&. So in principle storing the parameter files in the users home directory is suffient but might lead to come cluttering\&.
+.sp
+Since the XTBHOME variable is deprecated with version 6\&.0 and newer xtb(1) will issue a warning if XTBHOME is not part of the XTBPATH since the XTBHOME variable is not used in production runs\&.
+.SH "LOCAL FILES"
+.sp
+xtb(1) accesses a number of local files in the current working directory and also writes some output in specific files\&. Note that not all input and output files allow the \fB\-\-namespace\fR option\&.
+.SS "INPUT"
+.PP
+\fB\&.CHRG\fR
+.RS 4
+molecular charge as
+\fIint\fR
+.RE
+.PP
+\fB\&.UHF\fR
+.RS 4
+Nalpha\-Nbeta as
+\fIint\fR
+.RE
+.PP
+\fBmdrestart\fR
+.RS 4
+contains restart information for MD,
+\fB\-\-namespace\fR
+compatible\&.
+.RE
+.PP
+\fBpcharge\fR
+.RS 4
+point charge input, format is
+\fIreal\fR
+\fIreal\fR
+\fIreal\fR
+\fIreal\fR
+[\fIint\fR]\&. The first real is used as partial charge, the next three entries are the cartesian coordinates and the last is an optional atom type\&. Note that the point charge input is not affected by a CMA transformation\&. Also parallel Hessian calculations will fail due to I/O errors when using point charge embedding\&.
+.RE
+.PP
+\fBsolvent\fR
+.RS 4
+qmdff(1)
+input file
+.RE
+.PP
+\fBxcontrol\fR
+.RS 4
+default input file in
+\fB\-\-copy\fR
+mode, see
+xcontrol(7)
+for details, set by
+\fB\-\-input\fR\&.
+.RE
+.PP
+\fBxtbrestart\fR
+.RS 4
+contains restart information for SCC,
+\fB\-\-namespace\fR
+compatible\&.
+.RE
+.SS "OUTPUT"
+.PP
+\fBcharges\fR
+.RS 4
+contains Mulliken partial charges calculated in SCC
+.RE
+.PP
+\fBwbo\fR
+.RS 4
+contains Wiberg bond order calculated in SCC,
+\fB\-\-namespace\fR
+compatible\&.
+.RE
+.PP
+\fBenergy\fR
+.RS 4
+total energy in Turbomole format
+.RE
+.PP
+\fBgradient\fR
+.RS 4
+geometry, energy and gradient in Turbomole format
+.RE
+.PP
+\fBhessian\fR
+.RS 4
+contains the (not mass weighted) cartesian Hessian,
+\fB\-\-namespace\fR
+compatible\&.
+.RE
+.PP
+\fBxtbopt\&.xyz\fR, \fBxtbopt\&.coord\fR
+.RS 4
+optimized geometry in the same format as the input geometry\&.
+.RE
+.PP
+\fBxtbhess\&.coord\fR
+.RS 4
+distorted geometry if imaginary frequency was found
+.RE
+.PP
+\fBxtbopt\&.log\fR
+.RS 4
+contains all structures obtained in the geometry optimization with the respective energy in the comment line in a XMOL formatted trajectory
+.RE
+.PP
+\fBxtbsiman\&.log\fR,\fBxtb\&.trj\&.\fR\fB\fIint\fR\fR
+.RS 4
+trajectories from MD
+.RE
+.PP
+\fBscoord\&.\fR\fB\fIint\fR\fR
+.RS 4
+coordinate dump of MD
+.RE
+.PP
+\fBfod\&.cub\fR
+.RS 4
+FOD on a cube\-type grid
+.RE
+.PP
+\fBspindensity\&.cub\fR
+.RS 4
+spindensity on a cube\-type grid
+.RE
+.PP
+\fBdensity\&.cub\fR
+.RS 4
+density on a cube\-type grid
+.RE
+.PP
+\fBmolden\&.input\fR
+.RS 4
+MOs and occupation for visualisation and sTDA\-xTB calculations
+.RE
+.PP
+\fBpcgrad\fR
+.RS 4
+gradient of the point charges
+.RE
+.PP
+\fBxtb_esp\&.cosmo\fR
+.RS 4
+ESP fake cosmo output
+.RE
+.PP
+\fBxtb_esp_profile\&.dat\fR
+.RS 4
+ESP histogramm data
+.RE
+.PP
+\fBvibspectrum\fR
+.RS 4
+Turbomole style vibrational spectrum data group
+.RE
+.PP
+\fBg98\&.out\fR, \fBg98l\&.out\fR, \fBg98_canmode\&.out\fR, \fBg98_locmode\&.out\fR
+.RS 4
+g98 fake output with normal or local modes
+.RE
+.PP
+\fB\&.tmpxtbmodef\fR
+.RS 4
+input for mode following
+.RE
+.PP
+\fBcoordprot\&.0\fR
+.RS 4
+protonated species
+.RE
+.PP
+\fBxtblmoinfo\fR
+.RS 4
+centers of the localized molecular orbitals
+.RE
+.PP
+\fBlmocent\&.coord\fR
+.RS 4
+centers of the localized molecular orbitals
+.RE
+.PP
+\fBtmpxx\fR
+.RS 4
+number of recommended modes for mode following
+.RE
+.PP
+\fBxtb_normalmodes\fR, \fBxtb_localmodes\fR
+.RS 4
+binary dump for mode following
+.RE
+.SS "TOUCH"
+.PP
+\fBxtbmdok\fR
+.RS 4
+generated by successful MD
+.RE
+.PP
+\fB\&.xtbok\fR
+.RS 4
+generated after each successful
+xtb(1)
+run
+.RE
+.PP
+\fB\&.sccnotconverged\fR
+.RS 4
+generated after failed SCC with printlevel=2
+.RE
+.SH "WARNINGS"
+.sp
+xtb(1) can generate the two types of warnings, the first warning section is printed immediately after the normal banner at startup, summing up the evaluation of all input sources (commandline, xcontrol, xtbrc)\&. To check this warnings exclusively before running an expensive calculation a input check is implemented via the \fB\-\-define\fR flag\&. Please, study this warnings carefully!
+.sp
+After xtb(1) has evaluated the all input sources it immediately enters the production mode\&. Severe errors will lead to an abnormal termination which is signalled by the printout to STDERR and a non\-zero return value (usually 128)\&. All non\-fatal errors are summerized in the end of the calculation in one block, right bevor the timing analysis\&.
+.sp
+To aid the user to fix the problems generating these warnings a brief summary of each warning with its respective string representation in the output will be shown here:
+.PP
+\fBANCopt failed to converge the optimization\fR
+.RS 4
+geometry optimization has failed to converge in the given number optimization cycles\&. This is not neccessary a problem if only a small number of cycles was given for the optimization on purpose\&. All further calculations are done on the last geometry of the optimization\&.
+.RE
+.PP
+\fBHessian on incompletely optimized geometry!\fR
+.RS 4
+This warning will be issued twice, once before the Hessian, calculations starts (it would otherwise take some time before this this warning could be detected) and in the warning block in the end\&. The warning will be generated if the gradient norm on the given geometry is higher than a certain threshold\&.
+.RE
+.SH "EXIT STATUS"
+.PP
+\fB0\fR
+.RS 4
+normal termination of
+xtb(1)
+.RE
+.PP
+\fB128\fR
+.RS 4
+Failure (termination via error stop generates 128 as return value)
+.RE
+.SH "BUGS"
+.sp
+please report all bugs with an example input, \-\-copy dump of internal settings and the used geometry, as well as the \-\-verbose output to xtb@thch\&.uni\-bonn\&.de
+.SH "RESOURCES"
+.sp
+Main web site: http://grimme\&.uni\-bonn\&.de/software/xtb
+.SH "COPYING"
+.sp
+Copyright (C) 2015\-2018 S\&. Grimme\&. For non\-commerical, academia use only\&.

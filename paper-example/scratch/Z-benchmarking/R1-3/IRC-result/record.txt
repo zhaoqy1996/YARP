@@ -1,0 +1,7 @@
+product    Node1                                    Node2                                    
+pp_1_0     CC[CH]                                   C#C.C                                    Unintended          
+pp_2_0     C1CC1                                    CC=C                                     Intended            
+pp_2_1     CC=C                                     C1CC1                                    Intended            
+pp_2_2     CC=C                                     C1CC1                                    Intended            
+pp_3_1     C=C=C.[H][H]                             CC=C                                     Intended            
+pp_3_2     C=C=C.[H][H]                             CC=C                                     Intended            

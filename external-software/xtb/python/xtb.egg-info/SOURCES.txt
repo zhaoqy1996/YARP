@@ -1,0 +1,11 @@
+README.md
+setup.py
+xtb/__init__.py
+xtb/calculators.py
+xtb/interface.py
+xtb/solvation.py
+xtb.egg-info/PKG-INFO
+xtb.egg-info/SOURCES.txt
+xtb.egg-info/dependency_links.txt
+xtb.egg-info/requires.txt
+xtb.egg-info/top_level.txt

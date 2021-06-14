@@ -1,0 +1,3737 @@
+
+    __        __   _                            _        
+    \ \      / /__| | ___ ___  _ __ ___   ___  | |_ ___  
+     \ \ /\ / / _ \ |/ __/ _ \| '_ ` _ \ / _ \ | __/ _ \ 
+      \ V  V /  __/ | (_| (_) | | | | | |  __/ | || (_) |
+       \_/\_/ \___|_|\___\___/|_| |_| |_|\___|  \__\___/ 
+                                    ____ ____  __  __ 
+                       _ __  _   _ / ___/ ___||  \/  |
+                      | '_ \| | | | |  _\___ \| |\/| |
+                      | |_) | |_| | |_| |___) | |  | |
+                      | .__/ \__, |\____|____/|_|  |_|
+                      |_|    |___/                    
+#==========================================================================#
+#| If this code has benefited your research, please support us by citing: |#
+#|                                                                        |# 
+#| Aldaz, C.; Kammeraad J. A.; Zimmerman P. M. "Discovery of conical      |#
+#| intersection mediated photochemistry with growing string methods",     |#
+#| Phys. Chem. Chem. Phys., 2018, 20, 27394                               |#
+#| http://dx.doi.org/10.1039/c8cp04703k                                   |#
+#|                                                                        |# 
+#| Wang, L.-P.; Song, C.C. (2016) "Geometry optimization made simple with |#
+#| translation and rotation coordinates", J. Chem, Phys. 144, 214108.     |#
+#| http://dx.doi.org/10.1063/1.4952956                                    |#
+#==========================================================================#
+
+
+    
+ Using 1 processors
+#========================================================#
+#| [92m              Parsed GSM Keys : Values              [0m |#
+#========================================================#
+ADD_NODE_TOL              0.01 
+BDIST_RATIO               0.5 
+CONV_TOL                  0.005 
+DMAX                      1.0 
+DQMAG_MAX                 0.8 
+EST_Package               xTB 
+ID                        0 
+PES_type                  PES 
+adiabatic_index           [0] 
+conv_Ediff                100.0 
+conv_dE                   1.0 
+conv_gmax                 100.0 
+coordinate_type           TRIC 
+growth_direction          0 
+gsm_print_level           1 
+gsm_type                  DE_GSM 
+linesearch                NoLineSearch 
+lot_inp_file              /scratch/bell/zhao922/YARP/paper-example/KHP-network/pp_0/pp_21_0/xtb_lot.txt 
+max_gsm_iters             100 
+multiplicity              [1] 
+nproc                     1 
+num_nodes                 9 
+opt_print_level           1 
+optimizer                 eigenvector_follow 
+product_geom_fixed        False 
+reactant_geom_fixed       False 
+sigma                     1.0 
+use_multiprocessing       False 
+xyzfile                   /scratch/bell/zhao922/YARP/paper-example/KHP-network/pp_0/input_files/pp_21_0.xyz 
+----------------------------------------------------------
+#========================================================#
+#| [92m     Build the xTB level of theory (LOT) object     [0m |#
+#========================================================#
+ initializing LOT from geom
+#========================================================#
+#| [92m              Building the PES objects              [0m |#
+#========================================================#
+#========================================================#
+#| [92m       Building the reactant object with TRIC       [0m |#
+#========================================================#
+#========================================================#
+#| [92m               Building the topology                [0m |#
+#========================================================#
+#========================================================#
+#| [92m                   building bonds                   [0m |#
+#========================================================#
+None
+ In build bonds
+done
+#========================================================#
+#| [92m                   building bonds                   [0m |#
+#========================================================#
+None
+ In build bonds
+done
+ Adding bond (1, 4) to top1
+ Adding bond (3, 10) to top1
+#========================================================#
+#| [92m      Building Primitive Internal Coordinates       [0m |#
+#========================================================#
+ Creating block info
+ number of primitive blocks is  1
+ Done creating block info,
+ Now Making Primitives by block
+ Done making primitives
+ Made a total of 89 primitives
+ num blocks  1
+ done making primitives
+ make prim 0.025
+#========================================================#
+#| [92m     Building Primitive Internal Coordinates 2      [0m |#
+#========================================================#
+ Creating block info
+ number of primitive blocks is  1
+ Done creating block info,
+ Now Making Primitives by block
+ Done making primitives
+ Made a total of 89 primitives
+ num blocks  1
+ done making primitives
+ make prim 0.025
+#========================================================#
+#| [92m            Forming Union of Primitives             [0m |#
+#========================================================#
+ Number of primitives before 89
+Adding prim Angle 1-2-5 that is in Other to Internals
+Adding prim Angle 5-2-11 that is in Other to Internals
+Adding prim Out-of-Plane 2-1-11-3 that is in Other to Internals
+Adding prim Out-of-Plane 2-3-5-11 that is in Other to Internals
+Adding prim Out-of-Plane 5-2-4-7 that is in Other to Internals
+ Number of primitives after 94
+check 94
+#========================================================#
+#| [92m     Building Delocalized Internal Coordinates      [0m |#
+#========================================================#
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.022 Eig: 0.003
+#========================================================#
+#| [92m               Building the reactant                [0m |#
+#========================================================#
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ making primitive Hessian
+ Time to build Prim Hessian 0.001
+ forming Hessian in basis
+ molecule constructed
+#========================================================#
+#| [92m            Building the product object             [0m |#
+#========================================================#
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ making primitive Hessian
+ Time to build Prim Hessian 0.001
+ forming Hessian in basis
+ molecule constructed
+#========================================================#
+#| [92m           Building the Optimizer object            [0m |#
+#========================================================#
+#========================================================#
+#| [92m              Building the GSM object               [0m |#
+#========================================================#
+ gaddmax: 0.01
+ Assuming primitives are union!
+ number of primitives is 94
+ Energy of the end points are -13534.817, -13572.816
+ relative E 0.000, -38.000
+#========================================================#
+#| [92m     REACTANT GEOMETRY NOT FIXED!!! OPTIMIZING      [0m |#
+#========================================================#
+ initial E 0.0000
+ CONV_TOL 0.00050
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 0
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.000142834854612
+ dEstep=-0.0000
+ Node: 0 Opt step: 1 E: -0.0000 predE: -0.0100 ratio: 0.003 gradrms: 0.00003 ss: 0.000 DMAX: 0.000
+ gmax 0.0001 disp 0.0001 Ediff -0.0000 gradrms 0.0000
+
+ converged
+ opt-summary 0
+ Node: 0 Opt step: 1 E: -0.0000 predE: -0.0100 ratio: 0.003 gradrms: 0.00003 ss: 0.000 DMAX: 0.000
+
+#========================================================#
+#| [92m      PRODUCT GEOMETRY NOT FIXED!!! OPTIMIZING      [0m |#
+#========================================================#
+ initial E -37.9998
+ CONV_TOL 0.00050
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 8
+ evaluate fx in linesearch
+ dEstep=-0.0000
+ Node: 8 Opt step: 1 E: -37.9999 predE: -0.0100 ratio: 0.005 gradrms: 0.00006 ss: 0.000 DMAX: 0.000
+ gmax 0.0002 disp 0.0001 Ediff -0.0000 gradrms 0.0001
+
+ converged
+ opt-summary 8
+ Node: 8 Opt step: 1 E: -37.9999 predE: -0.0100 ratio: 0.005 gradrms: 0.00006 ss: 0.000 DMAX: 0.000
+
+#========================================================#
+#| [92m                Adding reactant node                [0m |#
+#========================================================#
+ adding node: 1 between 0 8 from 0
+ getting tangent from between 8 0 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ dqmag: 8.862
+ scaled dqmag: 1.266
+ Iter: 1 Err-dQ = 2.63175e-01 RMSD: 1.70531e-01 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.00845e-02 (2.63175e-01) RMSD: 2.92259e-02 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 4.36332e-06 (1.00845e-02) RMSD: 9.13610e-04 Damp: 1.00000e+00 (Good)
+ Iter: 4 Err-dQ (Best) = 5.16694e-12 (4.36332e-06) RMSD: 4.79535e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 4 microiterations (rmsd = 4.795e-07 |dQ| = 5.167e-12)
+ Copying from MoleculA 0
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.018 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=3,nR=2
+ Aligning
+ getting energy for node 1: 47.2127
+#========================================================#
+#| [92m                Adding product node                 [0m |#
+#========================================================#
+ adding node: 7 between 8 1 from 8
+ getting tangent from between 1 8 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ dqmag: 7.818
+ scaled dqmag: 1.303
+ Iter: 1 Err-dQ = 2.24583e-01 RMSD: 1.09503e-01 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.02473e-02 (2.24583e-01) RMSD: 1.91347e-02 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 4.65690e-06 (1.02473e-02) RMSD: 6.96271e-04 Damp: 1.00000e+00 (Good)
+ Iter: 4 Err-dQ (Best) = 4.17562e-12 (4.65690e-06) RMSD: 6.69083e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 4 microiterations (rmsd = 6.691e-07 |dQ| = 4.176e-12)
+ Copying from MoleculA 8
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.018 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=4,nP=2
+ Aligning
+ getting energy for node 7: -8.0591
+#========================================================#
+#| [92m                  In growth_iters                   [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 1 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 1 7 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 2.793   0.0   0.0
+ setting active nodes to 1 and 7
+ conv_tol of node 1 is 0.0100
+ conv_tol of node 7 is 0.0100
+#========================================================#
+#| [92m               Starting growth iter 0               [0m |#
+#========================================================#
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 47.2127
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.166277499506
+ dEstep=-12.3228
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 34.8899 predE: -7.1871 ratio: 1.715 gradrms: 0.01302 ss: 0.166 DMAX: 0.139
+ gmax 0.0457 disp 0.1904 Ediff -12.3228 gradrms 0.0130
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 1
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-9.2672
+ decreasing DMAX
+ Node: 1 Opt step: 2 E: 25.6227 predE: -5.3639 ratio: 1.728 gradrms: 0.01097 ss: 0.139 DMAX: 0.115
+ gmax 0.0415 disp 0.1416 Ediff -9.2672 gradrms 0.0110
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 3 for node 1
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-6.1088
+ decreasing DMAX
+ Node: 1 Opt step: 3 E: 19.5139 predE: -3.5777 ratio: 1.707 gradrms: 0.00899 ss: 0.115 DMAX: 0.096
+ gmax 0.0373 disp 0.0913 Ediff -6.1088 gradrms 0.0090
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 34.8899 predE: -7.1871 ratio: 1.715 gradrms: 0.01302 ss: 0.166 DMAX: 0.139
+ Node: 1 Opt step: 2 E: 25.6227 predE: -5.3639 ratio: 1.728 gradrms: 0.01097 ss: 0.139 DMAX: 0.115
+ Node: 1 Opt step: 3 E: 19.5139 predE: -3.5777 ratio: 1.707 gradrms: 0.00899 ss: 0.115 DMAX: 0.096
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -8.0591
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.100713369892
+ dEstep=-7.6670
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -15.7261 predE: -3.9473 ratio: 1.942 gradrms: 0.01141 ss: 0.101 DMAX: 0.084
+ gmax 0.0314 disp 0.0709 Ediff -7.6670 gradrms 0.0114
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 7
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-5.0256
+ decreasing DMAX
+ Node: 7 Opt step: 2 E: -20.7516 predE: -2.8764 ratio: 1.747 gradrms: 0.00930 ss: 0.084 DMAX: 0.070
+ gmax 0.0278 disp 0.0587 Ediff -5.0256 gradrms 0.0093
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -15.7261 predE: -3.9473 ratio: 1.942 gradrms: 0.01141 ss: 0.101 DMAX: 0.084
+ Node: 7 Opt step: 2 E: -20.7516 predE: -2.8764 ratio: 1.747 gradrms: 0.00930 ss: 0.084 DMAX: 0.070
+
+ node: 01 gradrms: 0.008985 node: 07 gradrms: 0.009296
+#========================================================#
+#| [92m                Adding reactant node                [0m |#
+#========================================================#
+ adding node: 2 between 1 7 from 1
+ getting tangent from between 7 1 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ dqmag: 7.211
+ scaled dqmag: 1.442
+ Iter: 1 Err-dQ = 2.58151e-01 RMSD: 1.53151e-01 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.02596e-02 (2.58151e-01) RMSD: 3.10075e-02 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 9.41855e-05 (2.02596e-02) RMSD: 1.24244e-03 Damp: 1.00000e+00 (Good)
+ Iter: 4 Err-dQ (Best) = 1.54765e-09 (9.41855e-05) RMSD: 4.00062e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 4 microiterations (rmsd = 4.001e-06 |dQ| = 1.548e-09)
+ Copying from MoleculA 1
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.018 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=5,nR=3
+ Aligning
+ getting energy for node 2: 113.1670
+#========================================================#
+#| [92m                Adding product node                 [0m |#
+#========================================================#
+ adding node: 6 between 7 2 from 7
+ getting tangent from between 2 7 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ dqmag: 6.030
+ scaled dqmag: 1.507
+ Iter: 1 Err-dQ = 4.00741e-01 RMSD: 1.23808e-01 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.20067e-02 (4.00741e-01) RMSD: 2.70748e-02 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 1.79860e-04 (5.20067e-02) RMSD: 2.81572e-03 Damp: 1.00000e+00 (Good)
+ Iter: 4 Err-dQ (Best) = 2.32893e-08 (1.79860e-04) RMSD: 1.53407e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 4 microiterations (rmsd = 1.534e-05 |dQ| = 2.329e-08)
+ Copying from MoleculA 7
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.018 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=6,nP=3
+ Aligning
+ getting energy for node 6: 52.6767
+ setting active nodes to 2 and 6
+ conv_tol of node 2 is 0.0100
+ conv_tol of node 6 is 0.0100
+#========================================================#
+#| [92m            Reparamerizing string nodes             [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.203 2.245   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.77877e-04 RMSD: 3.73815e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.45762e-09 (1.77877e-04) RMSD: 1.98048e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.980e-05 |dQ| = 3.458e-09)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.79266e-04 RMSD: 2.83840e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.02667e-09 (1.79266e-04) RMSD: 1.28558e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.286e-05 |dQ| = 2.027e-09)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.189 2.245   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 6.23009e-05 RMSD: 2.20749e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.27804e-10 (6.23009e-05) RMSD: 6.94138e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.941e-06 |dQ| = 4.278e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 6.01053e-05 RMSD: 1.63978e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.36630e-10 (6.01053e-05) RMSD: 4.29225e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.292e-06 |dQ| = 2.366e-10)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.181 2.245   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.18536e-05 RMSD: 1.30577e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.29147e-11 (2.18536e-05) RMSD: 2.43576e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.436e-06 |dQ| = 5.291e-11)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.88919e-06 RMSD: 3.89397e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 7.40448e-13 (1.88919e-06) RMSD: 2.39923e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.399e-07 |dQ| = 7.404e-13)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.01443e-05 RMSD: 9.48113e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.71801e-11 (2.01443e-05) RMSD: 1.43510e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.435e-06 |dQ| = 2.718e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.177 2.244   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 8.71703e-06 RMSD: 8.23907e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 8.45589e-12 (8.71703e-06) RMSD: 9.71974e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.720e-07 |dQ| = 8.456e-12)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 6.20514e-06 RMSD: 7.06336e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 7.96771e-12 (6.20514e-06) RMSD: 7.88750e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.887e-07 |dQ| = 7.968e-12)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 7.78211e-06 RMSD: 5.88862e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.10663e-12 (7.78211e-06) RMSD: 5.53574e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.536e-07 |dQ| = 4.107e-12)
+ spacings (end ic_reparam, steps: 3/4):  1.2  1.2  2.2  0.0  0.0  0.0  2.2  1.2  1.2   disprms: 0.0262
+ gopt_iter:  0 totalgrad:  0.1 gradrms: 0.004887 max E: 19.51
+
+#========================================================#
+#| [92m               Starting growth iter 1               [0m |#
+#========================================================#
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 22.7648
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-4.6284
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 18.1364 predE: -2.5407 ratio: 1.822 gradrms: 0.00727 ss: 0.096 DMAX: 0.080
+ gmax 0.0316 disp 0.0871 Ediff -4.6284 gradrms 0.0073
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 18.1364 predE: -2.5407 ratio: 1.822 gradrms: 0.00727 ss: 0.096 DMAX: 0.080
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 114.0134
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.205020610906
+ dEstep=-22.7234
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 91.2900 predE: -14.0533 ratio: 1.617 gradrms: 0.01766 ss: 0.205 DMAX: 0.171
+ gmax 0.0526 disp 0.2417 Ediff -22.7234 gradrms 0.0177
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 2
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-14.7546
+ decreasing DMAX
+ Node: 2 Opt step: 2 E: 76.5354 predE: -8.1586 ratio: 1.808 gradrms: 0.01420 ss: 0.171 DMAX: 0.142
+ gmax 0.0457 disp 0.1619 Ediff -14.7546 gradrms 0.0142
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 3 for node 2
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-10.1388
+ decreasing DMAX
+ Node: 2 Opt step: 3 E: 66.3965 predE: -5.5468 ratio: 1.828 gradrms: 0.01376 ss: 0.142 DMAX: 0.119
+ gmax 0.0444 disp 0.1262 Ediff -10.1388 gradrms 0.0138
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 91.2900 predE: -14.0533 ratio: 1.617 gradrms: 0.01766 ss: 0.205 DMAX: 0.171
+ Node: 2 Opt step: 2 E: 76.5354 predE: -8.1586 ratio: 1.808 gradrms: 0.01420 ss: 0.171 DMAX: 0.142
+ Node: 2 Opt step: 3 E: 66.3965 predE: -5.5468 ratio: 1.828 gradrms: 0.01376 ss: 0.142 DMAX: 0.119
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 52.6768
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.131201206568
+ dEstep=-11.5673
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 41.1095 predE: -6.3731 ratio: 1.815 gradrms: 0.01419 ss: 0.131 DMAX: 0.109
+ gmax 0.0356 disp 0.1024 Ediff -11.5673 gradrms 0.0142
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 6
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-7.7975
+ decreasing DMAX
+ Node: 6 Opt step: 2 E: 33.3120 predE: -4.2778 ratio: 1.823 gradrms: 0.01313 ss: 0.109 DMAX: 0.091
+ gmax 0.0354 disp 0.0762 Ediff -7.7975 gradrms 0.0131
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 3 for node 6
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-6.7054
+ decreasing DMAX
+ Node: 6 Opt step: 3 E: 26.6065 predE: -3.5683 ratio: 1.879 gradrms: 0.01240 ss: 0.091 DMAX: 0.076
+ gmax 0.0358 disp 0.0585 Ediff -6.7054 gradrms 0.0124
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 41.1095 predE: -6.3731 ratio: 1.815 gradrms: 0.01419 ss: 0.131 DMAX: 0.109
+ Node: 6 Opt step: 2 E: 33.3120 predE: -4.2778 ratio: 1.823 gradrms: 0.01313 ss: 0.109 DMAX: 0.091
+ Node: 6 Opt step: 3 E: 26.6065 predE: -3.5683 ratio: 1.879 gradrms: 0.01240 ss: 0.091 DMAX: 0.076
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -18.3844
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-3.7573
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -22.1417 predE: -2.1228 ratio: 1.770 gradrms: 0.00833 ss: 0.070 DMAX: 0.058
+ gmax 0.0267 disp 0.0568 Ediff -3.7573 gradrms 0.0083
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -22.1417 predE: -2.1228 ratio: 1.770 gradrms: 0.00833 ss: 0.070 DMAX: 0.058
+
+ node: 01 gradrms: 0.007267 node: 02 gradrms: 0.013762 node: 06 gradrms: 0.012398 node: 07 gradrms: 0.008332
+ setting active nodes to 2 and 6
+ conv_tol of node 2 is 0.0100
+ conv_tol of node 6 is 0.0100
+#========================================================#
+#| [92m            Reparamerizing string nodes             [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+  1.19 2.248   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.56085e-06 RMSD: 2.72849e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.72591e-13 (1.56085e-06) RMSD: 1.44667e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.447e-07 |dQ| = 3.726e-13)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.18751e-06 RMSD: 4.30101e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.47489e-13 (2.18751e-06) RMSD: 2.96474e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.965e-07 |dQ| = 6.475e-13)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.30612e-05 RMSD: 7.51807e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.04319e-11 (1.30612e-05) RMSD: 9.49881e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.499e-07 |dQ| = 1.043e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.191 2.247   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 9.26341e-07 RMSD: 2.10290e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 2.103e-04 |dQ| = 9.263e-07)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.91128e-06 RMSD: 4.02119e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.91552e-13 (1.91128e-06) RMSD: 2.59101e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.591e-07 |dQ| = 4.916e-13)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 5.29377e-06 RMSD: 4.78413e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.73253e-12 (5.29377e-06) RMSD: 3.84639e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.846e-07 |dQ| = 1.733e-12)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.192 2.246   0.0   0.0   0.0
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 6.02459e-07 RMSD: 1.69670e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.697e-04 |dQ| = 6.025e-07)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.52406e-06 RMSD: 3.59151e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.11242e-13 (1.52406e-06) RMSD: 2.06651e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.067e-07 |dQ| = 3.112e-13)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.31310e-06 RMSD: 3.16151e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.33068e-13 (2.31310e-06) RMSD: 1.67964e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.680e-07 |dQ| = 3.331e-13)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 6 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.193 2.245   0.0   0.0   0.0
+ spacings (end ic_reparam, steps: 3/4):  1.2  1.2  2.2  0.0  0.0  0.0  2.2  1.2  1.2   disprms: 0.0092
+ gopt_iter:  1 totalgrad: 0.229 gradrms: 0.008153 max E:  66.4
+
+#========================================================#
+#| [92m               Starting growth iter 2               [0m |#
+#========================================================#
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 18.3251
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-2.9859
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 15.3392 predE: -1.8239 ratio: 1.637 gradrms: 0.00731 ss: 0.080 DMAX: 0.067
+ gmax 0.0289 disp 0.0636 Ediff -2.9859 gradrms 0.0073
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 15.3392 predE: -1.8239 ratio: 1.637 gradrms: 0.00731 ss: 0.080 DMAX: 0.067
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 67.1973
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-7.4825
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 59.7147 predE: -4.1170 ratio: 1.817 gradrms: 0.01085 ss: 0.119 DMAX: 0.099
+ gmax 0.0401 disp 0.0886 Ediff -7.4825 gradrms 0.0108
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 2
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-5.1136
+ decreasing DMAX
+ Node: 2 Opt step: 2 E: 54.6011 predE: -2.7963 ratio: 1.829 gradrms: 0.00949 ss: 0.099 DMAX: 0.082
+ gmax 0.0356 disp 0.1051 Ediff -5.1136 gradrms 0.0095
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 59.7147 predE: -4.1170 ratio: 1.817 gradrms: 0.01085 ss: 0.119 DMAX: 0.099
+ Node: 2 Opt step: 2 E: 54.6011 predE: -2.7963 ratio: 1.829 gradrms: 0.00949 ss: 0.099 DMAX: 0.082
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 26.6065
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-5.1319
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 21.4747 predE: -2.7408 ratio: 1.872 gradrms: 0.01133 ss: 0.076 DMAX: 0.063
+ gmax 0.0336 disp 0.0497 Ediff -5.1319 gradrms 0.0113
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 6
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-4.1184
+ decreasing DMAX
+ Node: 6 Opt step: 2 E: 17.3563 predE: -2.2248 ratio: 1.851 gradrms: 0.01045 ss: 0.063 DMAX: 0.053
+ gmax 0.0336 disp 0.0449 Ediff -4.1184 gradrms 0.0105
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 3 for node 6
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-2.9909
+ decreasing DMAX
+ Node: 6 Opt step: 3 E: 14.3654 predE: -1.6009 ratio: 1.868 gradrms: 0.00971 ss: 0.053 DMAX: 0.044
+ gmax 0.0327 disp 0.0378 Ediff -2.9909 gradrms 0.0097
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 21.4747 predE: -2.7408 ratio: 1.872 gradrms: 0.01133 ss: 0.076 DMAX: 0.063
+ Node: 6 Opt step: 2 E: 17.3563 predE: -2.2248 ratio: 1.851 gradrms: 0.01045 ss: 0.063 DMAX: 0.053
+ Node: 6 Opt step: 3 E: 14.3654 predE: -1.6009 ratio: 1.868 gradrms: 0.00971 ss: 0.053 DMAX: 0.044
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -21.6798
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-2.7604
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -24.4402 predE: -1.5722 ratio: 1.756 gradrms: 0.00773 ss: 0.058 DMAX: 0.049
+ gmax 0.0257 disp 0.0419 Ediff -2.7604 gradrms 0.0077
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -24.4402 predE: -1.5722 ratio: 1.756 gradrms: 0.00773 ss: 0.058 DMAX: 0.049
+
+ node: 01 gradrms: 0.007308 node: 02 gradrms: 0.009486 node: 06 gradrms: 0.009712 node: 07 gradrms: 0.007725
+#========================================================#
+#| [92m                Adding reactant node                [0m |#
+#========================================================#
+ adding node: 3 between 2 6 from 2
+ getting tangent from between 6 2 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ dqmag: 4.792
+ scaled dqmag: 1.597
+ Iter: 1 Err-dQ = 2.17677e-01 RMSD: 1.36883e-01 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.06560e-02 (2.17677e-01) RMSD: 2.63196e-02 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 2.74893e-05 (1.06560e-02) RMSD: 7.61074e-04 Damp: 1.00000e+00 (Good)
+ Iter: 4 Err-dQ (Best) = 9.40605e-11 (2.74893e-05) RMSD: 1.11143e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 4 microiterations (rmsd = 1.111e-06 |dQ| = 9.406e-11)
+ Copying from MoleculA 2
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.017 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=7,nR=4
+ Aligning
+ getting energy for node 3: 148.7585
+#========================================================#
+#| [92m                Adding product node                 [0m |#
+#========================================================#
+ adding node: 5 between 6 3 from 6
+ getting tangent from between 3 6 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ dqmag: 3.412
+ scaled dqmag: 1.706
+ Iter: 1 Err-dQ = 1.60389e-01 RMSD: 1.31012e-01 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.05587e-03 (1.60389e-01) RMSD: 1.57199e-02 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 1.48335e-06 (4.05587e-03) RMSD: 2.56235e-04 Damp: 1.00000e+00 (Good)
+ Iter: 4 Err-dQ (Best) = 4.11122e-13 (1.48335e-06) RMSD: 1.76850e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 4 microiterations (rmsd = 1.768e-07 |dQ| = 4.111e-13)
+ Copying from MoleculA 6
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.017 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=8,nP=4
+ Aligning
+ getting energy for node 5: 122.0916
+ setting active nodes to 3 and 5
+ conv_tol of node 3 is 0.0100
+ conv_tol of node 5 is 0.0100
+#========================================================#
+#| [92m            Reparamerizing string nodes             [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 3 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 5 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.212 1.266 1.363   0.0 1.363  1.31 1.219
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.77627e-04 RMSD: 3.49330e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.39031e-08 (2.77627e-04) RMSD: 2.55771e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.558e-05 |dQ| = 1.390e-08)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 3.77607e-05 RMSD: 1.79279e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.92648e-10 (3.77607e-05) RMSD: 4.92007e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.920e-06 |dQ| = 1.926e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.46736e-05 RMSD: 1.13182e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.70833e-11 (1.46736e-05) RMSD: 9.84113e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.841e-07 |dQ| = 1.708e-11)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.06279e-04 RMSD: 3.01155e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.27564e-09 (2.06279e-04) RMSD: 1.51948e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.519e-05 |dQ| = 2.276e-09)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 3 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 5 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.206 1.257 1.363   0.0 1.363 1.305 1.209
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 9.74256e-05 RMSD: 2.06560e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.71781e-09 (9.74256e-05) RMSD: 8.94522e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 8.945e-06 |dQ| = 1.718e-09)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 6.46796e-05 RMSD: 2.34795e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.67657e-10 (6.46796e-05) RMSD: 8.42738e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 8.427e-06 |dQ| = 5.677e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 4.36408e-05 RMSD: 1.96533e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.51128e-10 (4.36408e-05) RMSD: 2.94578e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.946e-06 |dQ| = 1.511e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 7.13502e-05 RMSD: 1.76918e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.83211e-10 (7.13502e-05) RMSD: 5.23996e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.240e-06 |dQ| = 2.832e-10)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 3 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 5 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.207 1.246 1.363   0.0 1.363 1.296 1.209
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 3.41322e-05 RMSD: 1.22463e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.11082e-10 (3.41322e-05) RMSD: 3.13917e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.139e-06 |dQ| = 2.111e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 5.57322e-05 RMSD: 2.18046e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.23979e-10 (5.57322e-05) RMSD: 7.26030e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.260e-06 |dQ| = 4.240e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 4.18991e-05 RMSD: 1.94496e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.40995e-10 (4.18991e-05) RMSD: 2.85679e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.857e-06 |dQ| = 1.410e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.48206e-05 RMSD: 1.04299e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.53762e-11 (2.48206e-05) RMSD: 1.81909e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.819e-06 |dQ| = 3.538e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 3 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 5 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.212 1.236 1.363   0.0 1.363 1.286 1.213
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 1.19039e-05 RMSD: 7.25134e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.56797e-11 (1.19039e-05) RMSD: 1.09838e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.098e-06 |dQ| = 2.568e-11)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 3.69432e-05 RMSD: 1.77571e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.87547e-10 (3.69432e-05) RMSD: 4.81111e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.811e-06 |dQ| = 1.875e-10)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.85752e-05 RMSD: 1.62141e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.67191e-11 (2.85752e-05) RMSD: 1.96787e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.968e-06 |dQ| = 6.672e-11)
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 8.60828e-06 RMSD: 6.14153e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.35517e-12 (8.60828e-06) RMSD: 6.30030e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.300e-07 |dQ| = 4.355e-12)
+ spacings (end ic_reparam, steps: 3/4):  1.2  1.2  1.2  1.4  0.0  1.4  1.3  1.2  1.2   disprms: 0.0617
+ gopt_iter:  2 totalgrad: 0.187 gradrms: 0.006518 max E:  54.6
+
+#========================================================#
+#| [92m               Starting growth iter 3               [0m |#
+#========================================================#
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 17.1164
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-1.9687
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 15.1476 predE: -1.2841 ratio: 1.533 gradrms: 0.00581 ss: 0.067 DMAX: 0.056
+ gmax 0.0234 disp 0.0451 Ediff -1.9687 gradrms 0.0058
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 15.1476 predE: -1.2841 ratio: 1.533 gradrms: 0.00581 ss: 0.067 DMAX: 0.056
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 59.7777
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-4.0180
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 55.7597 predE: -2.1906 ratio: 1.834 gradrms: 0.00877 ss: 0.082 DMAX: 0.069
+ gmax 0.0327 disp 0.0756 Ediff -4.0180 gradrms 0.0088
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 55.7597 predE: -2.1906 ratio: 1.834 gradrms: 0.00877 ss: 0.082 DMAX: 0.069
+
+
+#========================================================#
+#| [92m                 Optimizing node 3                  [0m |#
+#========================================================#
+ setting node 3 opt_type to ICTAN
+ initial E 148.7585
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 3
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.19451263302
+ dEstep=-13.2031
+ decreasing DMAX
+ Node: 3 Opt step: 1 E: 135.5554 predE: -7.1056 ratio: 1.858 gradrms: 0.01150 ss: 0.195 DMAX: 0.162
+ gmax 0.0397 disp 0.1973 Ediff -13.2031 gradrms 0.0115
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 3
+ updating prim hess
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.14954950369
+ dEstep=-8.4115
+ decreasing DMAX
+ Node: 3 Opt step: 2 E: 127.1439 predE: -4.8959 ratio: 1.718 gradrms: 0.00995 ss: 0.150 DMAX: 0.125
+ gmax 0.0318 disp 0.1425 Ediff -8.4115 gradrms 0.0100
+
+ converged
+ opt-summary 3
+ Node: 3 Opt step: 1 E: 135.5554 predE: -7.1056 ratio: 1.858 gradrms: 0.01150 ss: 0.195 DMAX: 0.162
+ Node: 3 Opt step: 2 E: 127.1439 predE: -4.8959 ratio: 1.718 gradrms: 0.00995 ss: 0.150 DMAX: 0.125
+
+
+#========================================================#
+#| [92m                 Optimizing node 5                  [0m |#
+#========================================================#
+ setting node 5 opt_type to ICTAN
+ initial E 122.0916
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 5
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.180464431834
+ dEstep=-13.4184
+ decreasing DMAX
+ Node: 5 Opt step: 1 E: 108.6733 predE: -6.9532 ratio: 1.930 gradrms: 0.01333 ss: 0.180 DMAX: 0.150
+ gmax 0.0423 disp 0.1450 Ediff -13.4184 gradrms 0.0133
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 5
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-9.3428
+ decreasing DMAX
+ Node: 5 Opt step: 2 E: 99.3305 predE: -4.8453 ratio: 1.928 gradrms: 0.01217 ss: 0.150 DMAX: 0.125
+ gmax 0.0413 disp 0.0794 Ediff -9.3428 gradrms 0.0122
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 3 for node 5
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-8.3709
+ decreasing DMAX
+ Node: 5 Opt step: 3 E: 90.9596 predE: -4.4609 ratio: 1.877 gradrms: 0.01128 ss: 0.125 DMAX: 0.104
+ gmax 0.0384 disp 0.0799 Ediff -8.3709 gradrms 0.0113
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ opt-summary 5
+ Node: 5 Opt step: 1 E: 108.6733 predE: -6.9532 ratio: 1.930 gradrms: 0.01333 ss: 0.180 DMAX: 0.150
+ Node: 5 Opt step: 2 E: 99.3305 predE: -4.8453 ratio: 1.928 gradrms: 0.01217 ss: 0.150 DMAX: 0.125
+ Node: 5 Opt step: 3 E: 90.9596 predE: -4.4609 ratio: 1.877 gradrms: 0.01128 ss: 0.125 DMAX: 0.104
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 18.7030
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-2.0198
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 16.6832 predE: -1.0802 ratio: 1.870 gradrms: 0.00952 ss: 0.044 DMAX: 0.037
+ gmax 0.0320 disp 0.0556 Ediff -2.0198 gradrms 0.0095
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 16.6832 predE: -1.0802 ratio: 1.870 gradrms: 0.00952 ss: 0.044 DMAX: 0.037
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -22.9099
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-1.8814
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -24.7913 predE: -1.0903 ratio: 1.726 gradrms: 0.00668 ss: 0.049 DMAX: 0.040
+ gmax 0.0233 disp 0.0346 Ediff -1.8814 gradrms 0.0067
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -24.7913 predE: -1.0903 ratio: 1.726 gradrms: 0.00668 ss: 0.049 DMAX: 0.040
+
+ node: 01 gradrms: 0.005814 node: 02 gradrms: 0.008770 node: 03 gradrms: 0.009954 node: 05 gradrms: 0.011280
+ node: 06 gradrms: 0.009520 node: 07 gradrms: 0.006677
+#========================================================#
+#| [92m                Adding reactant node                [0m |#
+#========================================================#
+ adding node: 4 between 3 5 from 3
+ getting tangent from between 5 3 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ dqmag: 1.912
+ scaled dqmag: 0.956
+ Iter: 1 Err-dQ = 1.71733e-01 RMSD: 9.54752e-02 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.45452e-03 (1.71733e-01) RMSD: 9.71436e-03 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 9.67928e-07 (1.45452e-03) RMSD: 1.35556e-04 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 3 microiterations (rmsd = 1.356e-04 |dQ| = 9.679e-07)
+ Copying from MoleculA 3
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.017 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+ nn=9,nR=5
+ Aligning
+ getting energy for node 4: 158.7335
+ setting active nodes to 4 and 5
+ conv_tol of node 4 is 0.0100
+ conv_tol of node 5 is 0.0100
+#========================================================#
+#| [92m            Reparamerizing string nodes             [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.226 1.231 0.978 0.9984 0.9984 1.289  1.22 1.229
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 9.29110e-04 RMSD: 9.24953e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.01721e-07 (9.29110e-04) RMSD: 5.53521e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.535e-05 |dQ| = 1.017e-07)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.226 1.231 1.014 0.9617 0.9617 1.289  1.22 1.229
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 2.93033e-04 RMSD: 5.27240e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.06805e-08 (2.93033e-04) RMSD: 1.77421e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.774e-05 |dQ| = 1.068e-08)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.226 1.231 1.033  0.94  0.94 1.289  1.22 1.229
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 9.72318e-05 RMSD: 3.06336e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.21022e-09 (9.72318e-05) RMSD: 5.94244e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.942e-06 |dQ| = 1.210e-09)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 7 8 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+------------printing dqmaga---------------
+ 1.226 1.231 1.045 0.9272 0.9272 1.289  1.22 1.229
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ Iter: 1 Err-dQ = 3.31662e-05 RMSD: 1.79818e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.43091e-10 (3.31662e-05) RMSD: 2.03815e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.038e-06 |dQ| = 1.431e-10)
+ spacings (end ic_reparam, steps: 3/4):  1.2  1.2  1.2  1.0  0.93  0.93  1.3  1.2  1.2   disprms: 0.442
+ gopt_iter:  3 totalgrad: 0.285 gradrms: 0.008214 max E: 127.1
+
+#========================================================#
+#| [92m               Starting growth iter 4               [0m |#
+#========================================================#
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 15.1476
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-1.5610
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 13.5866 predE: -0.9149 ratio: 1.706 gradrms: 0.00455 ss: 0.056 DMAX: 0.046
+ gmax 0.0169 disp 0.0456 Ediff -1.5610 gradrms 0.0045
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 13.5866 predE: -0.9149 ratio: 1.706 gradrms: 0.00455 ss: 0.056 DMAX: 0.046
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 55.7597
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-3.3783
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 52.3814 predE: -1.8630 ratio: 1.813 gradrms: 0.00859 ss: 0.069 DMAX: 0.057
+ gmax 0.0296 disp 0.0556 Ediff -3.3783 gradrms 0.0086
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 52.3814 predE: -1.8630 ratio: 1.813 gradrms: 0.00859 ss: 0.069 DMAX: 0.057
+
+
+#========================================================#
+#| [92m                 Optimizing node 3                  [0m |#
+#========================================================#
+ setting node 3 opt_type to ICTAN
+ initial E 127.1439
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 3
+ evaluate fx in linesearch
+ dEstep=-6.4008
+ decreasing DMAX
+ Node: 3 Opt step: 1 E: 120.7430 predE: -3.5027 ratio: 1.827 gradrms: 0.00736 ss: 0.125 DMAX: 0.104
+ gmax 0.0224 disp 0.1107 Ediff -6.4008 gradrms 0.0074
+
+ converged
+ opt-summary 3
+ Node: 3 Opt step: 1 E: 120.7430 predE: -3.5027 ratio: 1.827 gradrms: 0.00736 ss: 0.125 DMAX: 0.104
+
+
+#========================================================#
+#| [92m                 Optimizing node 4                  [0m |#
+#========================================================#
+ setting node 4 opt_type to ICTAN
+ initial E 152.7808
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 4
+ evaluate fx in linesearch
+ Decreasing DMAX to 0.14818487151
+ dEstep=-5.5494
+ decreasing DMAX
+ Node: 4 Opt step: 1 E: 147.2314 predE: -3.3945 ratio: 1.635 gradrms: 0.01047 ss: 0.148 DMAX: 0.123
+ gmax 0.0260 disp 0.1195 Ediff -5.5494 gradrms 0.0105
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 4
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-6.5479
+ decreasing DMAX
+ Node: 4 Opt step: 2 E: 140.6835 predE: -3.5513 ratio: 1.844 gradrms: 0.00798 ss: 0.123 DMAX: 0.103
+ gmax 0.0191 disp 0.1290 Ediff -6.5479 gradrms 0.0080
+
+ converged
+ opt-summary 4
+ Node: 4 Opt step: 1 E: 147.2314 predE: -3.3945 ratio: 1.635 gradrms: 0.01047 ss: 0.148 DMAX: 0.123
+ Node: 4 Opt step: 2 E: 140.6835 predE: -3.5513 ratio: 1.844 gradrms: 0.00798 ss: 0.123 DMAX: 0.103
+
+
+#========================================================#
+#| [92m                 Optimizing node 5                  [0m |#
+#========================================================#
+ setting node 5 opt_type to ICTAN
+ initial E 90.9596
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 5
+ evaluate fx in linesearch
+ dEstep=-5.3786
+ decreasing DMAX
+ Node: 5 Opt step: 1 E: 85.5810 predE: -2.8562 ratio: 1.883 gradrms: 0.00873 ss: 0.104 DMAX: 0.087
+ gmax 0.0282 disp 0.1050 Ediff -5.3786 gradrms 0.0087
+
+ converged
+ opt-summary 5
+ Node: 5 Opt step: 1 E: 85.5810 predE: -2.8562 ratio: 1.883 gradrms: 0.00873 ss: 0.104 DMAX: 0.087
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 16.6832
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-1.8064
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 14.8767 predE: -0.9730 ratio: 1.857 gradrms: 0.01019 ss: 0.037 DMAX: 0.031
+ gmax 0.0364 disp 0.0388 Ediff -1.8064 gradrms 0.0102
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 6
+ updating prim hess
+ evaluate fx in linesearch
+ dEstep=-1.4342
+ decreasing DMAX
+ Node: 6 Opt step: 2 E: 13.4425 predE: -0.7748 ratio: 1.851 gradrms: 0.00966 ss: 0.031 DMAX: 0.025
+ gmax 0.0356 disp 0.0290 Ediff -1.4342 gradrms 0.0097
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 14.8767 predE: -0.9730 ratio: 1.857 gradrms: 0.01019 ss: 0.037 DMAX: 0.031
+ Node: 6 Opt step: 2 E: 13.4425 predE: -0.7748 ratio: 1.851 gradrms: 0.00966 ss: 0.031 DMAX: 0.025
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -24.7913
+ CONV_TOL 0.01000
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-1.2336
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -26.0248 predE: -0.7231 ratio: 1.706 gradrms: 0.00549 ss: 0.040 DMAX: 0.034
+ gmax 0.0193 disp 0.0281 Ediff -1.2336 gradrms 0.0055
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -26.0248 predE: -0.7231 ratio: 1.706 gradrms: 0.00549 ss: 0.040 DMAX: 0.034
+
+ node: 01 gradrms: 0.004547 node: 02 gradrms: 0.008593 node: 03 gradrms: 0.007363 node: 04 gradrms: 0.007985 node: 05 gradrms: 0.008734
+ node: 06 gradrms: 0.009658 node: 07 gradrms: 0.005487
+ creating newic molecule--used for ic_reparam
+ Copying from MoleculA 0
+ setting primitives from options!
+ num of primitives 94
+ Time to copy prims 0.004
+ Timings: Build G: 0.017 Eig: 0.001
+ getting cartesian coordinates from geom
+ Time to get coords= 0.000
+ initializing LOT from geom
+ Time to create PES,elements 0.000
+ getting coord_object from options
+ Time  to build coordinate system= 0.000
+ molecule constructed
+#========================================================#
+#| [92m             Done Growing the String!!!             [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+#========================================================#
+#| [92m            reparametrizing string nodes            [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.142
+ using average
+ rpart:   0.12  0.12  0.12  0.12  0.12  0.12  0.12  0.12 
+ disp[1]: -0.032  disp[2]: -0.053  disp[3]: -0.11  disp[4]: -0.019  disp[5]: 0.21  disp[6]: 0.13  disp[7]: 0.13 
+ disprms: 0.303
+
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.17039e-04 RMSD: 3.12989e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.45888e-09 (2.17039e-04) RMSD: 1.68619e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.686e-05 |dQ| = 6.459e-09)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.02651e-03 RMSD: 4.66320e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.38940e-07 (1.02651e-03) RMSD: 3.99984e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.000e-05 |dQ| = 2.389e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.05443e-03 RMSD: 8.75052e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.06502e-07 (1.05443e-03) RMSD: 1.02374e-04 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.024e-04 |dQ| = 3.065e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 4.64761e-05 RMSD: 1.90656e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.17157e-10 (4.64761e-05) RMSD: 2.74938e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.749e-06 |dQ| = 4.172e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 4.34142e-03 RMSD: 1.85258e-02 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.89829e-06 (4.34142e-03) RMSD: 2.33725e-04 Damp: 1.00000e+00 (Good)
+ Iter: 3 Err-dQ (Best) = 3.99556e-13 (2.89829e-06) RMSD: 1.41014e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 3 microiterations (rmsd = 1.410e-07 |dQ| = 3.996e-13)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 7.75445e-04 RMSD: 1.21563e-02 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 7.95303e-08 (7.75445e-04) RMSD: 6.33369e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.334e-05 |dQ| = 7.953e-08)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.92712e-03 RMSD: 2.35414e-02 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.74702e-07 (1.92712e-03) RMSD: 1.64894e-04 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.649e-04 |dQ| = 5.747e-07)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.132
+ disp[1]: -0.02  disp[2]: -0.033  disp[3]: -0.066  disp[4]: -0.048  disp[5]: 0.075  disp[6]: 0.026  disp[7]: -0.019 
+ disprms: 0.122
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.32941e-05 RMSD: 1.94404e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 9.52176e-10 (8.32941e-05) RMSD: 6.53493e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.535e-06 |dQ| = 9.522e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 4.02748e-04 RMSD: 2.94514e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.78501e-08 (4.02748e-04) RMSD: 1.60250e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.602e-05 |dQ| = 3.785e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.76599e-04 RMSD: 5.27262e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.90176e-08 (3.76599e-04) RMSD: 3.76536e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.765e-05 |dQ| = 3.902e-08)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.92127e-04 RMSD: 4.61106e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.66535e-08 (2.92127e-04) RMSD: 1.69986e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.700e-05 |dQ| = 1.665e-08)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 5.31442e-04 RMSD: 6.68861e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.20067e-08 (5.31442e-04) RMSD: 2.87031e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.870e-05 |dQ| = 4.201e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.46175e-05 RMSD: 2.14049e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.33837e-10 (3.46175e-05) RMSD: 2.81290e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.813e-06 |dQ| = 1.338e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 4.50382e-05 RMSD: 1.64671e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.28436e-10 (4.50382e-05) RMSD: 3.43679e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.437e-06 |dQ| = 1.284e-10)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ totaldqmag = 10.125
+ disp[1]: -0.012  disp[2]: -0.021  disp[3]: -0.039  disp[4]: -0.047  disp[5]: 0.019  disp[6]: -0.011  disp[7]: -0.029 
+ disprms: 0.075
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.13828e-05 RMSD: 1.19524e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.35245e-10 (3.13828e-05) RMSD: 2.47699e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.477e-06 |dQ| = 1.352e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.55327e-04 RMSD: 1.83865e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.72758e-09 (1.55327e-04) RMSD: 6.26365e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.264e-06 |dQ| = 5.728e-09)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.33554e-04 RMSD: 3.13870e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.86186e-09 (1.33554e-04) RMSD: 1.34450e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.345e-05 |dQ| = 4.862e-09)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.75882e-04 RMSD: 4.36845e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.47999e-08 (2.75882e-04) RMSD: 1.58514e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.585e-05 |dQ| = 1.480e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.21299e-05 RMSD: 1.65578e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.51838e-10 (3.21299e-05) RMSD: 1.74179e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.742e-06 |dQ| = 1.518e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 7.55796e-06 RMSD: 9.60263e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.27937e-12 (7.55796e-06) RMSD: 5.42669e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.427e-07 |dQ| = 6.279e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.10581e-04 RMSD: 2.57804e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 7.73590e-10 (1.10581e-04) RMSD: 8.39779e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 8.398e-06 |dQ| = 7.736e-10)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.120
+ disp[1]: -0.0076  disp[2]: -0.013  disp[3]: -0.024  disp[4]: -0.037  disp[5]: -0.0038  disp[6]: -0.022  disp[7]: -0.021 
+ disprms: 0.0552
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.22057e-05 RMSD: 7.46174e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.04614e-11 (1.22057e-05) RMSD: 9.66956e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.670e-07 |dQ| = 2.046e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 6.22834e-05 RMSD: 1.16822e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 9.30219e-10 (6.22834e-05) RMSD: 2.53321e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.533e-06 |dQ| = 9.302e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 4.89133e-05 RMSD: 1.89487e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.47848e-10 (4.89133e-05) RMSD: 4.92251e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.923e-06 |dQ| = 6.478e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.72610e-04 RMSD: 3.39491e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.74545e-09 (1.72610e-04) RMSD: 9.82682e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.827e-06 |dQ| = 5.745e-09)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.13951e-06 RMSD: 4.27821e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.39244e-13 (1.13951e-06) RMSD: 8.87425e-08 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 8.874e-08 |dQ| = 2.392e-13)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.96504e-05 RMSD: 1.91561e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 9.89959e-11 (2.96504e-05) RMSD: 2.13767e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.138e-06 |dQ| = 9.900e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 5.46527e-05 RMSD: 1.81334e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.95108e-10 (5.46527e-05) RMSD: 4.14063e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.141e-06 |dQ| = 1.951e-10)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.117
+ disp[1]: -0.0048  disp[2]: -0.0085  disp[3]: -0.014  disp[4]: -0.026  disp[5]: -0.011  disp[6]: -0.022  disp[7]: -0.013 
+ disprms: 0.0418
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 4.84980e-06 RMSD: 4.70658e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.22923e-12 (4.84980e-06) RMSD: 3.85103e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.851e-07 |dQ| = 3.229e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.55808e-05 RMSD: 7.50299e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.57880e-10 (2.55808e-05) RMSD: 1.04619e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.046e-06 |dQ| = 1.579e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.83256e-05 RMSD: 1.15709e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 9.05883e-11 (1.83256e-05) RMSD: 1.84059e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.841e-06 |dQ| = 9.059e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 8.96357e-05 RMSD: 2.41735e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.53613e-09 (8.96357e-05) RMSD: 5.07049e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.070e-06 |dQ| = 1.536e-09)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 9.30010e-06 RMSD: 1.20764e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.59058e-11 (9.30010e-06) RMSD: 7.23101e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.231e-07 |dQ| = 1.591e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.94299e-05 RMSD: 1.92714e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.01011e-10 (2.94299e-05) RMSD: 2.13325e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.133e-06 |dQ| = 1.010e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.11255e-05 RMSD: 1.12815e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.99125e-11 (2.11255e-05) RMSD: 1.59812e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.598e-06 |dQ| = 2.991e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.114
+ disp[1]: -0.0031  disp[2]: -0.0056  disp[3]: -0.009  disp[4]: -0.018  disp[5]: -0.011  disp[6]: -0.018  disp[7]: -0.0075 
+ disprms: 0.0307
+
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.01582e-06 RMSD: 3.03566e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.57751e-13 (2.01582e-06) RMSD: 1.60306e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.603e-07 |dQ| = 5.578e-13)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.10271e-05 RMSD: 4.93313e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.94467e-11 (1.10271e-05) RMSD: 4.52612e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.526e-07 |dQ| = 2.945e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 7.20961e-06 RMSD: 7.24430e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.39907e-11 (7.20961e-06) RMSD: 7.22695e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.227e-07 |dQ| = 1.399e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 4.21618e-05 RMSD: 1.64481e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.37485e-10 (4.21618e-05) RMSD: 2.37475e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.375e-06 |dQ| = 3.375e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 9.67103e-06 RMSD: 1.21951e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.72199e-11 (9.67103e-06) RMSD: 7.49855e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.499e-07 |dQ| = 1.722e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.96949e-05 RMSD: 1.59127e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.67377e-11 (1.96949e-05) RMSD: 1.43445e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.434e-06 |dQ| = 4.674e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 7.27539e-06 RMSD: 6.62428e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.60849e-12 (7.27539e-06) RMSD: 5.49854e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.499e-07 |dQ| = 3.608e-12)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.112
+ disp[1]: -0.002  disp[2]: -0.0037  disp[3]: -0.0058  disp[4]: -0.012  disp[5]: -0.0091  disp[6]: -0.014  disp[7]: -0.0045 
+ disprms: 0.022
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.60385e-07 RMSD: 1.98379e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.984e-04 |dQ| = 8.604e-07)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 4.87629e-06 RMSD: 3.28357e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.77169e-12 (4.87629e-06) RMSD: 2.00632e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.006e-07 |dQ| = 5.772e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.92941e-06 RMSD: 4.61161e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.30654e-12 (2.92941e-06) RMSD: 2.93182e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.932e-07 |dQ| = 2.307e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.88230e-05 RMSD: 1.09331e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.69175e-11 (1.88230e-05) RMSD: 1.05719e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.057e-06 |dQ| = 6.692e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 6.63205e-06 RMSD: 1.00263e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 8.11228e-12 (6.63205e-06) RMSD: 5.12879e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.129e-07 |dQ| = 8.112e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.11769e-05 RMSD: 1.20765e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.54507e-11 (1.11769e-05) RMSD: 8.17125e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 8.171e-07 |dQ| = 1.545e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.54122e-06 RMSD: 3.91669e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.44895e-13 (2.54122e-06) RMSD: 1.91938e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.919e-07 |dQ| = 4.449e-13)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.110
+ disp[1]: -0.0013  disp[2]: -0.0025  disp[3]: -0.0037  disp[4]: -0.0078  disp[5]: -0.0069  disp[6]: -0.0099  disp[7]: -0.0027 
+ disprms: 0.0154
+
+ spacings (end ic_reparam, steps: 8/8):
+ 1.3  1.3  1.3  1.3  1.3  1.3  1.3  1.3 
+  disprms: 0.0154
+
+#========================================================#
+#| [92m                    In opt_iters                    [0m |#
+#========================================================#
+
+*********************************************************************
+****************** set climber and finder to True *******************
+*********************************************************************
+#========================================================#
+#| [92m                Starting opt iter 0                 [0m |#
+#========================================================#
+ getting tangent from between 1 2 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 3 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 4 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ 3 way tangent (4): f1:0.36
+ getting tangent from between 4 5 pointing towards 4
+ getting tangent from between 3 4 pointing towards 3
+ done 3 way tangent
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+------------printing dqmaga---------------
+ 1.265 1.265 1.272 1.263 1.262 1.266 1.253   0.0
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 12.3222
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-0.9311
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 11.3912 predE: -0.5390 ratio: 1.727 gradrms: 0.00344 ss: 0.046 DMAX: 0.039
+ gmax 0.0116 disp 0.0369 Ediff -0.9311 gradrms 0.0034
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 11.3912 predE: -0.5390 ratio: 1.727 gradrms: 0.00344 ss: 0.046 DMAX: 0.039
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 48.4599
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-2.4907
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 45.9693 predE: -1.3603 ratio: 1.831 gradrms: 0.00791 ss: 0.057 DMAX: 0.048
+ gmax 0.0266 disp 0.0456 Ediff -2.4907 gradrms 0.0079
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 45.9693 predE: -1.3603 ratio: 1.831 gradrms: 0.00791 ss: 0.057 DMAX: 0.048
+
+
+#========================================================#
+#| [92m                 Optimizing node 3                  [0m |#
+#========================================================#
+ setting node 3 opt_type to ICTAN
+ initial E 109.0234
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 3
+ evaluate fx in linesearch
+ dEstep=-4.7893
+ decreasing DMAX
+ Node: 3 Opt step: 1 E: 104.2340 predE: -2.6060 ratio: 1.838 gradrms: 0.00716 ss: 0.104 DMAX: 0.087
+ gmax 0.0204 disp 0.0899 Ediff -4.7893 gradrms 0.0072
+
+ converged
+ opt-summary 3
+ Node: 3 Opt step: 1 E: 104.2340 predE: -2.6060 ratio: 1.838 gradrms: 0.00716 ss: 0.104 DMAX: 0.087
+
+
+#========================================================#
+#| [92m                 Optimizing node 4                  [0m |#
+#========================================================#
+ setting node 4 opt_type to ICTAN
+ initial E 151.7549
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 4
+ evaluate fx in linesearch
+ dEstep=-4.0491
+ decreasing DMAX
+ Node: 4 Opt step: 1 E: 147.7057 predE: -2.1736 ratio: 1.863 gradrms: 0.00758 ss: 0.103 DMAX: 0.086
+ gmax 0.0161 disp 0.0732 Ediff -4.0491 gradrms 0.0076
+
+ converged
+ opt-summary 4
+ Node: 4 Opt step: 1 E: 147.7057 predE: -2.1736 ratio: 1.863 gradrms: 0.00758 ss: 0.103 DMAX: 0.086
+
+
+#========================================================#
+#| [92m                 Optimizing node 5                  [0m |#
+#========================================================#
+ setting node 5 opt_type to ICTAN
+ initial E 74.2332
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 5
+ evaluate fx in linesearch
+ dEstep=-4.7897
+ decreasing DMAX
+ Node: 5 Opt step: 1 E: 69.4435 predE: -2.5524 ratio: 1.877 gradrms: 0.00968 ss: 0.087 DMAX: 0.073
+ gmax 0.0326 disp 0.1234 Ediff -4.7897 gradrms 0.0097
+
+ converged
+ opt-summary 5
+ Node: 5 Opt step: 1 E: 69.4435 predE: -2.5524 ratio: 1.877 gradrms: 0.00968 ss: 0.087 DMAX: 0.073
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 11.3652
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-1.3379
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 10.0273 predE: -0.7243 ratio: 1.847 gradrms: 0.00919 ss: 0.025 DMAX: 0.021
+ gmax 0.0348 disp 0.0293 Ediff -1.3379 gradrms 0.0092
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 10.0273 predE: -0.7243 ratio: 1.847 gradrms: 0.00919 ss: 0.025 DMAX: 0.021
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -26.3448
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-0.8376
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -27.1824 predE: -0.4918 ratio: 1.703 gradrms: 0.00444 ss: 0.034 DMAX: 0.028
+ gmax 0.0159 disp 0.0211 Ediff -0.8376 gradrms 0.0044
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -27.1824 predE: -0.4918 ratio: 1.703 gradrms: 0.00444 ss: 0.034 DMAX: 0.028
+
+
+ V_profile:     0.000   11.391   45.969  104.234  147.706   69.443   10.027  -27.182  -38.000 
+ nnodes  9
+ all uphill?  False
+ dissociative?  False
+ min nodes  [0, 8]
+ max nodes  [4]
+ emax and nmax in find peaks 147.7057,4 
+ found 1 significant peak(s) TOL 0.50
+ max E(4) 147.7
+ ts_cgradq 0.0320
+ dE_iter =4.05
+ node: 01 gradrms: 0.003439 node: 02 gradrms: 0.007906 node: 03 gradrms: 0.007165 node: 04 gradrms: 0.007579 node: 05 gradrms: 0.009680
+ node: 06 gradrms: 0.009192 node: 07 gradrms: 0.004439
+ ** starting climb **
+ totalgrad 0.2706 gradrms: 0.0076 gts: 0.0320
+#========================================================#
+#| [92m            reparametrizing string nodes            [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ totaldqmag = 10.153
+ using average
+ rpart:   0.25  0.25  0.25  0.0  0.25  0.25  0.25  0.25 
+ disp[1]: 0.01  disp[2]: 0.019  disp[3]: 0.024  disp[4]: 0.0  disp[5]: 0.0074  disp[6]: -0.00012  disp[7]: -0.0099 
+ disprms: 0.0349
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.55455e-05 RMSD: 1.00132e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.01863e-10 (2.55455e-05) RMSD: 2.17393e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.174e-06 |dQ| = 1.019e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 4.16893e-05 RMSD: 1.61840e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.74741e-10 (4.16893e-05) RMSD: 4.35355e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.354e-06 |dQ| = 6.747e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.55195e-04 RMSD: 2.38289e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.73929e-09 (1.55195e-04) RMSD: 5.19350e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.193e-06 |dQ| = 2.739e-09)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 5.36437e-06 RMSD: 4.81517e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.18180e-12 (5.36437e-06) RMSD: 2.85924e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.859e-07 |dQ| = 4.182e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.87695e-10 RMSD: 7.67796e-06 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 7.678e-06 |dQ| = 8.877e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.19804e-05 RMSD: 7.46386e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.20708e-11 (1.19804e-05) RMSD: 9.21634e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.216e-07 |dQ| = 1.207e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ totaldqmag = 10.150
+ disp[1]: 0.0054  disp[2]: 0.0099  disp[3]: 0.012  disp[4]: 0.0  disp[5]: -0.0081  disp[6]: -0.013  disp[7]: -0.014 
+ disprms: 0.0262
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 6.77497e-06 RMSD: 5.16497e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 7.18829e-12 (6.77497e-06) RMSD: 5.77678e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.777e-07 |dQ| = 7.188e-12)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.06435e-05 RMSD: 8.31463e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.32457e-11 (1.06435e-05) RMSD: 1.14319e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.143e-06 |dQ| = 4.325e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.51489e-05 RMSD: 1.13905e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.45559e-10 (3.51489e-05) RMSD: 1.18592e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.186e-06 |dQ| = 1.456e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 4.99287e-06 RMSD: 8.22186e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.57705e-12 (4.99287e-06) RMSD: 4.24169e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.242e-07 |dQ| = 4.577e-12)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 9.42336e-06 RMSD: 7.92599e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.16007e-11 (9.42336e-06) RMSD: 6.88988e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.890e-07 |dQ| = 1.160e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.46678e-05 RMSD: 1.07106e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.12567e-11 (2.46678e-05) RMSD: 1.89359e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.894e-06 |dQ| = 5.126e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ totaldqmag = 10.148
+ disp[1]: 0.0028  disp[2]: 0.0051  disp[3]: 0.0055  disp[4]: 0.0  disp[5]: -0.01  disp[6]: -0.013  disp[7]: -0.0083 
+ disprms: 0.0205
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.82866e-06 RMSD: 2.68561e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.24966e-13 (1.82866e-06) RMSD: 1.56081e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.561e-07 |dQ| = 5.250e-13)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.79913e-06 RMSD: 4.29791e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.96204e-12 (2.79913e-06) RMSD: 3.04663e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.047e-07 |dQ| = 2.962e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 7.88957e-06 RMSD: 5.40794e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 7.45468e-12 (7.88957e-06) RMSD: 2.67235e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.672e-07 |dQ| = 7.455e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.47376e-06 RMSD: 1.06924e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.32374e-11 (8.47376e-06) RMSD: 7.18674e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.187e-07 |dQ| = 1.324e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.05656e-05 RMSD: 8.43225e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.48688e-11 (1.05656e-05) RMSD: 7.74117e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.741e-07 |dQ| = 1.487e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 8.41245e-06 RMSD: 6.24581e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.05770e-12 (8.41245e-06) RMSD: 6.45173e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 6.452e-07 |dQ| = 6.058e-12)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.146
+ disp[1]: 0.0015  disp[2]: 0.0027  disp[3]: 0.0026  disp[4]: 0.0  disp[5]: -0.0085  disp[6]: -0.011  disp[7]: -0.004 
+ disprms: 0.0147
+
+ spacings (end ic_reparam, steps: 4/8):
+ 1.3  1.3  1.3  1.3  1.3  1.3  1.3  1.3 
+  disprms: 0.0147
+
+ V_profile (after reparam):     0.000   11.726   47.201  107.194  147.706   70.358   10.914  -26.640  -38.000 
+opt_iter:  0 totalgrad: 0.271 gradrms: 0.007378 max E(4) 147.7
+
+
+#========================================================#
+#| [92m                Starting opt iter 1                 [0m |#
+#========================================================#
+ CLIMBING
+ getting tangent from between 1 2 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 3 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 4 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ 3 way tangent (4): f1:0.34
+ getting tangent from between 4 5 pointing towards 4
+ getting tangent from between 3 4 pointing towards 3
+ done 3 way tangent
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+------------printing dqmaga---------------
+ 1.275 1.276 1.279 1.264  1.27 1.262  1.25   0.0
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 11.7259
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-0.6790
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 11.0469 predE: -0.3893 ratio: 1.744 gradrms: 0.00300 ss: 0.039 DMAX: 0.032
+ gmax 0.0082 disp 0.0333 Ediff -0.6790 gradrms 0.0030
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 11.0469 predE: -0.3893 ratio: 1.744 gradrms: 0.00300 ss: 0.039 DMAX: 0.032
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 47.2006
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-2.0198
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 45.1808 predE: -1.0972 ratio: 1.841 gradrms: 0.00751 ss: 0.048 DMAX: 0.040
+ gmax 0.0237 disp 0.0392 Ediff -2.0198 gradrms 0.0075
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 45.1808 predE: -1.0972 ratio: 1.841 gradrms: 0.00751 ss: 0.048 DMAX: 0.040
+
+
+#========================================================#
+#| [92m                 Optimizing node 3                  [0m |#
+#========================================================#
+ setting node 3 opt_type to ICTAN
+ initial E 107.1938
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 3
+ evaluate fx in linesearch
+ dEstep=-3.5593
+ decreasing DMAX
+ Node: 3 Opt step: 1 E: 103.6346 predE: -1.9166 ratio: 1.857 gradrms: 0.00636 ss: 0.087 DMAX: 0.072
+ gmax 0.0162 disp 0.0722 Ediff -3.5593 gradrms 0.0064
+
+ converged
+ opt-summary 3
+ Node: 3 Opt step: 1 E: 103.6346 predE: -1.9166 ratio: 1.857 gradrms: 0.00636 ss: 0.087 DMAX: 0.072
+
+
+#========================================================#
+#| [92m                 Optimizing node 4                  [0m |#
+#========================================================#
+ setting node 4 opt_type to CLIMB
+ multiplying steps for node 4 by 2
+ initial E 147.7057
+ CONV_TOL 0.00500
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 4
+ gts 0.0329
+ evaluate fx in linesearch
+ dEstep=-2.2907
+ decreasing DMAX
+ Node: 4 Opt step: 1 E: 145.4151 predE: -1.1905 ratio: 1.924 gradrms: 0.00674 ss: 0.086 DMAX: 0.071
+ gmax 0.0146 disp 0.0648 Ediff -2.2907 gradrms 0.0067
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 4
+ updating prim hess
+ gts 0.0314
+ evaluate fx in linesearch
+ dEstep=-1.7485
+ decreasing DMAX
+ Node: 4 Opt step: 2 E: 143.6666 predE: -0.9144 ratio: 1.912 gradrms: 0.00590 ss: 0.071 DMAX: 0.060
+ gmax 0.0143 disp 0.0570 Ediff -1.7485 gradrms 0.0059
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 3 for node 4
+ updating prim hess
+ gts 0.0301
+ evaluate fx in linesearch
+ dEstep=-1.0851
+ decreasing DMAX
+ Node: 4 Opt step: 3 E: 142.5815 predE: -0.5455 ratio: 1.989 gradrms: 0.00573 ss: 0.060 DMAX: 0.050
+ gmax 0.0146 disp 0.0554 Ediff -1.0851 gradrms 0.0057
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 4 for node 4
+ updating prim hess
+ gts 0.0286
+ evaluate fx in linesearch
+ dEstep=-0.7199
+ decreasing DMAX
+ Node: 4 Opt step: 4 E: 141.8616 predE: -0.3502 ratio: 2.056 gradrms: 0.00562 ss: 0.050 DMAX: 0.041
+ gmax 0.0155 disp 0.0547 Ediff -0.7199 gradrms 0.0056
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 5 for node 4
+ updating prim hess
+ gts 0.0270
+ evaluate fx in linesearch
+ dEstep=-0.5252
+ decreasing DMAX
+ Node: 4 Opt step: 5 E: 141.3364 predE: -0.2538 ratio: 2.069 gradrms: 0.00554 ss: 0.041 DMAX: 0.034
+ gmax 0.0162 disp 0.0414 Ediff -0.5252 gradrms 0.0055
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 6 for node 4
+ updating prim hess
+ gts 0.0256
+ evaluate fx in linesearch
+ dEstep=-0.3469
+ decreasing DMAX
+ Node: 4 Opt step: 6 E: 140.9894 predE: -0.1642 ratio: 2.113 gradrms: 0.00548 ss: 0.034 DMAX: 0.029
+ gmax 0.0167 disp 0.0336 Ediff -0.3469 gradrms 0.0055
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ opt-summary 4
+ Node: 4 Opt step: 1 E: 145.4151 predE: -1.1905 ratio: 1.924 gradrms: 0.00674 ss: 0.086 DMAX: 0.071
+ Node: 4 Opt step: 2 E: 143.6666 predE: -0.9144 ratio: 1.912 gradrms: 0.00590 ss: 0.071 DMAX: 0.060
+ Node: 4 Opt step: 3 E: 142.5815 predE: -0.5455 ratio: 1.989 gradrms: 0.00573 ss: 0.060 DMAX: 0.050
+ Node: 4 Opt step: 4 E: 141.8616 predE: -0.3502 ratio: 2.056 gradrms: 0.00562 ss: 0.050 DMAX: 0.041
+ Node: 4 Opt step: 5 E: 141.3364 predE: -0.2538 ratio: 2.069 gradrms: 0.00554 ss: 0.041 DMAX: 0.034
+ Node: 4 Opt step: 6 E: 140.9894 predE: -0.1642 ratio: 2.113 gradrms: 0.00548 ss: 0.034 DMAX: 0.029
+
+
+#========================================================#
+#| [92m                 Optimizing node 5                  [0m |#
+#========================================================#
+ setting node 5 opt_type to ICTAN
+ initial E 70.3582
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 5
+ evaluate fx in linesearch
+ dEstep=-3.9260
+ decreasing DMAX
+ Node: 5 Opt step: 1 E: 66.4321 predE: -2.1083 ratio: 1.862 gradrms: 0.00927 ss: 0.073 DMAX: 0.060
+ gmax 0.0303 disp 0.0770 Ediff -3.9260 gradrms 0.0093
+
+ converged
+ opt-summary 5
+ Node: 5 Opt step: 1 E: 66.4321 predE: -2.1083 ratio: 1.862 gradrms: 0.00927 ss: 0.073 DMAX: 0.060
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 10.9140
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-1.0977
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 9.8163 predE: -0.5936 ratio: 1.849 gradrms: 0.00896 ss: 0.021 DMAX: 0.018
+ gmax 0.0345 disp 0.0175 Ediff -1.0977 gradrms 0.0090
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 9.8163 predE: -0.5936 ratio: 1.849 gradrms: 0.00896 ss: 0.021 DMAX: 0.018
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -26.6398
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-0.5915
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -27.2313 predE: -0.3410 ratio: 1.735 gradrms: 0.00393 ss: 0.028 DMAX: 0.023
+ gmax 0.0137 disp 0.0173 Ediff -0.5915 gradrms 0.0039
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -27.2313 predE: -0.3410 ratio: 1.735 gradrms: 0.00393 ss: 0.028 DMAX: 0.023
+
+
+ V_profile:     0.000   11.047   45.181  103.635  140.989   66.432    9.816  -27.231  -38.000 
+ nnodes  9
+ all uphill?  False
+ dissociative?  False
+ min nodes  [0, 8]
+ max nodes  [4]
+ emax and nmax in find peaks 140.9894,4 
+ found 1 significant peak(s) TOL 0.50
+ max E(4) 141.0
+ ts_cgradq 0.0241
+ dE_iter =6.72
+ node: 01 gradrms: 0.002999 node: 02 gradrms: 0.007510 node: 03 gradrms: 0.006361 node: 04 gradrms: 0.005483 node: 05 gradrms: 0.009265
+ node: 06 gradrms: 0.008959 node: 07 gradrms: 0.003933
+#========================================================#
+#| [92m            reparametrizing string nodes            [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.279
+ using average
+ rpart:   0.25  0.25  0.25  0.0  0.25  0.25  0.25  0.25 
+ disp[1]: 0.002  disp[2]: 0.0041  disp[3]: -0.0019  disp[4]: 0.0  disp[5]: -0.097  disp[6]: -0.075  disp[7]: -0.068 
+ disprms: 0.14
+
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 9.15242e-07 RMSD: 1.85137e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.851e-04 |dQ| = 9.152e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.86730e-06 RMSD: 3.44722e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.39619e-12 (1.86730e-06) RMSD: 1.94832e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.948e-07 |dQ| = 1.396e-12)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 3.69345e-07 RMSD: 1.53108e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.531e-04 |dQ| = 3.693e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 8.89620e-04 RMSD: 9.03140e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.56030e-07 (8.89620e-04) RMSD: 7.40667e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.407e-05 |dQ| = 1.560e-07)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.23818e-04 RMSD: 4.75401e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.45029e-08 (3.23818e-04) RMSD: 2.35702e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.357e-05 |dQ| = 1.450e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 5.72387e-04 RMSD: 4.82646e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 2.70370e-08 (5.72387e-04) RMSD: 4.36927e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.369e-05 |dQ| = 2.704e-08)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.274
+ disp[1]: 0.0011  disp[2]: 0.0023  disp[3]: -0.0013  disp[4]: 0.0  disp[5]: -0.054  disp[6]: -0.043  disp[7]: -0.01 
+ disprms: 0.0694
+
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.74604e-07 RMSD: 1.01458e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.015e-04 |dQ| = 2.746e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 5.69120e-07 RMSD: 1.90250e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.903e-04 |dQ| = 5.691e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.55596e-07 RMSD: 9.93676e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 9.937e-05 |dQ| = 1.556e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.86082e-04 RMSD: 5.04994e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.66167e-08 (2.86082e-04) RMSD: 2.34671e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.347e-05 |dQ| = 1.662e-08)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.01776e-04 RMSD: 2.75596e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.57998e-09 (1.01776e-04) RMSD: 7.55564e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.556e-06 |dQ| = 1.580e-09)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.20670e-05 RMSD: 6.99743e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.33793e-11 (1.20670e-05) RMSD: 9.21951e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.220e-07 |dQ| = 1.338e-11)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.271
+ disp[1]: 0.00058  disp[2]: 0.0012  disp[3]: -0.00082  disp[4]: 0.0  disp[5]: -0.029  disp[6]: -0.024  disp[7]: -0.00026 
+ disprms: 0.0377
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.05906e-08 RMSD: 5.49777e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 5.498e-05 |dQ| = 8.059e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.69877e-07 RMSD: 1.03922e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.039e-04 |dQ| = 1.699e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 6.59077e-08 RMSD: 6.46692e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 6.467e-05 |dQ| = 6.591e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.62010e-05 RMSD: 2.75153e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.53005e-09 (8.62010e-05) RMSD: 7.01941e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.019e-06 |dQ| = 1.530e-09)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 3.10292e-05 RMSD: 1.54987e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.54866e-10 (3.10292e-05) RMSD: 2.33261e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.333e-06 |dQ| = 1.549e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 8.06123e-09 RMSD: 1.80589e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.806e-05 |dQ| = 8.061e-09)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ totaldqmag = 10.269
+ disp[1]: 0.00031  disp[2]: 0.00067  disp[3]: -0.00054  disp[4]: 0.0  disp[5]: -0.016  disp[6]: -0.013  disp[7]: 0.001 
+ disprms: 0.0205
+
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.29895e-08 RMSD: 2.93679e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 2.937e-05 |dQ| = 2.299e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 4.94240e-08 RMSD: 5.60483e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 5.605e-05 |dQ| = 4.942e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.80846e-08 RMSD: 4.22140e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 4.221e-05 |dQ| = 2.808e-08)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.50306e-05 RMSD: 1.47693e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.29911e-10 (2.50306e-05) RMSD: 2.03078e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 2.031e-06 |dQ| = 1.299e-10)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 9.34511e-06 RMSD: 8.58934e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.44527e-11 (9.34511e-06) RMSD: 7.07626e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.076e-07 |dQ| = 1.445e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 1.10968e-07 RMSD: 8.97132e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 8.971e-05 |dQ| = 1.110e-07)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.268
+ disp[1]: 0.00016  disp[2]: 0.00036  disp[3]: -0.00035  disp[4]: 0.0  disp[5]: -0.0084  disp[6]: -0.0072  disp[7]: 0.00084 
+ disprms: 0.0111
+
+ spacings (end ic_reparam, steps: 5/8):
+ 1.3  1.3  1.3  1.3  1.3  1.3  1.3  1.3 
+  disprms: 0.0111
+
+ V_profile (after reparam):     0.000   11.113   45.465  103.443  140.989   78.298   14.991  -25.909  -38.000 
+opt_iter:  1 totalgrad: 0.244 gradrms: 0.006735 max E(4) 141.0
+
+
+#========================================================#
+#| [92m                Starting opt iter 2                 [0m |#
+#========================================================#
+ CLIMBING
+ getting tangent from between 1 2 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 3 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 4 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ 3 way tangent (4): f1:0.37
+ getting tangent from between 4 5 pointing towards 4
+ getting tangent from between 3 4 pointing towards 3
+ done 3 way tangent
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+------------printing dqmaga---------------
+ 1.279  1.28 1.279 1.233 1.295 1.286  1.28   0.0
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 11.1132
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-0.4716
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 10.6416 predE: -0.2662 ratio: 1.772 gradrms: 0.00279 ss: 0.032 DMAX: 0.027
+ gmax 0.0071 disp 0.0288 Ediff -0.4716 gradrms 0.0028
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 10.6416 predE: -0.2662 ratio: 1.772 gradrms: 0.00279 ss: 0.032 DMAX: 0.027
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 45.4649
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-1.6666
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 43.7983 predE: -0.9069 ratio: 1.838 gradrms: 0.00710 ss: 0.040 DMAX: 0.033
+ gmax 0.0209 disp 0.0301 Ediff -1.6666 gradrms 0.0071
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 43.7983 predE: -0.9069 ratio: 1.838 gradrms: 0.00710 ss: 0.040 DMAX: 0.033
+
+
+#========================================================#
+#| [92m                 Optimizing node 3                  [0m |#
+#========================================================#
+ setting node 3 opt_type to ICTAN
+ initial E 103.4433
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 3
+ evaluate fx in linesearch
+ dEstep=-2.9047
+ decreasing DMAX
+ Node: 3 Opt step: 1 E: 100.5386 predE: -1.5626 ratio: 1.859 gradrms: 0.00663 ss: 0.072 DMAX: 0.060
+ gmax 0.0155 disp 0.0483 Ediff -2.9047 gradrms 0.0066
+
+ converged
+ opt-summary 3
+ Node: 3 Opt step: 1 E: 100.5386 predE: -1.5626 ratio: 1.859 gradrms: 0.00663 ss: 0.072 DMAX: 0.060
+
+
+#========================================================#
+#| [92m                 Optimizing node 4                  [0m |#
+#========================================================#
+ setting node 4 opt_type to CLIMB
+ multiplying steps for node 4 by 2
+ initial E 140.9894
+ CONV_TOL 0.00500
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 4
+ gts 0.0266
+ evaluate fx in linesearch
+ dEstep=-0.0942
+ Node: 4 Opt step: 1 E: 140.8952 predE: -0.0275 ratio: 3.429 gradrms: 0.00503 ss: 0.029 DMAX: 0.029
+ gmax 0.0155 disp 0.0323 Ediff -0.0942 gradrms 0.0050
+
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+
+ On opt step 2 for node 4
+ updating prim hess
+ gts 0.0244
+ evaluate fx in linesearch
+ dEstep=-0.1917
+ decreasing DMAX
+ Node: 4 Opt step: 2 E: 140.7034 predE: -0.0813 ratio: 2.358 gradrms: 0.00497 ss: 0.029 DMAX: 0.024
+ gmax 0.0157 disp 0.0298 Ediff -0.1917 gradrms 0.0050
+
+ converged
+ opt-summary 4
+ Node: 4 Opt step: 1 E: 140.8952 predE: -0.0275 ratio: 3.429 gradrms: 0.00503 ss: 0.029 DMAX: 0.029
+ Node: 4 Opt step: 2 E: 140.7034 predE: -0.0813 ratio: 2.358 gradrms: 0.00497 ss: 0.029 DMAX: 0.024
+
+
+#========================================================#
+#| [92m                 Optimizing node 5                  [0m |#
+#========================================================#
+ setting node 5 opt_type to ICTAN
+ initial E 78.2981
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 5
+ evaluate fx in linesearch
+ dEstep=-3.5753
+ decreasing DMAX
+ Node: 5 Opt step: 1 E: 74.7228 predE: -1.9079 ratio: 1.874 gradrms: 0.00998 ss: 0.060 DMAX: 0.050
+ gmax 0.0308 disp 0.0606 Ediff -3.5753 gradrms 0.0100
+
+ converged
+ opt-summary 5
+ Node: 5 Opt step: 1 E: 74.7228 predE: -1.9079 ratio: 1.874 gradrms: 0.00998 ss: 0.060 DMAX: 0.050
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 14.9908
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-0.9265
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 14.0643 predE: -0.4988 ratio: 1.858 gradrms: 0.00905 ss: 0.018 DMAX: 0.015
+ gmax 0.0332 disp 0.0157 Ediff -0.9265 gradrms 0.0091
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 14.0643 predE: -0.4988 ratio: 1.858 gradrms: 0.00905 ss: 0.018 DMAX: 0.015
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -25.9090
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-0.4650
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -26.3740 predE: -0.2624 ratio: 1.772 gradrms: 0.00374 ss: 0.023 DMAX: 0.020
+ gmax 0.0130 disp 0.0141 Ediff -0.4650 gradrms 0.0037
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -26.3740 predE: -0.2624 ratio: 1.772 gradrms: 0.00374 ss: 0.023 DMAX: 0.020
+
+
+ V_profile:     0.000   10.642   43.798  100.539  140.703   74.723   14.064  -26.374  -38.000 
+ nnodes  9
+ all uphill?  False
+ dissociative?  False
+ min nodes  [0, 8]
+ max nodes  [4]
+ emax and nmax in find peaks 140.7034,4 
+ found 1 significant peak(s) TOL 0.50
+ max E(4) 140.7
+ ts_cgradq 0.0226
+ dE_iter =0.29
+ node: 01 gradrms: 0.002786 node: 02 gradrms: 0.007100 node: 03 gradrms: 0.006635 node: 04 gradrms: 0.004967 node: 05 gradrms: 0.009980
+ node: 06 gradrms: 0.009052 node: 07 gradrms: 0.003742
+ ** starting exact climb **
+ totalgrad 0.2424 gradrms: 0.0050 gts: 0.0226
+<class 'optimizers.eigenvector_follow.eigenvector_follow'>
+ getting tangent from between 1 2 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 3 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 4 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ 3 way tangent (4): f1:0.38
+ getting tangent from between 4 5 pointing towards 4
+ getting tangent from between 3 4 pointing towards 3
+ done 3 way tangent
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+------------printing dqmaga---------------
+  1.28 1.285  1.27 1.239 1.336 1.288 1.281   0.0
+modifying Hessian with RP
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ number of primitive coordinates: 94
+ number of non-redundant coordinates: 36
+(94, 36)
+ TS Hess init'd w/ existing Hintp
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ tHt 0.046 a: 1.0 b: 0.4 c: -0.454
+#========================================================#
+#| [92m            reparametrizing string nodes            [0m |#
+#========================================================#
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.310
+ using average
+ rpart:   0.25  0.25  0.25  0.0  0.25  0.25  0.25  0.25 
+ disp[1]: -0.0026  disp[2]: -0.0033  disp[3]: -0.0093  disp[4]: 0.0  disp[5]: -0.047  disp[6]: -0.037  disp[7]: -0.029 
+ disprms: 0.0669
+
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.56130e-06 RMSD: 2.35759e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.40920e-13 (1.56130e-06) RMSD: 1.09806e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.098e-07 |dQ| = 3.409e-13)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 4.40159e-06 RMSD: 2.81136e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 4.71701e-12 (4.40159e-06) RMSD: 1.59715e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.597e-07 |dQ| = 4.717e-12)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 8.13110e-06 RMSD: 7.22353e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.75022e-11 (8.13110e-06) RMSD: 7.50192e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.502e-07 |dQ| = 1.750e-11)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 2.27899e-04 RMSD: 4.47763e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.07217e-08 (2.27899e-04) RMSD: 1.85928e-05 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.859e-05 |dQ| = 1.072e-08)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 7.25128e-05 RMSD: 2.38348e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 8.77911e-10 (7.25128e-05) RMSD: 5.54933e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 5.549e-06 |dQ| = 8.779e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 9.87408e-05 RMSD: 1.97024e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 8.95336e-10 (9.87408e-05) RMSD: 7.54161e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 7.542e-06 |dQ| = 8.953e-10)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.306
+ disp[1]: -0.0018  disp[2]: -0.0025  disp[3]: -0.0062  disp[4]: 0.0  disp[5]: -0.023  disp[6]: -0.018  disp[7]: -0.0013 
+ disprms: 0.0297
+
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 7.75527e-07 RMSD: 1.66210e-04 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 1.662e-04 |dQ| = 7.755e-07)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.58819e-06 RMSD: 2.15727e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 1.63339e-12 (2.58819e-06) RMSD: 9.40422e-08 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 9.404e-08 |dQ| = 1.633e-12)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 3.59992e-06 RMSD: 4.80322e-04 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 3.42729e-12 (3.59992e-06) RMSD: 3.31822e-07 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 3.318e-07 |dQ| = 3.427e-12)
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ Iter: 1 Err-dQ = 5.40120e-05 RMSD: 2.16855e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 6.09284e-10 (5.40120e-05) RMSD: 4.38641e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 4.386e-06 |dQ| = 6.093e-10)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 1.69967e-05 RMSD: 1.17255e-03 Damp: 1.00000e+00
+ Iter: 2 Err-dQ (Best) = 5.03489e-11 (1.69967e-05) RMSD: 1.31653e-06 Damp: 1.00000e+00 (Good)
+ Cartesian coordinates obtained after 2 microiterations (rmsd = 1.317e-06 |dQ| = 5.035e-11)
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ Iter: 1 Err-dQ = 2.01700e-07 RMSD: 8.90148e-05 Damp: 1.00000e+00
+ Cartesian coordinates obtained after 1 microiterations (rmsd = 8.901e-05 |dQ| = 2.017e-07)
+ getting tangent from between 1 0 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 2 1 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 3 2 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ getting tangent from between 4 3 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 4 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 5 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 7 6 pointing towards 7
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 8 7 pointing towards 8
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ totaldqmag = 10.303
+ disp[1]: -0.0013  disp[2]: -0.0019  disp[3]: -0.0041  disp[4]: 0.0  disp[5]: -0.01  disp[6]: -0.008  disp[7]: 0.0025 
+ disprms: 0.014
+
+ spacings (end ic_reparam, steps: 3/8):
+ 1.3  1.3  1.3  1.3  1.3  1.3  1.3  1.3 
+  disprms: 0.014
+
+ V_profile (after reparam):     0.000   10.586   43.646   99.896  140.703   79.076   15.940  -25.857  -38.000 
+opt_iter:  2 totalgrad: 0.242 gradrms: 0.006786 max E(4) 140.7
+
+
+#========================================================#
+#| [92m                Starting opt iter 3                 [0m |#
+#========================================================#
+ TS SEARCHING
+ getting tangent from between 1 2 pointing towards 1
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 2 3 pointing towards 2
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 3 4 pointing towards 3
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ 3 way tangent (4): f1:0.4
+ getting tangent from between 4 5 pointing towards 4
+ getting tangent from between 3 4 pointing towards 3
+ done 3 way tangent
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+ getting tangent from between 4 5 pointing towards 4
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 5 6 pointing towards 5
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ getting tangent from between 6 7 pointing towards 6
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+------------printing dqmaga---------------
+ 1.279 1.281 1.275  1.23 1.303 1.295  1.29   0.0
+
+#========================================================#
+#| [92m                 Optimizing node 1                  [0m |#
+#========================================================#
+ setting node 1 opt_type to ICTAN
+ initial E 10.5858
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 1
+ evaluate fx in linesearch
+ dEstep=-0.3343
+ decreasing DMAX
+ Node: 1 Opt step: 1 E: 10.2515 predE: -0.1870 ratio: 1.788 gradrms: 0.00265 ss: 0.027 DMAX: 0.022
+ gmax 0.0074 disp 0.0239 Ediff -0.3343 gradrms 0.0027
+
+ converged
+ opt-summary 1
+ Node: 1 Opt step: 1 E: 10.2515 predE: -0.1870 ratio: 1.788 gradrms: 0.00265 ss: 0.027 DMAX: 0.022
+
+
+#========================================================#
+#| [92m                 Optimizing node 2                  [0m |#
+#========================================================#
+ setting node 2 opt_type to ICTAN
+ initial E 43.6458
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 2
+ evaluate fx in linesearch
+ dEstep=-1.2903
+ decreasing DMAX
+ Node: 2 Opt step: 1 E: 42.3554 predE: -0.7000 ratio: 1.843 gradrms: 0.00669 ss: 0.033 DMAX: 0.028
+ gmax 0.0184 disp 0.0229 Ediff -1.2903 gradrms 0.0067
+
+ converged
+ opt-summary 2
+ Node: 2 Opt step: 1 E: 42.3554 predE: -0.7000 ratio: 1.843 gradrms: 0.00669 ss: 0.033 DMAX: 0.028
+
+
+#========================================================#
+#| [92m                 Optimizing node 3                  [0m |#
+#========================================================#
+ setting node 3 opt_type to ICTAN
+ initial E 99.8964
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.017 Eig: 0.001
+ On opt step 1 for node 3
+ evaluate fx in linesearch
+ dEstep=-2.1756
+ decreasing DMAX
+ Node: 3 Opt step: 1 E: 97.7208 predE: -1.1698 ratio: 1.860 gradrms: 0.00619 ss: 0.060 DMAX: 0.050
+ gmax 0.0145 disp 0.0442 Ediff -2.1756 gradrms 0.0062
+
+ converged
+ opt-summary 3
+ Node: 3 Opt step: 1 E: 97.7208 predE: -1.1698 ratio: 1.860 gradrms: 0.00619 ss: 0.060 DMAX: 0.050
+
+
+#========================================================#
+#| [92m                 Optimizing node 4                  [0m |#
+#========================================================#
+ setting node 4 opt_type to TS
+ multiplying steps for node 4 by 2
+ initial E 140.7034
+ CONV_TOL 0.00500
+ On opt step 1 for node 4
+(' overlap', array([[-0.0077,  0.0115,  0.0175, -0.0175]]))
+(' nneg', 1)
+ t/ol 3: 0.02
+ updating coord basis
+ Timings: Build G: 0.016 Eig: 0.001
+[[1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+ Switching to climb! Maxol not good!
+ gts 0.0223
+ evaluate fx in linesearch
+ dEstep=-0.1780
+ decreasing DMAX
+ Node: 4 Opt step: 1 E: 140.5254 predE: -0.0867 ratio: 2.054 gradrms: 0.00484 ss: 0.024 DMAX: 0.020
+ gmax 0.0157 disp 0.0204 Ediff -0.1780 gradrms 0.0048
+
+ converged
+ opt-summary 4
+ Node: 4 Opt step: 1 E: 140.5254 predE: -0.0867 ratio: 2.054 gradrms: 0.00484 ss: 0.024 DMAX: 0.020
+
+
+#========================================================#
+#| [92m                 Optimizing node 5                  [0m |#
+#========================================================#
+ setting node 5 opt_type to ICTAN
+ initial E 79.0761
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 5
+ evaluate fx in linesearch
+ dEstep=-2.8926
+ decreasing DMAX
+ Node: 5 Opt step: 1 E: 76.1834 predE: -1.5425 ratio: 1.875 gradrms: 0.00952 ss: 0.050 DMAX: 0.042
+ gmax 0.0281 disp 0.0493 Ediff -2.8926 gradrms 0.0095
+
+ converged
+ opt-summary 5
+ Node: 5 Opt step: 1 E: 76.1834 predE: -1.5425 ratio: 1.875 gradrms: 0.00952 ss: 0.050 DMAX: 0.042
+
+
+#========================================================#
+#| [92m                 Optimizing node 6                  [0m |#
+#========================================================#
+ setting node 6 opt_type to ICTAN
+ initial E 15.9397
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 6
+ evaluate fx in linesearch
+ dEstep=-0.7668
+ decreasing DMAX
+ Node: 6 Opt step: 1 E: 15.1729 predE: -0.4117 ratio: 1.862 gradrms: 0.00897 ss: 0.015 DMAX: 0.012
+ gmax 0.0325 disp 0.0135 Ediff -0.7668 gradrms 0.0090
+
+ converged
+ opt-summary 6
+ Node: 6 Opt step: 1 E: 15.1729 predE: -0.4117 ratio: 1.862 gradrms: 0.00897 ss: 0.015 DMAX: 0.012
+
+
+#========================================================#
+#| [92m                 Optimizing node 7                  [0m |#
+#========================================================#
+ setting node 7 opt_type to ICTAN
+ initial E -25.8573
+ CONV_TOL 0.01250
+ updating coord basis
+ Timings: Build G: 0.018 Eig: 0.001
+ On opt step 1 for node 7
+ evaluate fx in linesearch
+ dEstep=-0.3540
+ decreasing DMAX
+ Node: 7 Opt step: 1 E: -26.2113 predE: -0.1962 ratio: 1.804 gradrms: 0.00355 ss: 0.020 DMAX: 0.016
+ gmax 0.0120 disp 0.0114 Ediff -0.3540 gradrms 0.0036
+
+ converged
+ opt-summary 7
+ Node: 7 Opt step: 1 E: -26.2113 predE: -0.1962 ratio: 1.804 gradrms: 0.00355 ss: 0.020 DMAX: 0.016
+
+
+ V_profile:     0.000   10.251   42.355   97.721  140.525   76.183   15.173  -26.211  -38.000 
+ nnodes  9
+ all uphill?  False
+ dissociative?  False
+ min nodes  [0, 8]
+ max nodes  [4]
+ emax and nmax in find peaks 140.5254,4 
+ found 1 significant peak(s) TOL 0.50
+ max E(4) 140.5
+ dE_iter =0.18
+ node: 01 gradrms: 0.002652 node: 02 gradrms: 0.006689 node: 03 gradrms: 0.006186 node: 04 gradrms: 0.004840 node: 05 gradrms: 0.009522
+ node: 06 gradrms: 0.008975 node: 07 gradrms: 0.003550
+ Printing string to opt_converged_000.xyz
+Finished GSM!
+ TS energy: 140.5254
+ absolute energy TS node -13394.2912
+ min reactant node: 0 min product node 8 TS node is 4
+ Delta E is 37.9999

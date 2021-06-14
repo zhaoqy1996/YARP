@@ -1,0 +1,8 @@
+$fix
+   atoms: 1-10,12
+   elements: O
+$constrain
+   distance: 1, 2, 1.4
+   angle: 5, 7, 8, auto
+   dihedral: 3, 4, 1, 7, 180
+$end

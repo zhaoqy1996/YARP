@@ -1,0 +1,3 @@
+[console_scripts]
+gsm = pygsm.wrappers.main:main
+

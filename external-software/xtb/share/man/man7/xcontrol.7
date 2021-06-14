@@ -1,0 +1,1507 @@
+'\" t
+.\"     Title: xcontrol
+.\"    Author: [FIXME: author] [see http://www.docbook.org/tdg5/en/html/author]
+.\" Generator: DocBook XSL Stylesheets vsnapshot <http://docbook.sf.net/>
+.\"      Date: 03/11/2020
+.\"    Manual: \ \&
+.\"    Source: \ \&
+.\"  Language: English
+.\"
+.TH "XCONTROL" "7" "03/11/2020" "\ \&" "\ \&"
+.\" -----------------------------------------------------------------
+.\" * Define some portability stuff
+.\" -----------------------------------------------------------------
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.\" http://bugs.debian.org/507673
+.\" http://lists.gnu.org/archive/html/groff/2009-02/msg00013.html
+.\" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.ie \n(.g .ds Aq \(aq
+.el       .ds Aq '
+.\" -----------------------------------------------------------------
+.\" * set default formatting
+.\" -----------------------------------------------------------------
+.\" disable hyphenation
+.nh
+.\" disable justification (adjust text to left margin only)
+.ad l
+.\" -----------------------------------------------------------------
+.\" * MAIN CONTENT STARTS HERE *
+.\" -----------------------------------------------------------------
+.SH "NAME"
+xcontrol \- instruction file for `xtb(1)` version 6\&.0 and newer
+.SH "SYNOPSIS"
+.sp
+xtb \-I,\-\-input \fBxcontrol\fR \fIFILE\fR
+.SH "DESCRIPTION"
+.sp
+The xcontrol(7) instruction set is the successor of the set\-block present in xtb(1) version 5\&.8 and earlier\&. The used instruction set is similar to the data groups in Turbomole or the detailed input structure of ORCA\&. Every instruction is started by a flag ($) and terminated by the next flag\&. A instruction is only valid if the flag is in the first column, the instruction name is the rest of the register\&. A valid instruction opens its blocks with its own options, every option is a key\-value pair\&.
+.sp
+There are two kind of instructions, logical and groups\&. Logical instructions toggle a specific operation and cannot contain a option block while group instructions only open the option block without any further actions\&.
+.sp
+A special instruction is the end instruction which is optional, as EOF is a valid alternative in this implementation\&.
+.sp
+It should be noted that xtb(1) is able to produce xcontrol(7) instructions by itself\&. You can tell xtb(1) by \fB\-\-copy\fR to save you original instructions, note that this implementation will strip all comments while copying (print what you see, not what you read), to aid debugging\&.
+.SS "$fit"
+.sp
+logical instruction to set xtb(1) in mfit(1) compatibility mode and prints out further informations\&. This is a pure development feature and therefore should be absent in every productive run\&.
+.SS "$samerand"
+.sp
+logical instruction to initialize the random number generator with the same sequence
+.SS "$chrg \fIint\fR"
+.sp
+set the charge of the molecule
+.SS "$spin \fIint\fR"
+.sp
+set Nalpha\-Nbeta of the molecule
+.SS "$cma"
+.sp
+shifts molecule to center of mass and transforms cartesian coordinates into the coordinate system of the principle axis (not affected by \(oqisotopes\(cq\-file)\&.
+.SS "$constrain"
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+This data group refers to constraining the gradient by appling potentials\&. Exact fixing is done with the fix data group\&.
+.sp .5v
+.RE
+.PP
+\fBforce constant\fR=\fIreal\fR
+.RS 4
+force constant for constraining potential
+.RE
+.PP
+\fBall bonds\fR=\fIbool\fR
+.RS 4
+generate potentials to constrain the length of all bonds
+.RE
+.PP
+\fBall angles\fR=\fIbool\fR
+.RS 4
+generate potentials to constrain all bond angles
+.RE
+.PP
+\fBall torsions\fR=\fIbool\fR
+.RS 4
+generate potentials to constrain the angles of all torsions
+.RE
+.PP
+\fBelements\fR: \fIsymbol\fR|\fInumber\fR,\&...
+.RS 4
+constrains all elements of the same type, the atom type is determined by the ordinal number or the element symbol
+.RE
+.PP
+\fBatoms\fR: \fIlist\fR,\&...
+.RS 4
+constrains the atom positions of all atoms in
+\fIlist\fR\&. Needs at least two atoms since potential is applied on all atoms in
+\fIlist\fR\&.
+.RE
+.PP
+\fBdistance\fR: \fIi\fR,\fIj\fR,auto|\fIreal\fR
+.RS 4
+constrain the distance between atom
+\fIi\fR
+and
+\fIj\fR
+to the actual length (auto) or the value
+\fIreal\fR, which has to be given in Ångström\&.
+.RE
+.PP
+\fBangle\fR: \fIi\fR,\fIj\fR,\fIk\fR,auto|\fIreal\fR
+.RS 4
+constrain the angle between atom
+\fIi\fR,
+\fIj\fR
+and
+\fIk\fR
+to the actual length (auto) or the value
+\fIreal\fR, which has to be given in degrees\&.
+.RE
+.PP
+\fBdihedral\fR: \fIi\fR,\fIj\fR,\fIk\fR,\fIl\fR,auto|\fIreal\fR
+.RS 4
+constrain the angle between atom
+\fIi\fR,
+\fIj\fR,
+\fIk\fR
+and
+\fIl\fR
+to the actual length (auto) or the value
+\fIreal\fR, which has to be given in degrees\&.
+.RE
+.PP
+\fBcenter\fR: \fIreal\fR,\fIint\fR
+.RS 4
+implemented and documented as in xtb 5\&.8, might use fragment1 information from split instruction\&.
+.RE
+.PP
+\fBcma[ interface]\fR: auto|\fIreal\fR
+.RS 4
+implemented and documented as in xtb 5\&.8, might use fragment1/fragment2 information from split instruction\&.
+.RE
+.PP
+\fBz\fR: \fIreal\fR
+.RS 4
+implemented and documented as in xtb 5\&.8, might use fragment1 information from split instruction\&.
+.RE
+.SS "$cube"
+.PP
+\fBstep\fR=\fIreal\fR
+.RS 4
+grid spacing for cube file
+.RE
+.PP
+\fBpthr\fR=\fIreal\fR
+.RS 4
+density matrix neglect threshold
+.RE
+.PP
+\fBcal\fR=\fIint\fR
+.RS 4
+=1 switches on cube\-file output (=0 means writing molden file instead, \-1=do nothing)
+.RE
+.SS "$embedding"
+.PP
+\fBat\fR=\fIint\fR
+.RS 4
+default atom type for point charges
+.RE
+.PP
+\fBes\fR=\fIbool\fR
+.RS 4
+use isotropic electrostatic with point charges
+.RE
+.PP
+\fBinput\fR=\fIfile\fR
+.RS 4
+point charges are read from
+\fIfile\fR
+(default:
+\fIpcharge\fR), format is:
+\fIq\fR
+\fIx\fR
+\fIy\fR
+\fIz\fR
+[\fIiat\fR|\fIgam\fR], where
+\fIq\fR
+is the partial charges,
+\fIxyz\fR
+are the position of the partial charge in bohr and
+\fIiat\fR
+is the ordinal number of the atom\&. The corresponding gam\-Parameter of the element will be used in the potential\&. Alternatively the
+\fIgam\fR
+value can be given directly as fifth argument, to simulate point charges provide a huge value for
+\fIgam\fR\&.
+.RE
+.PP
+\fBgradient\fR=\*(Aqfile
+.RS 4
+gradient of the point charges is written to
+\fIfile\fR
+(default:
+\fIpcgrad\fR)
+.RE
+.SS "$external"
+.PP
+\fBmopac bin\fR=\fISTRING\fR
+.RS 4
+path to
+mopac(1)
+binary, will search
+PATH
+variable for binary if not set
+.RE
+.PP
+\fBmopac input\fR=\fISTRING\fR
+.RS 4
+input string used for
+mopac(1)
+calculation, make sure it generates an aux file for
+xtb(1)
+to read in\&.
+.RE
+.PP
+\fBmopac file\fR=\fISTRING\fR
+.RS 4
+name of the
+mopac(1)
+input file
+.RE
+.PP
+\fBorca bin\fR=\fISTRING\fR
+.RS 4
+path to
+orca(1)
+binary, will search
+PATH
+variable for binary if not set
+.RE
+.PP
+\fBorca input line\fR=\fISTRING\fR
+.RS 4
+input string used for
+orca(1)
+calculation, will use engrad runtyp by default
+.RE
+.PP
+\fBorca input file\fR=\fISTRING\fR
+.RS 4
+name of the
+orca(1)
+input file
+.RE
+.PP
+\fBturbodir\fR=\fISTRING\fR
+.RS 4
+path to your Turbomole directory (usually found in
+TURBODIR
+or
+TURBOIMG
+variable)
+.RE
+.SS "$fix"
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+the fix group refers to exact fixing\&. For geometry optimizations the gradient is set to zero, while for Hessians no displacements are calculated\&. Constraining with external potentials is done by the constrain data group\&.
+.sp .5v
+.RE
+.PP
+\fBelements\fR: \fIsymbol\fR|\fInumber\fR,\&...
+.RS 4
+fixes all elements of the same type, the atom type is determined by the ordinal number or the element symbol\&. This is automatically deactivated for molecular dynamics since it leads to instabilities\&.
+.RE
+.PP
+\fBatoms\fR: \fIlist\fR,\&...
+.RS 4
+fixes all atoms in
+\fIlist\fR
+by setting the gradient to zero\&. This is automatically deactivated for molecular dynamics since it leads to instabilities\&.
+.RE
+.PP
+\fBfreeze frequency\fR=\fIreal\fR
+.RS 4
+diagonal element used for freezing atoms in numerical Hessian calculation
+.RE
+.PP
+\fBfreeze\fR: \fIlist\fR,\&...
+.RS 4
+freezes all atoms in
+\fIlist\fR
+for hessian calculation
+.RE
+.PP
+\fBshake\fR: \fIi\fR,\fIj\fR,\&...
+.RS 4
+use SHAKE to constrain the atompair
+\fIij\fR
+in molecular dynamics\&.
+.RE
+.SS "$gbsa"
+.PP
+\fBsolvent\fR=\fIstring\fR
+.RS 4
+solvent for the generalized born (GB) model with solvent accessable surface area (SASA), requires
+\&.param_gbsa\&.solvent
+in
+XTBPATH\&. Does not activate GBSA (use commandline)\&.
+.RE
+.PP
+\fBion_st\fR=\fIreal\fR
+.RS 4
+ion strength for salt screening in GBSA
+.RE
+.PP
+\fBion_rad\fR=\fIreal\fR
+.RS 4
+ion radius for salt screening in GBSA
+.RE
+.PP
+\fBgrid\fR=\fIlevel\fR
+.RS 4
+changes the grid used for the surface accessable surface area (normal, tight, vtight, extreme are available)\&.
+.RE
+.SS "$gfn"
+.PP
+\fBmethod\fR=\fIint\fR
+.RS 4
+version of the GFN Hamiltonian
+.RE
+.SS "$hess"
+.PP
+\fBsccacc\fR=\fIreal\fR
+.RS 4
+SCC accuracy level in Hessian runs
+.RE
+.PP
+\fBstep\fR=\fIreal\fR
+.RS 4
+Cartesian displacement increment for numerical Hessian
+.RE
+.PP
+\fBelement mass\fR: \fIint\fR,\fIreal\fR,\&...
+.RS 4
+set mass of elements
+\fIint\fR
+to
+\fIreal\fR
+.RE
+.PP
+\fBisotope\fR: \fIint\fR,\fIreal\fR,\&... (6\&.1 only)
+.RS 4
+set mass of atom number
+\fIint\fR
+to
+\fIreal\fR
+.RE
+.PP
+\fBmodify mass\fR: \fIint\fR,\fIreal\fR,\&... (6\&.1 only)
+.RS 4
+set mass of atom number
+\fIint\fR
+to
+\fIreal\fR
+.RE
+.PP
+\fBscale mass\fR: \fIint\fR,\fIreal\fR,\&... (6\&.1 only)
+.RS 4
+scale mass of atom number
+\fIint\fR
+by
+\fIreal\fR
+.RE
+.SS "$metadyn (6\&.1 only)"
+.PP
+\fBsave\fR=\fIint\fR
+.RS 4
+maximal number of structures for rmsd criteria
+.RE
+.PP
+\fBkpush\fR=\fIreal\fR,\&...
+.RS 4
+scaling factor for rmsd criteria can be positive and negative
+.RE
+.PP
+\fBmodify factor\fR=\fIint\fR,\fIreal\fR,\&...
+.RS 4
+replace the factor
+\fIint\fR
+with
+\fIreal\fR
+.RE
+.PP
+\fBscale factor\fR=\fIint\fR,\fIreal\fR,\&...
+.RS 4
+scales the factor
+\fIint\fR
+with
+\fIreal\fR
+.RE
+.PP
+\fBalp\fR=\fIreal\fR
+.RS 4
+width of the Gaussian potential used in the rmsd criteria
+.RE
+.PP
+\fBcoord\fR=\fIfile\fR
+.RS 4
+external structures to initialize the rmsd criteria (xmol format required)
+.RE
+.PP
+\fBatoms\fR: \fIlist\fR,\&...
+.RS 4
+atoms to include in rmsd calculation, if not present all atoms are taken into account
+.RE
+.SS "$md"
+.PP
+\fBtemp\fR=\fIreal\fR
+.RS 4
+MD thermostat/GBSA temperature
+.RE
+.PP
+\fBtime\fR=\fIreal\fR
+.RS 4
+MD run time in ps
+.RE
+.PP
+\fBdump\fR=\fIreal\fR
+.RS 4
+dump structure in every mddump fs
+.RE
+.PP
+\fBvelo\fR=\fIint\fR
+.RS 4
+set to 1 if dumps (trj file) should contain velocities
+.RE
+.PP
+\fBnvt\fR=\fIint\fR
+.RS 4
+use thermostat (=1, =0 for NVE)
+.RE
+.PP
+\fBskip\fR=\fIint\fR
+.RS 4
+skip interval in \-mdav, \-mdopt
+.RE
+.PP
+\fBstep\fR=\fIreal\fR
+.RS 4
+MD time step in fs (automatically determined if < 0), could be 4\-5 fs with shake =2, md_hmass=4
+.RE
+.PP
+\fBhmass\fR=\fIint\fR
+.RS 4
+increase hydrogen mass to this value in amu (at const\&. tot\&. mass) allowing large time steps (=0 off)
+.RE
+.PP
+\fBshake\fR=\fIint\fR
+.RS 4
+shake on (=0: off which is default) for X\-H bonds only (=1),
+.RE
+.PP
+\fBsccacc\fR=\fIreal\fR
+.RS 4
+SCC accuracy level in MD\&. Every 10th step the SCC is properly converged at sccconv=1\&.0\&. sccmd should be < 5 in critical cases, effects may show up as bad thermostating
+.RE
+.SS "$modef"
+.PP
+\fBn\fR=\fIint\fR
+.RS 4
+of points along normal mode path scan
+.RE
+.PP
+\fBstep\fR=\fIreal\fR
+.RS 4
+step lengths for scan (should be around 1 because its adjusted internally to mode mass and FC)
+.RE
+.PP
+\fBupdat\fR=\fIreal\fR
+.RS 4
+update search mode with a fraction of the displacement at every step (0\&.0 means no update, 0\&.1\-0\&.2 is a good choice)
+.RE
+.PP
+\fBlocal\fR=\fIint\fR
+.RS 4
+use canonical normal modes (=0) or Pipek\-Mezey localized ones (=1)
+.RE
+.PP
+\fBvthr\fR=\fIreal\fR
+.RS 4
+threshold up to which frequency modes are used for mode based conformer search (def\&. is 300)
+.RE
+.PP
+\fBprj\fR=\fIint\fR
+.RS 4
+number of second mode which should be projected out in mode following (normally = 7 ie the TS mode which is fixed then)
+.RE
+.PP
+\fBmode\fR=\fIint\fR
+.RS 4
+can set by \-\-modef via cmdline
+.RE
+.SS "$opt"
+.PP
+\fBengine\fR=\fImethod\fR
+.RS 4
+method can be
+\fIrf\fR
+for ANCopt (default),
+\fIlbfgs\fR
+for L\-ANCopt or
+\fIinertial\fR
+for FIRE\&.
+.RE
+.PP
+\fBoutput\fR=\fIfile\fR
+.RS 4
+redirect output of optimization to
+\fIfile\fR
+.RE
+.PP
+\fBlogfile\fR=\*(Aqfile
+.RS 4
+write optimization log to
+\fIfile\fR
+(default: xtbopt\&.log)
+.RE
+.PP
+\fBoptlevel\fR=\fIlevel\fR
+.RS 4
+convergence thresholds for the
+ancopt(3): crude = \-3, sloppy = \-2, loose = \-1, normal = 0, tight = 1, verytight = 2, extreme = 3
+.RE
+.PP
+\fBmicrocycle\fR=\fIint\fR
+.RS 4
+number of optimization cycles before new ANC are made (default=25)
+.RE
+.PP
+\fBmaxcycle\fR=\fIint\fR
+.RS 4
+total number of opt\&. cycles, 0 means automatically determined
+.RE
+.PP
+\fBhlow\fR=\fIreal\fR
+.RS 4
+lowest force constant in ANC generation (should be > 0\&.005)
+.RE
+.PP
+\fBmaxdispl\fR=\fIreal\fR
+.RS 4
+maximum coordinate displacement in
+ancopt(3)
+.RE
+.PP
+\fBs6\fR=\fIreal\fR
+.RS 4
+dispersion scaling in ANC generation
+.RE
+.PP
+\fBts\fR=\fIbool\fR
+.RS 4
+dummy
+.RE
+.PP
+\fBtsroot\fR=\fIint\fR
+.RS 4
+dummy
+.RE
+.PP
+\fBhessian\fR=lindh\-d2|lindh|swart
+.RS 4
+model hessian for generation of ANC used in optimization
+.RE
+.PP
+\fBkstretch\fR=\fIreal\fR
+.RS 4
+stretch force constant in model hessian
+.RE
+.PP
+\fBkbend\fR=\fIreal\fR
+.RS 4
+bend force constant in model hessian
+.RE
+.PP
+\fBktorsion\fR=\fIreal\fR
+.RS 4
+torsion force constant in model hessian
+.RE
+.PP
+\fBkoutofp\fR=\fIreal\fR
+.RS 4
+out\-of\-plain force constant to model hessian
+.RE
+.PP
+\fBkvdw\fR=\fIreal\fR
+.RS 4
+additional vdW\-contribution (lindh|swart only)
+.RE
+.PP
+\fBkes\fR=\fIreal\fR
+.RS 4
+electrostatic contribution to model hessian by EEQ model
+.RE
+.PP
+\fBrcut\fR=\fIreal\fR
+.RS 4
+distance cutoff for bonds in model hessian
+.RE
+.SS "$path (6\&.1 only)"
+.PP
+\fBnrun\fR=\fIint\fR
+.RS 4
+number of runs for pathfinder
+.RE
+.PP
+\fBnopt\fR=\fIint\fR
+.RS 4
+number of points on the path to optimize
+.RE
+.PP
+\fBanopt\fR=\fIint\fR
+.RS 4
+number of steps to optimize the points on the path
+.RE
+.PP
+\fBkpush\fR=\fIreal\fR
+.RS 4
+factor for RMSD criterium pushing away from the reactant structure
+.RE
+.PP
+\fBkpull\fR=\fIreal\fR
+.RS 4
+factor for RMSD criterium pulling towards the product structure
+.RE
+.PP
+\fBalp\fR=\fIreal\fR
+.RS 4
+width of the RMSD criterium
+.RE
+.PP
+\fBproduct\fR=\fIfile\fR
+.RS 4
+file name of the product structure
+.RE
+.SS "$scan"
+.PP
+\fBmode\fR=sequential|concerted
+.RS 4
+scans all constraints at once (concerted) or after each other (sequential)\&. in sequential mode the final value of the scanned constraint is kept in place\&. in concerted mode all steps for the scans have to be the same\&.
+.RE
+.PP
+\fBint\fR: \fIstart\fR,\fIend\fR,\fIsteps\fR
+.RS 4
+where
+\fIstart\fR
+and
+\fIend\fR
+are
+\fIreal\fR
+values and
+\fIsteps\fR
+is an integer value\&. Defines a scan along constraint
+\fBint\fR
+(which has to be defined before, of course), from
+\fIstart\fR
+to
+\fIend\fR
+in a certain number of
+\fIsteps\fR\&. There is no limitation in the number of
+\fIsteps\fR
+as in 5\&.8\&.
+.RE
+.PP
+\fBname\fR: \fIvalues\fR; \fIstart\fR,\fIend\fR,\fIsteps\fR
+.RS 4
+defines the constrain
+\fBname\fR
+on which the scan is performed\&. See above and the the constrain group for more information, since
+\fBname\fR
+(e\&.g\&.
+\fBdistance\fR) and
+\fIvalues\fR
+(e\&.g\&.
+\fIi\fR,\fIj\fR,\fIvalue\fR) are handed internally to the constrain parser\&.
+.RE
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+the scan parser will always terminate in error if the instruction could not be parsed correctly, while the constrain parser is able to skip instructions with wrong input by raising a warning\&.
+.sp .5v
+.RE
+.SS "$scc"
+.PP
+\fBtemp\fR=\fIreal\fR
+.RS 4
+electronic temperature for the Fermi smearing
+.RE
+.PP
+\fBbroydamp\fR=\fIreal\fR
+.RS 4
+damping for the Broyden convergence accelerator
+.RE
+.PP
+\fBguess\fR=gasteiger|goedecker|sad
+.RS 4
+different possible guess charges for GFN2\-xTB SCC calculation
+.RE
+.PP
+\fBmaxiteration\fR=\fIint\fR
+.RS 4
+adjusts the number of SCC iterations in the first/last SCC calculation
+.RE
+.SS "$split"
+.PP
+\fBfragment1\fR: \fIlist\fR,\&...
+.RS 4
+defines atoms belonging to fragment 1
+.RE
+.PP
+\fBfragment2\fR: \fIlist\fR,\&...
+.RS 4
+defines atoms belonging to fragment 2
+.RE
+.PP
+\fBfragment\fR: \fIi\fR,\fIlist\fR,\&...
+.RS 4
+defines atoms belonging to fragment
+\fIi\fR
+.RE
+.SS "$stm (6\&.1 only)"
+.sp
+activate by $write/stm=true
+.PP
+\fBbroadening\fR=\fIreal\fR
+.RS 4
+width of tip DOS energy broadening (eV)
+.RE
+.PP
+\fBcurrent\fR=\fIreal\fR
+.RS 4
+constant current value (arb\&.u\&.)
+.RE
+.PP
+\fBgrid\fR=\fIreal\fR
+.RS 4
+grid width (Bohr), half that value along Z
+.RE
+.PP
+\fBthr\fR=\fIreal\fR
+.RS 4
+integral and density matrix neglect threshold
+.RE
+.PP
+\fBpotential\fR=\fIreal\fR
+.RS 4
+potential of tip vs\&. molecule, negative values let e flow from mol to tip i\&.e\&. occ space of mol is probed
+.RE
+.SS "$symmetry"
+.PP
+\fBdesy\fR=\fIreal\fR
+.RS 4
+point group symmetrization threshold
+.RE
+.PP
+\fBmaxat\fR=\fIint\fR
+.RS 4
+point group determination skipped if # atoms > this value (i\&.e\&. desymaxat 0 switches it off)
+.RE
+.SS "$thermo"
+.PP
+\fBtemp\fR=\fIreal\fR
+.RS 4
+temperature for thermostatistical calculation (default: 298\&.15 K)
+.RE
+.PP
+\fBsthr\fR=\fIreal\fR
+.RS 4
+rotor cut\-off (cm\-1) in thermo (default: 50\&.0)
+.RE
+.SS "$wall"
+.PP
+\fBpotential\fR=logfermi|polynomial
+.RS 4
+sets kind of wall potential used (default: polynomial)
+.RE
+.PP
+\fBalpha\fR=\fIint\fR
+.RS 4
+exponent of polynomial wall potential (default: 30)
+.RE
+.PP
+\fBbeta\fR=\fIreal\fR
+.RS 4
+exponent of logfermi bias potential (default: 6\&.0)
+.RE
+.PP
+\fBautoscale\fR=\fIreal\fR
+.RS 4
+scales axis of automatic determined wall potentials by
+\fIreal\fR
+.RE
+.PP
+\fBaxisshift\fR=\fIreal\fR
+.RS 4
+constant offset used in automatic dermined wall potential axis (default: 3\&.5)
+.RE
+.PP
+\fBtemp\fR=\fIreal\fR
+.RS 4
+temperature of the logfermi wall (default: 300\&.0 K), wall energy of logfermi is multiplied with kT\&.
+.RE
+.PP
+\fBsphere\fR: auto|\fIreal\fR,all|\fIlist\fR,\&...
+.RS 4
+set up a spherical wall potential for all or the atoms in
+\fIlist\fR
+with the radius
+\fIreal\fR
+or an automatical determined sphere radius
+.RE
+.PP
+\fBellipsoid\fR: auto|\fIreal\fR,auto|\fIreal\fR,auto|\fIreal\fR,all|\fIlist\fR,\&...
+.RS 4
+set up a ellipsoid wall potential for all or the atoms in
+\fIlist\fR
+with the radii
+\fIreal\fR
+or an automatical determined sphere radius
+.RE
+.SS "$write"
+.PP
+\fBesp\fR=\fIbool\fR
+.RS 4
+calculate and print electrostatic potential, this will create a data file and a cosmo file
+.RE
+.PP
+\fBgrid file\fR=\fIfile\fR
+.RS 4
+read gridpoints for ESP calculation from
+\fIfile\fR\&.
+.RE
+.PP
+\fBmos\fR=\fIbool\fR
+.RS 4
+print molden file
+.RE
+.PP
+\fBlmo\fR=\fIbool\fR
+.RS 4
+localize orbitals and print out LMO centers
+.RE
+.PP
+\fBdensity\fR=\fIbool\fR
+.RS 4
+calculate density on a cube grid
+.RE
+.PP
+\fBspin population\fR=\fIbool\fR
+.RS 4
+spin population analysis
+.RE
+.PP
+\fBspin density\fR=\fIbool\fR
+.RS 4
+calculate spin density on a cube grid
+.RE
+.PP
+\fBfod\fR=\fIbool\fR
+.RS 4
+calculate FOD on a cube grid (set electronic temperature to at least 12500 K)
+.RE
+.PP
+\fBwiberg\fR=\fIbool\fR
+.RS 4
+calculate and print Wiberg bond order
+.RE
+.PP
+\fBdipole\fR=\fIbool\fR
+.RS 4
+calculate and print dipole moment
+.RE
+.PP
+\fBcharges\fR=\fIbool\fR
+.RS 4
+print charges file
+.RE
+.PP
+\fBmulliken\fR=\fIbool\fR
+.RS 4
+print mulliken population analysis
+.RE
+.PP
+\fBorbital energies\fR=\fIbool\fR
+.RS 4
+print orbital energies and occupation numbers
+.RE
+.PP
+\fBstm\fR=\fIbool\fR
+.RS 4
+creates an STM image of the molecule, see stm group (6\&.1 only)
+.RE
+.PP
+\fBgeosum\fR=\fIbool\fR
+.RS 4
+old style geometry summary
+.RE
+.PP
+\fBinertia\fR=\fIbool\fR
+.RS 4
+geometry summary on moments on inertia and rotational constants (available with
+\-\-define)
+.RE
+.PP
+\fBdistances\fR=\fIbool\fR
+.RS 4
+geometry summary on distances and bonds (available with
+\-\-define)
+.RE
+.PP
+\fBangles\fR=\fIbool\fR
+.RS 4
+geometry summary on angles (available with
+\-\-define)
+.RE
+.PP
+\fBtorsions\fR=\fIbool\fR
+.RS 4
+geometry summary on dihedral angles and torsions (available with
+\-\-define)
+.RE
+.SS "LEGACY"
+.sp
+To ensure compatibility with older versions of the xtb(1) prior to version 6\&.0 a group instruction set is allowed which accepts the same syntax as the original set\-block\&. Here we provide a list of set\-block commands and their corresponding instructions in xcontrol(7)\&.
+.if n \{\
+.sp
+.\}
+.RS 4
+.it 1 an-trap
+.nr an-no-space-flag 1
+.nr an-break-flag 1
+.br
+.ps +1
+\fBNote\fR
+.ps -1
+.br
+.sp
+xtb(1) can read a set\-block by itself and will print out a equivalent instruction set\&. This feature will be deprecated in future versions since the set\-block is less flexible than xcontrol(7) and might be deactived without prior announcement!
+.sp .5v
+.RE
+.PP
+\fBbroydamp\fR
+.RS 4
+use
+\fBbroydamp\fR
+in
+\fBscc\fR
+group instead
+.RE
+.PP
+\fBchrg, charge\fR
+.RS 4
+use
+\fBchrg\fR
+logical instead
+.RE
+.PP
+\fBconstrainallbo, constralltbo\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBconstrainalltors, constralltors\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBconstrain\fR
+.RS 4
+use
+\fBconstrain\fR
+group instead
+.RE
+.PP
+\fBconstrainel\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBconstrfc\fR
+.RS 4
+use
+\fBforce constant\fR
+in
+\fBconstrain\fR
+group instead
+.RE
+.PP
+\fBconstrxyz\fR
+.RS 4
+use
+\fBatoms\fR
+in
+\fBfix\fR
+group instead
+.RE
+.PP
+\fBcube_cal\fR
+.RS 4
+use
+\fBcal\fR
+in
+\fBcube\fR
+group instead
+.RE
+.PP
+\fBcube_pthr\fR
+.RS 4
+use
+\fBpthr\fR
+in
+\fBcube\fR
+group instead
+.RE
+.PP
+\fBcube_step\fR
+.RS 4
+use
+\fBstep\fR
+in
+\fBcube\fR
+group instead
+.RE
+.PP
+\fBdesymaxat\fR
+.RS 4
+use
+\fBmaxat\fR
+in
+\fBsymmetry\fR
+group instead
+.RE
+.PP
+\fBdesy\fR
+.RS 4
+use
+\fBdesy\fR
+in
+\fBsymmetry\fR
+group instead
+.RE
+.PP
+\fBellips\fR
+.RS 4
+use
+\fBellipsoid\fR
+in
+\fBwall\fR
+group instead
+.RE
+.PP
+\fBetemp\fR
+.RS 4
+use
+\fBtemp\fR
+in
+\fBscc\fR
+group instead
+.RE
+.PP
+\fBex_open_HS\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBex_open_LS\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBfit\fR
+.RS 4
+use
+\fBfit\fR
+logical instead
+.RE
+.PP
+\fBfix\fR
+.RS 4
+use
+\fBatoms\fR
+in
+\fBfix\fR/\fBconstrain\fR
+group instead
+.RE
+.PP
+\fBfixfc\fR
+.RS 4
+use
+\fBforce constant\fR
+in
+\fBconstrain\fR
+group instead
+.RE
+.PP
+\fBfragment1\fR
+.RS 4
+use
+\fBfragment1\fR
+in
+\fBsplit\fR
+group instead
+.RE
+.PP
+\fBfragment2\fR
+.RS 4
+use
+\fBfragment1\fR
+in
+\fBsplit\fR
+group instead
+.RE
+.PP
+\fBgbsa\fR
+.RS 4
+use
+\fBsolvent\fR
+in
+\fBgbsa\fR
+group instead
+.RE
+.PP
+\fBgfnver\fR
+.RS 4
+use
+\fBversion\fR
+in
+\fBgfn\fR
+group instead
+.RE
+.PP
+\fBhessa\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBhessf\fR
+.RS 4
+use
+\fBfreeze\fR
+in
+\fBfix\fR
+group instead
+.RE
+.PP
+\fBhlowopt\fR
+.RS 4
+use
+\fBhlow\fR
+in
+\fBopt\fR
+group instead
+.RE
+.PP
+\fBion_rad\fR
+.RS 4
+use
+\fBion_rad\fR
+in
+\fBgbas\fR
+group instead
+.RE
+.PP
+\fBion_st\fR
+.RS 4
+use
+\fBion_st\fR
+in
+\fBgbsa\fR
+group instead
+.RE
+.PP
+\fBmaxdispl\fR
+.RS 4
+use
+\fBmaxdipl\fR
+in
+\fBopt\fR
+group instead
+.RE
+.PP
+\fBmaxopt\fR
+.RS 4
+use
+\fBmaxcycle\fR
+in
+\fBopt\fR
+group instead
+.RE
+.PP
+\fBmddumpxyz\fR
+.RS 4
+use
+\fBdump\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBmd_hmass\fR
+.RS 4
+use
+\fBhmass\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBmdskip\fR
+.RS 4
+use
+\fBskip\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBmdstep\fR
+.RS 4
+use
+\fBstep\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBmdtemp\fR
+.RS 4
+use
+\fBtemp\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBmdtime\fR
+.RS 4
+use
+\fBtime\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBmicroopt\fR
+.RS 4
+use
+\fBmircocycle\fR
+in
+\fBopt\fR
+group instead
+.RE
+.PP
+\fBmode_local\fR
+.RS 4
+use
+\fBlocal\fR
+in
+\fBmodef\fR
+group instead
+.RE
+.PP
+\fBmode_n\fR
+.RS 4
+use
+\fBn\fR
+in
+\fBmodef\fR
+group instead
+.RE
+.PP
+\fBmode_prj\fR
+.RS 4
+use
+\fBprj\fR
+in *modef group instead
+.RE
+.PP
+\fBmode_step\fR
+.RS 4
+use
+\fBstep\fR
+in
+\fBmodef\fR
+group instead
+.RE
+.PP
+\fBmode_updat\fR
+.RS 4
+use
+\fBupdat\fR
+in
+\fBmodef\fR
+group instead
+.RE
+.PP
+\fBmode_vthr\fR
+.RS 4
+use
+\fBvthr\fR
+in
+\fBmodef\fR
+group instead
+.RE
+.PP
+\fBnvt\fR
+.RS 4
+use
+\fBnvt\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBoptlev\fR
+.RS 4
+use
+\fBoptlevel\fR
+in
+\fBopt\fR
+group intead
+.RE
+.PP
+\fBorca_exe\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBorca_line\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBorca_mpi\fR
+.RS 4
+currently not supported
+.RE
+.PP
+\fBrestartmd, mdrestart\fR
+.RS 4
+use
+\fBrestart\fR
+in
+\fBmd\fR
+group
+.RE
+.PP
+\fBruntyp\fR
+.RS 4
+please use the commandline instead, might still work
+.RE
+.PP
+\fBs6opt\fR
+.RS 4
+use
+\fBs6\fR
+in
+\fBopt\fR
+group instead
+.RE
+.PP
+\fBsamerand\fR
+.RS 4
+use
+\fBsamerand\fR
+logical instead
+.RE
+.PP
+\fBscan\fR
+.RS 4
+use
+\fBscan\fR
+group instead
+.RE
+.PP
+\fBscchess\fR
+.RS 4
+use
+\fBsccacc\fR
+in
+\fBhess\fR
+group instead
+.RE
+.PP
+\fBsccmd\fR
+.RS 4
+use
+\fBsccacc\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBshake\fR
+.RS 4
+use
+\fBshake\fR
+in
+\fBmd\fR
+group instead
+.RE
+.PP
+\fBsphere\fR
+.RS 4
+use
+\fBsphere\fR
+in
+\fBsphere\fR
+group instead
+.RE
+.PP
+\fBspringexp\fR
+.RS 4
+use
+\fBspringexp\fR
+in
+\fBfix\fR
+group instead
+.RE
+.PP
+\fBstephess\fR
+.RS 4
+use
+\fBstep\fR
+in *hess group instead
+.RE
+.PP
+\fBthermo_sthr\fR
+.RS 4
+use
+\fBsthr\fR
+in
+\fBthermo\fR
+group instead
+.RE
+.PP
+\fBthermo\fR
+.RS 4
+use
+\fBtemp\fR
+in
+\fBthermo\fR
+group instead
+.RE
+.PP
+\fBuhf\fR
+.RS 4
+use
+\fBuhf\fR
+logical instead
+.RE
+.PP
+\fBvelodump\fR
+.RS 4
+use
+\fBvelo\fR
+in
+\fBmd\fR
+group instead
+.RE
+.SH "BUGS"
+.sp
+Please report all bugs with an example input, \-\-copy dump of internal settings and the used geometry, as well as the \-\-verbose output to xtb@thch\&.uni\-bonn\&.de
+.SH "RESOURCES"
+.sp
+Main web site: http://grimme\&.uni\-bonn\&.de/software/xtb
+.SH "COPYING"
+.sp
+Copyright (C) 2015\-2020 S\&. Grimme\&. This work is licensed under the Creative Commons Attribution\-ShareAlike 4\&.0 International (CC BY\-SA 4\&.0)\&.

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+{% include 'js.html' %}
+{% include 'style.html' %}
+{% block head %}
+{% endblock %}
+
+{% set proj = md['title'] or 'Browse ASE Database' %}
+
+    <title>{% block title %}{% endblock %}</title>
+
+  </head>
+
+  <body {% block BodySettings %}{% endblock %}>
+
+    <div class="container" style="padding: 0px;">
+      <div class="row">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <ul class="nav navbar-nav navbar-right">
+{% if home %}
+              <li>
+                <a href="{{ home }}">CMR</a>
+              </li>
+    {% if project %}
+              <li>
+                <a href="{{ home }}{{ project }}/{{ project }}.html">
+                More information</a>
+              </li>
+    {% endif %}
+{% endif %}
+{% if back %}
+              <li>
+                <a href="/{{ project }}/">Back to search page</a>
+              </li>
+{% endif %}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div> <!--end of container-->
+
+{% block content %}
+{% endblock %}
+
+{% if ase_db_footer %}
+  <div class="text-center">{{ ase_db_footer | safe }}</div>
+{% endif %}
+  </body>
+</html>

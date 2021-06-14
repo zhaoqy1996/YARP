@@ -1,0 +1,192 @@
+{% extends 'layout.html' %}
+
+{% macro atoms() %}
+{% if d.numbers|length %}
+<div class="row">
+    <center>
+        <div id="appdiv"></div>
+    {% if open_ase_gui %}
+        <img src="/{{ project }}/image/{{ d.id }}.png">
+    {% endif %}
+    </center>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-4">
+        {% if open_ase_gui %}
+        <a class="btn" href="/{{ project }}/gui/{{ d.id }}">
+        Open ASE's GUI</a>
+        {% endif %}
+        <div class="btn-group pull-right">
+            <button type="button" class="btn btn-link dropdown-toggle btn-sm"
+            data-toggle="dropdown">
+                Unit cell <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a onclick="repeatCell(1, 1, 1);">1x1x1</a></li>
+                <li><a onclick="repeatCell({{ n1 }}, {{ n2 }}, {{ n3 }});">
+                {{ n1 }}x{{ n2 }}x{{ n3 }}</a></li>
+            </ul>
+        </div>
+        <div class="btn-group pull-right">
+            <button type="button" class="btn btn-link dropdown-toggle btn-sm"
+            data-toggle="dropdown">
+                Download <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="/{{ project }}/xyz/{{ d.id }}">xyz</a></li>
+                <li><a href="/{{ project }}/sqlite/{{ d.id }}">db</a></li>
+                <li><a href="/{{ project }}/json/{{ d.id }}">json</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+</div>
+{% endif %}
+{% endmacro %}
+
+{% macro cell() %}
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Axis</th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+<th>Periodic</th>
+</tr>
+</thead>
+<tbody>
+            {% for axis in s.cell %}
+<tr>
+<td>{{ loop.index }}</td>
+                {% for a in axis %} <td>{{ a }}</td>{% endfor %}
+<td>{{ d.pbc[loop.index0] }}</td>
+</tr>
+            {% endfor %}
+</tbody>
+</table>
+<table class="table table-striped">
+<tbody>
+<tr><td>Lengths:</td>{% for L in s.lengths %} <td>{{ L }}</td>{% endfor %}</tr>
+<tr><td>Angles:</td>{% for a in s.angles %} <td>{{ a }}</td>{% endfor %}</tr>
+</tbody>
+</table>
+{% endmacro %}
+
+{% macro table(data) %}
+<table class="table table-striped">
+<!--
+<colgroup>
+<col class="col-xs-7">
+<col class="col-xs-3">
+<col class="col-xs-2">
+</colgroup>
+-->
+<thead>
+    <tr>
+    {% for title in data.header %}
+        <th>{{ title }}</th>
+    {% endfor %}
+    </tr>
+</thead>
+<tbody>
+{% for row in data.rows %}
+    <tr>
+    {% for value in row %}
+        <td> {{ value|safe }} </td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endmacro %}
+
+{% block title %}
+{{proj}} - Summary
+{% endblock %}
+
+{% set d = s.row %}
+
+{% block head %}
+{% if not open_ase_gui %}
+<script src="{{ url_for('static', filename='jsmol/JSmol.min.js') }}"></script>
+
+<script>
+jmol_isReady = function(applet)
+{
+    Jmol._getElement(applet, "appletdiv").style.border="1px solid lightgray";
+    Jmol.script(jmolApplet0, "set displaycellparameters false;")
+    Jmol.script(jmolApplet0,
+    "load /{{ project }}/cif/{{ d.id }}.cif { {{ n1 }} {{ n2 }} {{ n3 }} };");
+    }
+</script>
+
+<script src="{{ url_for('static', filename='summary.js') }}"></script>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+<h1>
+{{ s.formula|safe }}
+</h1>
+
+<div class="panel-group">
+
+{% for title, things in s.layout %}
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="btn-block" data-toggle="collapse"
+        href="#collapse{{ loop.index0 }}">
+        {{ title }}
+        </a>
+        </h4>
+    </div>
+
+    <div id="collapse{{ loop.index0 }}"
+    class="panel-collapse collapse {% if loop.index0 == 0 %}in{% endif %}">
+        <div class="panel-body">
+    {% for column in things %}
+        <div class="col-md-6">
+    {% for data in column %}
+            <div class="row">
+        {% if data.type == 'atoms' %}
+            {{ atoms() }}
+        {% elif data.type == 'cell' %}
+            {{ cell() }}
+        {% elif data.type == 'table' %}
+            {{ table(data) }}
+        {% else %}
+	    {% if data.link %}
+	        {% if data.link == 'empty' %}
+                    <br>
+	        {% else %}
+	            <center>
+		      <a target="_blank"
+			 rel="noopener noreferrer"
+			 href="/{{ project }}/plot/{{ uid }}/{{ data.link }}">
+			Interactive mode
+		      </a>
+		    </center>
+		{% endif %}
+	    {% endif %}
+             <img
+                src="/{{ project }}/plot/{{ uid }}/{{ data.filename }}"
+                width="100%">
+        {% endif %}
+            </div> <!--END ROW-->
+    {% endfor %}
+        </div> <!--END col-md-6-->
+    {% endfor %}
+        </div> <!--END PANEL BODY-->
+    </div> <!--END COLLAPSE-->
+</div> <!--END PANEL-->
+{% endfor %}
+</div> <!--END PANEL GROUP-->
+</div>
+{% endblock content %}
