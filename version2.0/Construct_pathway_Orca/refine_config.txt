@@ -1,0 +1,29 @@
+# reactant and product info
+reaction_dict    /depot/bsavoie/data/YARP/reaction/wB97XD_def2TZVP.p                # path to reaction dictionary
+input_xyz        /scratch/bell/zhao922/pyGSM/M05-data/KHP-step2/refine_xyz
+                                                                                    # path to GSM input files
+output_path      /scratch/bell/zhao922/pyGSM/M05-data/KHP-step2                     # path to GSM output fodler
+pygsm_path       /depot/bsavoie/apps/YARP/pyGSM/pygsm/wrappers/main.py              # pathway to pygsm
+E_dict           /depot/bsavoie/data/YARP/DFT-db/wB97XD_def2TZVP.db                 # reactant energy
+c_path           /depot/bsavoie/apps/YARP/conformer/				    # crest output folder
+
+# General cluster arguments
+charge           0		      # charge
+unpair           0		      # unpair lone electron
+DFT-IRC		 True                 # If is True, perform IRC calculation at DFT level
+batch            slurm                # scheduler, pbs and slurm are valid options
+sched            slurm                # scheduler argument for the script (for halstead/brown, slurm is the only option)
+
+# Cluster arguments for TS-location & IRC calculation
+functional    wB97XD                  # functional for both TS geo-opt and IRC
+basis         Def2TZVP                # basis set for both TS geo-opt and IRC
+Dispersion    None		      # EmpiricalDispersion keyword (option: None, D2, D3, D3BJ)
+wt            8                       # walltime for each calculation
+ppn           32                      # number of cpus per node
+procs         1                       # number of processors for each Gaussian job. Should divide into ppn argugment
+Njobs         1                       # number of jobs for each submit file
+queue         bsavoie                 # queue to submit the jobs to
+parallel      perpendicular           # select horizontal or perpendicular
+memory        1000                    # memory per cpu (recommand to be less than 1000MB)
+IRC-image     60                      # maximum image number for IRC calculation
+stepsize      15                      # step size for IRC calculation

@@ -1,0 +1,8 @@
+python reaction_enumeration.py Reactant/Ga_ethyl_ethene.xyz -o first_step -N 1 -t [1,3] -c 8 -S [14,47]
+python reaction_enumeration.py Reactant/Ga_butyl_ethene.xyz -o second_step -N 1 -t [1,3] -c 10 -S [20,53]
+python reaction_enumeration.py Reactant/Ga_ethyl_butene.xyz -o third_step -N 1 -t [1,3] -c 14 -S [20,53]
+python reaction_enumeration.py Reactant/Ga_2butyl_ethene.xyz -o fourth_step -N 1 -t [1,3] -c 10 -S [20,53]
+python reaction_enumeration.py Reactant/Ga_3hexane_ethene.xyz -o fourth_step_2 -N 1 -t [1,3] -c 12 -S [26,59]
+python reaction_enumeration.py Reactant/Ga_ethyl_2butene.xyz -o fifth_step -N 1 -t [1,3] -c 14 -S [20,53]
+
+sinteractive -A bsavoie --nodes=1 --ntasks-per-node=1 --time 24:00:00

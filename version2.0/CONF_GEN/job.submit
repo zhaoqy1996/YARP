@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#SBATCH --job-name=xTB.0
+#SBATCH --output=RCS.0.out
+#SBATCH --error=RCS.0.err
+#SBATCH -A standby
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time 4:00:00
+
+# activate a correct anaconda environment
+source activate YARP
+
+# Load environment for Gaussian
+python conf_gen.py XXX_A_folder_of_xyz_files_XXX -N 3 -Njob 8 -w XXX_An_output_folder_XXX -ff mmff94 -s 2 --remove_constraints
+wait

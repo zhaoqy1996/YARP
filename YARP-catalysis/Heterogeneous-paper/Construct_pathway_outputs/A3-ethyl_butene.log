@@ -1,0 +1,73 @@
+Directly take xyz_files ready for GSM...
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+pyGSM-xTB for pp_10_0 finished
+pyGSM-xTB for pp_11_0 finished
+pyGSM-xTB for pp_12_0 finished
+pyGSM-xTB for pp_13_0 finished
+pyGSM-xTB for pp_14_0 finished
+pyGSM-xTB for pp_16_0 finished
+pyGSM-xTB for pp_17_0 finished
+pyGSM-xTB for pp_18_0 finished
+pyGSM-xTB for pp_1_0 finished
+pyGSM-xTB for pp_1_1 finished
+pyGSM-xTB for pp_2_0 finished
+pyGSM-xTB for pp_2_1 failed
+pyGSM-xTB for pp_3_0 finished
+pyGSM-xTB for pp_5_0 finished
+pyGSM-xTB for pp_6_0 finished
+pyGSM-xTB for pp_7_0 finished
+pyGSM-xTB for pp_8_0 finished
+pyGSM-xTB for pp_9_0 finished
+TS for reaction payway to pp_10_0 is found with Energy barrier 44.7986699997
+TS for reaction payway to pp_11_0 is found with Energy barrier 86.08194
+TS for reaction payway to pp_12_0 is found with Energy barrier 58.6649700001
+TS for reaction payway to pp_13_0 is found with Energy barrier 92.4109200002
+TS for reaction payway to pp_14_0 is found with Energy barrier 56.3812199999
+TS for reaction payway to pp_16_0 is found with Energy barrier 77.8333499997
+TS for reaction payway to pp_17_0 is found with Energy barrier 76.06746
+TS for reaction payway to pp_18_0 is found with Energy barrier 35.3675700002
+TS for reaction payway to pp_1_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_1_1 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_2_0 is found with Energy barrier 99.8644500001
+TS for reaction payway to pp_3_0 is found with Energy barrier 111.98187
+TS for reaction payway to pp_5_0 is found with Energy barrier 36.0851400001
+TS for reaction payway to pp_6_0 is found with Energy barrier 66.1140900002
+TS for reaction payway to pp_7_0 is found with Energy barrier 92.9136600002
+TS for reaction payway to pp_8_0 is found with Energy barrier 67.7539800001
+TS for reaction payway to pp_9_0 is found with Energy barrier 71.2265399999
+Total number of gradient calls is 371
+IRC for reaction payway to pp_10_0 is finished
+IRC for reaction payway to pp_11_0 is finished
+IRC for reaction payway to pp_12_0 is finished
+IRC for reaction payway to pp_13_0 is finished
+IRC for reaction payway to pp_14_0 is finished
+IRC for reaction payway to pp_16_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_17_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_18_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_2_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+

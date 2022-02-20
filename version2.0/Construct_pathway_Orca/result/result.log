@@ -1,0 +1,19 @@
+Geometry optimization is done at xtb level with single point energy:-15.662044452428 and resulting xyz file /scratch/bell/zhao922/life/step1/cata-B97/opt-folder/LELOWRISYMNNSU-XLYOFNOQVPJJNP-XLYOFNOQVPJJNP.xyz
+	 running 0 CREST jobs...
+	 running 4 CONF_GEN jobs...
+	 running 11 GSM jobs...
+pyGSM for LELOW-XLYOF_1_0-cata_1 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_1_0-cata_2 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_1_0-cata_3 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_2_0-cata_1 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_2_0-cata_2 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_3_0-cata1_1 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_3_0-cata1_2 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_3_0-cata1_3 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_3_0-cata2_1 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_3_0-cata2_2 fails / locates to a wrong TS
+pyGSM for LELOW-XLYOF_3_0-cata2_3 fails / locates to a wrong TS
+	 running 1 low level TS_opt jobs...
+	 running 1 low level IRC jobs...
+	 running 1 high level TS_opt jobs...
+Total number of gradient calls is 0

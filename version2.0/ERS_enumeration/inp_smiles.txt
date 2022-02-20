@@ -1,0 +1,10 @@
+OC[C@H]([C@]1(OC1=O)[C@H](CO)O)O
+OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O
+OC[C@@H]1[C@@H]([C@@]1(O)C=O)CO
+OC[C@@H]([C@]1(C=O)[C@@H]([C@H]1O)O)O
+OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O
+OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O
+OC[C@@H]([C@@]1(C=O)O[C@]1(O)CO)O
+OC[C@@H]([C@@]1(C=O)C[C@H]1O)O
+OC[C@H]1[C@@]([C@]1(O)C=O)(O)CO
+OC[C@]1(O)[C@@]([C@@]1(O)C=O)(O)CO

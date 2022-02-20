@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#SBATCH --job-name=ERS
+#SBATCH --output=ERS.out
+#SBATCH --error=ERS.err
+#SBATCH -A standby
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time 4:00:00
+
+# cd into the submission directory
+echo Running on host `hostname`
+echo Start Time is `date`
+
+source activate python3
+
+python reaction_enumeration.py Reactant/Glucose/new-S3/ -c TCIT-config.txt -rd ../dict/reactants_Pb3f3.p -ff mmff94 -P 1 -t [3] --apply_TCIT --partial_b3f3
+#python reaction_enumeration.py Reactant/Glucose.xyz -c TCIT-config.txt -rd ../dict/reactants_b2f2.p -ff mmff94 -P 1 -t [3] --apply_TCIT
+# python reaction_enumeration.py Reactant/PC-net_b2f2.txt -c TCIT-config.txt -rd ../dict/reactants_b2f2.p -t [3] --apply_TCIT -ff mmff94
+
+wait
+echo End Time is `date`

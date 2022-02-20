@@ -1,0 +1,42 @@
+# reactant and product info
+input_type       1                                                                  # 0 refers to take reactant and product
+                                                                                    # 1 refers to take input_xyz which is ready for GSM
+reactant_xyz     /home/zhao922/bin/MyGithub/YARP/YARP-catalysis/ERS_enumeration/Reactant/Ga_ethyl_butene.xyz
+                                                                                    # path to reactant xyz file
+product_path     /home/zhao922/bin/MyGithub/YARP/YARP-catalysis/ERS_enumeration/fourth_step/reaction_channel/pp_0
+                                                                                    # path to products folder
+input_xyz        /scratch/halstead/z/zhao922/pyGSM/YARP-catalysis/sixth_step_1/input_files
+                                                                                    # path to GSM input files
+output_path      /scratch/halstead/z/zhao922/pyGSM/YARP-catalysis/sixth_step_1
+surface          22-53  							    # surface atoms list (fixed during geo-opt)
+E_dict           energy_db/6-31G.db                                                 # reactant energy
+charge           0                                                                  # charge of the system
+unpair           0                                                                  # number of unpaired electrons
+multiplicity     1                                                                  # multiplicity of the system
+
+# arguments
+pre-opt          True                 # Pre-optimize the reactant and product or not
+mode             DE-GSM               # mode of pyGSM package
+Nimage           11                   # Number of images for each reaction pathway (9 is default for pyGSM DE-GSM)
+add-tor          0.01                 # Convergence tolerance for adding new node (default: 0.01)
+conv-tor         0.005                # Convergence tolerance for optimizing nodes (default: 0.005)
+
+# Cluster arguments for pyGSM
+batch         slurm                   # scheduler, pbs and slurm are valid options
+sched         slurm                   # scheduler argument for the script (for halstead/brown, slurm is the only option)
+wt            4                       # walltime for each calculation
+Njobs         1                       # number of jobs for each submit file
+queue         bsavoie                 # queue to submit the jobs to
+
+# Cluster arguments for TS-location & IRC calculation
+functional    B3LYP                   # functional for both TS geo-opt and IRC
+basis         6-31G                   # basis set for both TS geo-opt and IRC
+wt2           24                      # walltime for each calculation
+ppn           20                      # number of cpus per node
+procs         10                      # number of processors for each Gaussian job. Should divide into ppn argugment
+Njobs2        1                       # number of jobs for each submit file
+queue2        bsavoie                 # queue to submit the jobs to
+parallel      perpendicular           # select horizontal or perpendicular
+memory        60                      # memory call
+IRC-image     40                      # maximum image number for IRC calculation
+stepsize      15                      # step size for IRC calculation

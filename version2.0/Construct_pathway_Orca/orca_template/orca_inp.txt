@@ -1,0 +1,3 @@
+!b97-3c engrad tightscf scfconvforced
+
+%scf smeartemp 5000 end

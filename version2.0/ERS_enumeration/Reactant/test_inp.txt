@@ -1,0 +1,3 @@
+C[C@@]1(O)COC1=O
+O=COCC(=O)C
+O=CO[C@H](C=O)C

@@ -1,0 +1,474 @@
+Working on OC[C@H]([C@]1(OC1=O)[C@H](CO)O)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  304019.316413:  30.780 kcal/mole into final prediction (based on depth=0 ring  301405.943498: 24.739)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][6][1]][6[8][6][1]][6[8][8]][8[6]]]'] is missing, use frag_gen_inter to calculate OC[C@H]([C@]1(OC1=O)[C@H](CO)O)O....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (22):
+
+		[6[6[8][6][1]][6[8][6][1]][6[8][8]][8[6]]]
+		[8[6[6][1][1]][1]]
+		[8[6[6][6][1]][1]]
+		[8[6[6][6][6]][6[8][6]]]
+		[6[6[8][6][6]][8[6]][8]]
+		[6[6[8][6][1]][8[1]][1][1]]
+		[6[6[8][6][6]][6[8][1][1]][8[1]][1]]
+		[8[6[6][6][6]][6[1][1][1]]]
+		[8[6[8][6]][1]]
+		[6[6[8][6][6]][8[1]][8]]
+		[6[6[8][6][6]][6[1][1][1]][8[1]][1]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][8[1]][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[6]]]
+		[6[6[1][1][1]][8[6]][8]]
+		[8[6[1][1][1]][6[8][6]]]
+		[6[6[1][1][1]][6[1][1][1]][6[8][8]][8[1]]]
+		[8[6[6][6][6]][1]]
+		[6[6[8][1][1]][6[1][1][1]][8[1]][1]]
+		[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][8[1]][8]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][6][1]][1]]', '[6[6[1][1][1]][6[1][1][1]][8[1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][1][1]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][6][6]][6[1][1][1]]]', '[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[6]]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[8][6]][1]]', '[6[6[1][1][1]][8[1]][8]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[1][1][1]][6[1][1][1]][6[8][8]][8[1]]]', '[6[6[8][6][6]][8[1]][8]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[6[6[8][6][6]][6[1][1][1]][8[1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[1][1][1]][6[8][6]]]', '[6[6[1][1][1]][8[6]][8]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[8[6[6][6][6]][1]]'}]
+put VUYOHFPLEQCSDO-KCQQBQQISA-N in xyz_task folder, wait for G4 calculation...
+Working on OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  404221.307481:  26.080 kcal/mole into final prediction (based on depth=0 ring  401607.909426: 26.480)
+
+========================================================================================================================
+========================================================================================================================
+
+No more information is needed, begin to calculate enthalpy of fomation of OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O
+Prediction are made based on such group types: (Hf_298k/S0_298k)
+[8[6[6][1][1]][1]]            : -39.62/28.64
+[6[6[8][6][1]][8[1]][1][1]]   : -6.77/7.21 
+[6[6[8][6][6]][6[8][1][1]][8[1]][1]]: -5.85/-15.52
+[6[6[8][6][1]][6[8][6][1]][6[8][1]][8[8]]]: 6.04 /-37.86
+[6[6[8][6][6]][8][1]]         : -29.76/34.11
+[8[6[6][6][6]][8[6]]]         : -7.61/14.42
+[8[6[6][6][1]][8[6]]]         : -6.95/13.56
+[6[6[8][6][6]][6[8][1][1]][8[8]][1]]: -1.45/-15.70
+[6[6[8][6][1]][8[1]][1][1]]   : -6.77/7.21 
+[8[6[6][1][1]][1]]            : -39.62/28.64
+[8[6[6][6][1]][1]]            : -40.68/28.99
+Prediction of Hf_0 for OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O is -607.701 kJ/mol
+Prediction of Hf_298 for OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O is -640.039 kJ/mol
+Prediction of Gf_298 for OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O is -404.229 kJ/mol
+Prediction of S0_gas for OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O is 512.410 J/(mol*K)
+Prediction of Cv_gas for OC[C@H]([C@@]1(C=O)OO[C@H]1CO)O is 205.778 J/(mol*K)
+Working on OC[C@@H]1[C@@H]([C@@]1(O)C=O)CO...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  304019.346268:  33.331 kcal/mole into final prediction (based on depth=0 ring  301805.962243: 27.795)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][6][6]][6[6][6][1]][6[8][1][1]][1]]', '[6[6[8][6][6]][6[6][6][1]][6[8][1][1]][1]]', '[6[6[6][6][1]][6[6][6][1]][6[8][1]][8[1]]]'] is missing, use frag_gen_inter to calculate OC[C@@H]1[C@@H]([C@@]1(O)C=O)CO....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (13):
+
+		[6[6[6][6][1]][8[1]][1][1]]
+		[8[6[6][1][1]][1]]
+		[6[6[8][6][6]][6[6][6][1]][6[8][1][1]][1]]
+		[6[6[8][6][6]][8][1]]
+		[6[6[6][6][1]][6[6][6][1]][6[8][1]][8[1]]]
+		[8[6[6][6][6]][1]]
+		[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][1]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[6][6][1]][6[1][1][1]][6[1][1][1]][1]]
+		[6[6[6][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]
+		[6[6[8][6][6]][6[1][1][1]][6[1][1][1]][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[6[6[6][6][1]][8[1]][1][1]]', '[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][6]][8][1]]', '[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[8[6[6][6][6]][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][6]][6[1][1][1]][6[1][1][1]][1]]', '[6[6[6][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]'}]
+put HWABDWFWKVAHTH-ZETCQYMHSA-N in xyz_task folder, wait for G4 calculation...
+put OCTZTUGFQYMECR-UHFFFAOYSA-N in xyz_task folder, wait for G4 calculation...
+Working on OC[C@@H]([C@]1(C=O)[C@@H]([C@H]1O)O)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  304019.352264:  25.830 kcal/mole into final prediction (based on depth=0 ring  301805.962243: 27.795)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][6][1]][6[8][6][1]][6[8][6][1]][6[8][1]]]'] is missing, use frag_gen_inter to calculate OC[C@@H]([C@]1(C=O)[C@@H]([C@H]1O)O)O....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (14):
+
+		[8[6[6][1][1]][1]]
+		[6[6[6][6][6]][8][1]]
+		[6[6[8][6][1]][6[8][6][1]][6[8][6][1]][6[8][1]]]
+		[6[6[6][6][6]][6[8][6][1]][8[1]][1]]
+		[8[6[6][6][1]][1]]
+		[6[6[8][6][1]][8[1]][1][1]]
+		[6[6[6][6][6]][6[8][1][1]][8[1]][1]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][6[8][1]]]
+		[6[6[6][6][6]][6[1][1][1]][8[1]][1]]
+		[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][6[1][1][1]]]
+		[6[6[8][6][1]][6[1][1][1]][8[1]][1]]
+		[6[6[1][1][1]][6[1][1][1]][8[1]][1]]
+		[6[6[8][1][1]][6[1][1][1]][8[1]][1]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 7 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[6][6][6]][8][1]]', '[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][6[8][1]]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][6][1]][1]]', '[6[6[1][1][1]][6[1][1][1]][8[1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][1][1]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[6][6][6]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][6[1][1][1]]]'}]
+put VOUPSEYOJLWSSP-QYNIQEEDSA-N in xyz_task folder, wait for G4 calculation...
+Working on OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  303615.913187:  21.306 kcal/mole into final prediction (based on depth=0 ring  301405.943498: 24.739)
+
+========================================================================================================================
+========================================================================================================================
+
+No more information is needed, begin to calculate enthalpy of fomation of OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O
+Prediction are made based on such group types: (Hf_298k/S0_298k)
+[8[6[6][1][1]][1]]            : -39.62/28.64
+[6[6[8][6][1]][8[1]][1][1]]   : -6.77/7.21 
+[6[6[8][6][6]][6[8][1][1]][8[1]][1]]: -5.85/-15.52
+[6[6[8][8][6]][6[8][6][1]][6[8][1]][8[1]]]: -4.49/-40.20
+[6[6[8][6][6]][6[8][1][1]][8[6]][8[1]]]: -4.51/-35.50
+[8[6[8][6][6]][1]]            : -42.34/28.99
+[6[6[8][8][6]][8[6]][1][1]]   : -6.61/9.59 
+[8[6[8][6][6]][6[6][1][1]]]   : -29.32/8.93 
+[6[6[8][6][6]][8][1]]         : -29.76/34.11
+[8[6[6][6][6]][1]]            : -41.37/30.57
+[8[6[6][6][1]][1]]            : -40.68/28.99
+Prediction of Hf_0 for OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O is -894.477 kJ/mol
+Prediction of Hf_298 for OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O is -962.405 kJ/mol
+Prediction of Gf_298 for OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O is -724.122 kJ/mol
+Prediction of S0_gas for OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O is 504.115 J/(mol*K)
+Prediction of Cv_gas for OC[C@@H]([C@@]([C@]1(O)CO1)(C=O)O)O is 208.354 J/(mol*K)
+Working on OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  404221.320550:  23.365 kcal/mole into final prediction (based on depth=0 ring  402007.943202: 26.828)
+
+========================================================================================================================
+========================================================================================================================
+
+No more information is needed, begin to calculate enthalpy of fomation of OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O
+Prediction are made based on such group types: (Hf_298k/S0_298k)
+[8[6[6][1][1]][1]]            : -39.62/28.64
+[6[6[8][6][1]][8[1]][1][1]]   : -6.77/7.21 
+[6[6[8][6][6]][6[8][1][1]][8[1]][1]]: -5.85/-15.52
+[6[6[8][6][1]][6[8][6][1]][6[8][8]][8[1]]]: -7.28/-43.70
+[8[6[6][6][6]][1]]            : -41.37/30.57
+[6[6[8][6][6]][8[6]][8]]      : -45.07/13.67
+[8[6[6][6][1]][6[8][6]]]      : -38.31/7.17 
+[6[6[8][6][6]][6[8][1][1]][8[6]][1]]: -0.62/-14.23
+[6[6[8][6][1]][8[1]][1][1]]   : -6.77/7.21 
+[8[6[6][1][1]][1]]            : -39.62/28.64
+[8[6[6][6][1]][1]]            : -40.68/28.99
+Prediction of Hf_0 for OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O is -986.166 kJ/mol
+Prediction of Hf_298 for OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O is -1040.206 kJ/mol
+Prediction of Gf_298 for OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O is -792.593 kJ/mol
+Prediction of S0_gas for OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O is 472.821 J/(mol*K)
+Prediction of Cv_gas for OC[C@H]([C@@]1(O)C(=O)O[C@H]1CO)O is 193.575 J/(mol*K)
+Working on OC[C@@H]([C@@]1(C=O)O[C@]1(O)CO)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  304221.323927:  36.099 kcal/mole into final prediction (based on depth=0 ring  301405.943498: 24.739)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][8][6]][6[8][6][1]][6[8][1]][8[6]]]'] is missing, use frag_gen_inter to calculate OC[C@@H]([C@@]1(C=O)O[C@]1(O)CO)O....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (26):
+
+		[6[6[8][8][6]][8[1]][1][1]]
+		[8[6[6][1][1]][1]]
+		[8[6[8][6][6]][6[6][6][6]]]
+		[6[6[8][6][6]][8][1]]
+		[8[6[6][6][1]][1]]
+		[6[6[8][6][6]][6[8][1][1]][8[6]][8[1]]]
+		[8[6[8][6][6]][1]]
+		[6[6[8][8][6]][6[8][6][1]][6[8][1]][8[6]]]
+		[6[6[8][6][1]][8[1]][1][1]]
+		[6[6[8][6][6]][6[8][1][1]][8[1]][1]]
+		[6[6[8][1][1]][6[1][1][1]][8[1]][8[1]]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[6]]]
+		[6[6[1][1][1]][6[1][1][1]][8[6]][8[1]]]
+		[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]
+		[8[6[6][6][6]][1]]
+		[6[6[1][1][1]][6[1][1][1]][8[1]][1]]
+		[8[6[8][6][6]][6[1][1][1]]]
+		[6[6[8][8][6]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][6[1][1][1]][8[1]][8[1]]]
+		[6[6[8][6][6]][6[1][1][1]][8[1]][1]]
+		[8[6[6][6][6]][6[1][1][1]]]
+		[6[6[8][6][6]][6[1][1][1]][8[1]][8[1]]]
+		[6[6[8][1][1]][6[1][1][1]][8[1]][1]]
+		[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 7 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[6[6[8][8][6]][8[1]][1][1]]', '[6[6[8][1][1]][6[1][1][1]][8[1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][6]][8][1]]', '[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][6][1]][1]]', '[6[6[1][1][1]][6[1][1][1]][8[1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[8][6][6]][1]]', '[6[6[1][1][1]][6[1][1][1]][8[1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][1][1]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][6][6]][6[1][1][1]]]', '[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[6]]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[8][6][6]][6[1][1][1]]]', '[6[6[1][1][1]][6[1][1][1]][8[6]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[8[6[6][6][6]][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][8][6]][6[1][1][1]][6[1][1][1]][8[1]]]', '[6[6[8][6][6]][6[1][1][1]][8[1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[6[6[8][6][6]][6[1][1][1]][8[1]][1]]'}]
+put RWJQRADSHPOPRD-CAHLUQPWSA-N in xyz_task folder, wait for G4 calculation...
+Working on OC[C@@H]([C@@]1(C=O)C[C@H]1O)O...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  303817.362543:  28.400 kcal/mole into final prediction (based on depth=0 ring  301805.962243: 27.795)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][6][1]][6[8][6][1]][6[6][1][1]][6[8][1]]]'] is missing, use frag_gen_inter to calculate OC[C@@H]([C@@]1(C=O)C[C@H]1O)O....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (18):
+
+		[6[6[6][6][6]][6[8][6][1]][1][1]]
+		[8[6[6][1][1]][1]]
+		[6[6[6][6][6]][8][1]]
+		[6[6[6][6][6]][6[6][1][1]][8[1]][1]]
+		[8[6[6][6][1]][1]]
+		[6[6[8][6][1]][6[8][6][1]][6[6][1][1]][6[8][1]]]
+		[6[6[8][6][1]][8[1]][1][1]]
+		[6[6[6][6][6]][6[8][1][1]][8[1]][1]]
+		[6[6[6][1][1]][6[1][1][1]][8[1]][1]]
+		[6[6[6][1][1]][6[1][1][1]][6[1][1][1]][6[1][1][1]]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][6[8][1]]]
+		[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][6[1][1][1]]]
+		[6[6[8][6][1]][6[1][1][1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][8[1]][1]]
+		[6[6[6][6][6]][6[1][1][1]][1][1]]
+		[6[6[6][6][6]][6[1][1][1]][8[1]][1]]
+		[6[6[8][1][1]][6[1][1][1]][8[1]][1]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[6][6][6]][8][1]]', '[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][6[8][1]]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][6][1]][1]]', '[6[6[1][1][1]][6[1][1][1]][8[1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][1][1]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[6][1][1]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][6[1][1][1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[6][6][6]][6[1][1][1]][1][1]]', '[6[6[6][1][1]][6[1][1][1]][6[1][1][1]][6[1][1][1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[6][6][6]][6[1][1][1]][8[1]][1]]', '[6[6[8][6][1]][6[1][1][1]][6[1][1][1]][6[1][1][1]]]'}]
+put ORMGJUVXZOPHTE-RNLVFQAGSA-N in xyz_task folder, wait for G4 calculation...
+Working on OC[C@H]1[C@@]([C@]1(O)C=O)(O)CO...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  304221.341587:  31.518 kcal/mole into final prediction (based on depth=0 ring  301805.962243: 27.795)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][6][6]][6[8][6][6]][6[8][1][1]][1]]', '[6[6[8][6][6]][6[6][6][1]][6[8][1][1]][8[1]]]', '[6[6[8][6][6]][6[6][6][1]][6[8][1]][8[1]]]'] is missing, use frag_gen_inter to calculate OC[C@H]1[C@@]([C@]1(O)C=O)(O)CO....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (16):
+
+		[6[6[6][6][1]][8[1]][1][1]]
+		[6[6[8][6][6]][6[6][6][1]][6[8][1][1]][8[1]]]
+		[8[6[6][1][1]][1]]
+		[6[6[8][6][6]][8][1]]
+		[8[6[6][6][6]][1]]
+		[6[6[8][6][6]][8[1]][1][1]]
+		[6[6[8][6][6]][6[8][6][6]][6[8][1][1]][1]]
+		[6[6[8][6][6]][6[6][6][1]][6[8][1]][8[1]]]
+		[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][1]]
+		[6[6[8][6][6]][6[1][1][1]][6[1][1][1]][1]]
+		[6[6[8][6][6]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[6][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 7 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 7 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 7 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[6[6[6][6][1]][8[1]][1][1]]', '[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][1]]'}]
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][6]][8][1]]', '[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[8[6[6][6][6]][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[6[6[8][6][6]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][6]][6[1][1][1]][6[1][1][1]][1]]', '[6[6[6][6][1]][6[1][1][1]][6[1][1][1]][8[1]]]'}]
+put ILMLLXVYBUMSGH-QMMMGPOBSA-N in xyz_task folder, wait for G4 calculation...
+put KHBQLLFLZPJPSA-UHFFFAOYSA-N in xyz_task folder, wait for G4 calculation...
+put NXJLJLUZPHVFKH-QMMMGPOBSA-N in xyz_task folder, wait for G4 calculation...
+Working on OC[C@]1(O)[C@@]([C@@]1(O)C=O)(O)CO...
+Identify rings! Add ring correction to final predictoon
+Add ring correction  304423.336906:  29.923 kcal/mole into final prediction (based on depth=0 ring  301805.962243: 27.795)
+
+========================================================================================================================
+========================================================================================================================
+
+Information of ['[6[6[8][6][6]][6[8][6][6]][6[8][1][1]][8[1]]]', '[6[6[8][6][6]][6[8][6][6]][6[8][1][1]][8[1]]]', '[6[6[8][6][6]][6[8][6][6]][6[8][1]][8[1]]]'] is missing, use frag_gen_inter to calculate OC[C@]1(O)[C@@]([C@@]1(O)C=O)(O)CO....
+
+************************************************************************************************************************
+*                         Parsing atomtypes in need of parametrization for the following files                         *
+************************************************************************************************************************
+
+  compound.xyz
+Number of bonding matrix are 1
+
+	 grouptypes in need of parametrization (11):
+
+		[6[6[8][6][6]][6[8][6][6]][6[8][1][1]][8[1]]]
+		[8[6[6][1][1]][1]]
+		[6[6[8][6][6]][6[8][6][6]][6[8][1]][8[1]]]
+		[6[6[8][6][6]][8][1]]
+		[6[6[8][6][6]][8[1]][1][1]]
+		[8[6[6][6][6]][1]]
+		[6[6[8][6][6]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][8[1]][1][1]]
+		[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]
+		[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+		[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]
+
+	 grouptypes in need of transfering (0):
+
+
+************************************************************************************************************************
+*                                       Beginning canonical fragment generation                                        *
+*----------------------------------------------------------------------------------------------------------------------*
+* NOTE: Each atomtype will be parametrized using the smallest molecular fragment that is consistent with its           *
+*       topological definition                                                                                         *
+************************************************************************************************************************
+
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 8 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 8 centers, so this might take a while.
+WARNING in opt_terminal_centers: Iterating through all terminal center conformers. There are 6 centers, so this might take a while.
+Apply modified Pedley's second constrian to [{'[8[6[6][1][1]][1]]', '[6[6[1][1][1]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][6][6]][8][1]]', '[6[6[1][1][1]][6[1][1][1]][6[8][1]][8[1]]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[8][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[6[6[8][6][6]][8[1]][1][1]]'}]
+Apply modified Pedley's second constrian to [{'[6[6[1][1][1]][6[1][1][1]][6[1][1][1]][8[1]]]', '[8[6[6][6][6]][1]]'}]
+put DBTAPLCGEGIPQZ-UHFFFAOYSA-N in xyz_task folder, wait for G4 calculation...
+put WADHTUHONZMWQD-UHFFFAOYSA-N in xyz_task folder, wait for G4 calculation...
+Please first perform G4 calculations for missing model compounds and then run this file again

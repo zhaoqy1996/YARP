@@ -1,0 +1,20 @@
+# Script and executable locations
+TCIT_path     /home/zhao922/bin/taffi_beta/TCIT_Scripts/TCIT/TCIT.py
+							# pathway to TCIT.py
+input_type    smiles                                    # two input types, one is 'smiles' and the other one is 'xyz' files (default: xyz)
+
+target_file   inp_smiles.txt
+							# Absolute path to xyz file of model compound
+
+database      /depot/bsavoie/data/TCIT/TCIT_CAV.db      # Absolute path to database
+
+G4_db	      /depot/bsavoie/data/TCIT/G4_thermo.db     # G4 result database
+
+TCIT_db	      /depot/bsavoie/data/TCIT/TCIT_result.json # TCIT result data
+
+ring_db       /depot/bsavoie/data/TCIT/depth0_RC.db 
+                                                        # Absolute path to ring correction database
+
+xyz_task      xyz_task
+							# folder to run G4 jobs, MKAE SURE xyz_task folder is empty
+

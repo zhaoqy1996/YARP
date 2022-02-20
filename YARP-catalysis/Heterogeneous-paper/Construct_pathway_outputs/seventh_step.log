@@ -1,0 +1,13 @@
+Directly take xyz_files ready for GSM...
+pyGSM-xTB for pp_1_0 finished
+pyGSM-xTB for pp_3_0 finished
+pyGSM-xTB for pp_8_0 finished
+
+TS for reaction payway to pp_1_0 is found with Energy barrier 45.227
+TS for reaction payway to pp_3_0 is found with Energy barrier 60.615
+TS for reaction payway to pp_8_0 is found with Energy barrier 29.373
+Total number of gradient calls is 72
+
+IRC for reaction payway to pp_1_0 is finished
+IRC for reaction payway to pp_3_0 is finished
+IRC for reaction payway to pp_8_0 is finished

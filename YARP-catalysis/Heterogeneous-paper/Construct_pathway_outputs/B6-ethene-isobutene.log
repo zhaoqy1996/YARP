@@ -1,0 +1,20 @@
+Directly take xyz_files ready for GSM...
+pyGSM-xTB for pp_11_0 finished
+pyGSM-xTB for pp_12_0 finished
+pyGSM-xTB for pp_1_0 finished
+pyGSM-xTB for pp_2_0 finished
+pyGSM-xTB for pp_4_0 finished
+pyGSM-xTB for pp_4_1 finished
+pyGSM-xTB for pp_5_0 finished
+pyGSM-xTB for pp_6_0 finished
+pyGSM-xTB for pp_8_0 finished
+TS for reaction payway to pp_11_0 is found with Energy barrier 58.7204099994
+TS for reaction payway to pp_12_0 is found with Energy barrier 92.4493499994
+TS for reaction payway to pp_1_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_2_0 is found with Energy barrier 100.365299999
+TS for reaction payway to pp_4_0 is found with Energy barrier 78.0040799996
+TS for reaction payway to pp_4_1 is found with Energy barrier 41.3034299996
+TS for reaction payway to pp_5_0 is found with Energy barrier 51.0022799993
+TS for reaction payway to pp_6_0 is found with Energy barrier 57.8018699995
+TS for reaction payway to pp_8_0 is found with Energy barrier 65.3543099997
+Total number of gradient calls is 187

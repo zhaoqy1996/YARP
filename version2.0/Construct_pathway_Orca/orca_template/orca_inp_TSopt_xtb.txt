@@ -1,0 +1,11 @@
+! XTB2 TIGHTSCF OptTS NumFreq
+
+%geom
+Calc_Hess true
+NumHess true
+Recalc_Hess 8
+end
+
+%freq
+CentralDiff true
+end

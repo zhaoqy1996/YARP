@@ -1,0 +1,8 @@
+Product list for Reactant/Ga_neobutyl_ethene.xyz
+Index      Indicator                      N-adj_mats      Pathways                                                                                            
+1          CC(CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O)(C)C 1               [(0, [0])]                                                                                          
+2          C=CC(C)(C)C.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+3          C=C[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CC(C)C 1               [(0, [0])]                                                                                          
+4          C=C.CC(=C)C.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+5          C=C.CC(C[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O)C 1               [(0, [0])]                                                                                          
+6          CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CC(=C)C 1               [(0, [0])]                                                                                          

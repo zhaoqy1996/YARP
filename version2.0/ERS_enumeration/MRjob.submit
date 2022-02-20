@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#SBATCH --job-name=MRERS
+#SBATCH --output=MRERS.out
+#SBATCH --error=MRERS.err
+#SBATCH -A bsavoie
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time 240:00:00
+
+# cd into the submission directory
+echo Running on host `hostname`
+echo Time is `date`
+
+source activate python3
+python enumerate_MR.py Reactant/Pubchem/Pubchem_1.txt -ff mmff94
+
+wait
+echo End Time is `date`

@@ -1,0 +1,17 @@
+Directly take xyz_files ready for GSM...
+pyGSM-xTB for pp_1_0 finished
+pyGSM-xTB for pp_2_0 finished
+pyGSM-xTB for pp_3_0 finished
+pyGSM-xTB for pp_4_0 finished
+TS for reaction payway to pp_1_0 is found with Energy barrier 44.0842499996
+TS for reaction payway to pp_2_0 is found with Energy barrier 93.4926299997
+TS for reaction payway to pp_3_0 is found with Energy barrier 59.8355099998
+TS for reaction payway to pp_4_0 is found with Energy barrier 83.4497999999
+Total number of gradient calls is 74
+IRC for reaction payway to pp_1_0 is finished
+IRC for reaction payway to pp_2_0 is finished
+IRC for reaction payway to pp_3_0 is finished
+IRC for reaction payway to pp_4_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+

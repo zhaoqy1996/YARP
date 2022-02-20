@@ -1,0 +1,11 @@
+Product list for Reactant/Ga-butyl.xyz
+Index      Indicator                      N-adj_mats      Pathways                                                                                            
+1          CCCCCC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O 1               [(0, [0])]                                                                                          
+2          CCCCC=C.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+3          C=C[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CCCC 1               [(0, [0])]                                                                                          
+4          C=C.C=C.CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O 1               [(0, [0])]                                                                                          
+5          C=C.CCCC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O 4               [(0, [0, 1, 2, 3])]                                                                                 
+6          C=C.CCC=C.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+7          C=C.CC[C@H]([Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O)C 2               [(0, [0, 1])]                                                                                       
+8          C=C.C1CCC1.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+9          CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CCC=C 1               [(0, [0])]                                                                                          

@@ -1,0 +1,6 @@
+! B97-3c TIGHTSCF OptTS Freq RIJCOSX
+
+%geom
+Calc_Hess true
+Recalc_Hess 5
+end

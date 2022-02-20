@@ -1,0 +1,9 @@
+O=C1OCCCO1
+O=c1occo1
+O=CCOC(=O)C
+C[C@H]1CO1
+OC(=O)OCC=C
+O=COCC(=O)C
+O=CO[C@H](C=O)C
+CCC=O
+CC(=O)C

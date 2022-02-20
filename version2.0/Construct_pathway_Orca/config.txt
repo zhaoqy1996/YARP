@@ -1,0 +1,67 @@
+# reactant and product info
+input_type       0                                                                  # 0 refers to take in reactants in the input_list.txt and use the info of reactant_dict
+                                                                                    # 1 refers to take reactions but generate conformers
+										    # 2 refers to take input_xyz which is ready for GSM
+reactant_dict    /home/zhao922/bin/Github/YARP/version2.0/dict/reactants_b2f2.p
+                                                                                    # path to reactant dictionary
+reaction_dict    /depot/bsavoie/data/YARP/reaction/B3LYPD3_TZVP_orca.p              # path to reaction dictionary
+input_xyz        /scratch/bell/zhao922/life/step1/cata-B97/input_files
+                                                                                    # path to GSM input files
+output_path      /scratch/bell/zhao922/life/step1/cata-B97                          # path to GSM output fodler
+input_react      input_list.txt                                                     # input reactants list
+pygsm_path       /home/zhao922/bin/pyGSM/pygsm/wrappers/main.py              	    # pathway to pygsm
+E_dict           /depot/bsavoie/data/YARP/DFT-db/B3LYPD3_TZVP_orca.db               # reactant energy
+ff               mmff94                                                             # force-field applied for joint optimization
+
+# TCIT arguments
+apply_TCIT       True                                                               # Apply TCIT to prune product or not
+TCIT_result      /depot/bsavoie/data/TCIT/TCIT_result.json       		    # TCIT result dict
+Hf_cut           80                                                                 # When enthalpy change > Hf_cut kJ/mol, exlcude this reaction pathway
+
+# basic arguments
+charge           0		      # charge
+unpair           0		      # unpair lone electron
+batch            slurm                # scheduler, pbs and slurm are valid options
+sched            slurm                # scheduler argument for the script (for halstead/brown, slurm is the only option)
+restart_step     None    	      # Indicates which step is done, default is None, normally run the job (Option: None,GSM,low-TS,DFT-TS,low-IRC,IRC)
+select_conf      True		      # If is True, duplicated TS will be excluded
+DFT-IRC		 True                 # If is True, perform IRC calculation at DFT level
+memory        	 1000                 # memory per cpu (recommand to be less than 1000MB)
+hess-step      	 3                    # Frequency of hessian recalc
+IRC-image     	 60                   # maximum image number for IRC calculation
+IRC-model	 /home/zhao922/bin/Github/YARP/version2.0/utilities/general_model.json
+				      # intended classification model
+DG_thresh        45                   # activation energy threshold (kcal/mol), TSs with DG larger than this will be discarded
+compute_product  False                # when this flag is on, also add product into DFT calculation list (doesn't work for input type = 0)
+
+# GSM setting
+level            B97-3c               # level of theory (e.g. B3LYP/6-31G; if is xTB/ANI, directly use pyGSM-xTB/pyGSM-ANI, others use pyGSM-Orca)
+Nimage           9                    # Number of images for each reaction pathway (9 is default for pyGSM DE-GSM)
+add-tor          0.01                 # Convergence tolerance for adding new node (default: 0.01)
+conv-tor         0.005                # Convergence tolerance for optimizing nodes (default: 0.005)
+relax_end        True                 # If is False, the end nodes will be fixed by pyGSM
+low_wt           8                    # walltime for each calculation
+low_njobs        1                    # number of jobs for each submit file
+low_queue        bsavoie              # queue to submit the jobs to
+low_procs        4                    # only works for pyGSM-Orca/pyGSM-Gaussian, note:	currently if this value	is larger than 1, parallelization only supports 1 job per node
+
+# CONF-GEN setting
+c_wt             4                    # walltime for each CREST calculation
+c_njobs		 1		      # number of CREST jobs for each submit file
+c_nprocs 	 32		      # number of cpus for each CREST jobs
+n_max		 3		      # maximum number of conformations to be considered
+c_queue		 standby	      # queue to submit the jobs to
+add-joint        True                 # If is true, apply joint-optimization to obtain one conformation (only works for input type == 0)
+c_path           /scratch/bell/zhao922/YARP/conformer/
+				      # pathway to CREST conformer folder
+
+# Cluster arguments for TS-location & IRC calculation
+functional    B3LYP                   # functional for both TS geo-opt and IRC
+basis         TZVP                    # basis set for both TS geo-opt and IRC
+dispersion    D3		      # EmpiricalDispersion keyword (option: None, D2, D3, D3BJ)
+high_wt       8                       # walltime for each calculation
+ppn           8                       # number of cpus per node
+high_procs    8                       # number of processors for each Gaussian job. Should divide into ppn argugment
+high_njobs    1                       # number of jobs for each submit file
+high_queue    bsavoie                 # queue to submit the jobs to
+parallel      perpendicular           # select horizontal or perpendicular

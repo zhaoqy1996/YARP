@@ -1,0 +1,48 @@
+Directly take xyz_files ready for GSM...
+pyGSM-xTB for pp_1_0 finished
+pyGSM-xTB for pp_2_0 finished
+pyGSM-xTB for pp_3_0 finished
+pyGSM-xTB for pp_4_0 finished
+pyGSM-xTB for pp_6_0 failed
+pyGSM-xTB for pp_7_0 finished
+pyGSM-xTB for pp_7_1 finished
+pyGSM-xTB for pp_8_0 finished
+pyGSM-xTB for pp_9_0 finished
+TS for reaction payway to pp_1_0 is found with Energy barrier 61.3053000001
+TS for reaction payway to pp_2_0 is found with Energy barrier 108.43938
+TS for reaction payway to pp_3_0 is found with Energy barrier 76.4435700002
+TS for reaction payway to pp_4_0 is found with Energy barrier 74.6361000002
+TS for reaction payway to pp_7_0 is found with Energy barrier 72.7341300004
+TS for reaction payway to pp_7_1 is found with Energy barrier 102.32901
+TS for reaction payway to pp_8_0 is found with Energy barrier 113.68413
+TS for reaction payway to pp_9_0 is found with Energy barrier 36.0479700002
+Total number of gradient calls is 229
+IRC for reaction payway to pp_1_0 is finished
+IRC for reaction payway to pp_2_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_3_0 is finished
+IRC for reaction payway to pp_4_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_7_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_7_1 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_8_0 is finished
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+Table Generation Warnings:
+WARNING in Table_generator: 1 oxygen(s) have more than two bonds.
+
+IRC for reaction payway to pp_9_0 is finished

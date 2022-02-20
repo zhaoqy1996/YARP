@@ -1,0 +1,14 @@
+Product list for Reactant/Ga_2butyl_ethene_2.xyz
+Index      Indicator                      N-adj_mats      Pathways                                                                                            
+1          CC[C@@H](CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O)C 1               [(0, [0])]                                                                                          
+2          C[C@H](C=C)CC.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+3          C=C[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CCCC 1               [(0, [0])]                                                                                          
+4          C=C.CC=C.C[Ga]1O[Si@]2(O)O[Si@]3(O)O[Si](O[Si@@]4(O[Si@@](O1)(O)O[Si@@](O2)(O)O[Si@](O3)(O4)O)O)(O)O 1               [(0, [0])]                                                                                          
+5          C=C.CC(C[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O)C 1               [(0, [0])]                                                                                          
+6          C=C.C/C=C\C.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+7          C=C.CC[C@H]([Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O)C 1               [(0, [0])]                                                                                          
+8          C=C.CCC=C.O[Si@]12O[Si@]3(O)O[Si](O[Si@@](O1)(O)O[Si@@]1(O[Si@@](O2)(O)O[Si@@](O3)(O)O[GaH]O1)O)(O)O 1               [(0, [0])]                                                                                          
+9          C=C.CCCC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O 2               [(0, [0, 1])]                                                                                       
+10         CCC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CC=C 1               [(0, [0])]                                                                                          
+11         CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.C/C=C\C 1               [(0, [0])]                                                                                          
+12         CC[Ga]1O[Si@]2(O)O[Si@@]3(O[Si@@](O1)(O)O[Si@]1(O)O[Si](O[Si@@](O2)(O)O[Si@](O3)(O1)O)(O)O)O.CCC=C 1               [(0, [0])]                                                                                          

@@ -1,0 +1,53 @@
+Geometry optimization is done at xtb level with single point energy:-115.635425201825 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_10_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.654754589593 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.655051187935 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_11_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.654113762558 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.631645850328 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_12_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.653902881913 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.641569311297 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_1_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.654194005062 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.643431506238 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_2_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.630155819686 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.664477536718 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_3_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.647948074576 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.643981251298 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_4_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.650878186673 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.676546462662 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_5_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.654302014486 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.66655939671 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_6_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.64613842661 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.647563070563 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_7_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.65408897879 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.61516923961 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_8_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.653880335107 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.653626577155 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/pp_9_0-opt.xyz
+Geometry optimization is done at xtb level with single point energy:-115.654134753632 and resulting xyz file /scratch/bell/zhao922/YARP/catalysis/test/opt-folder/Ga_ethyl_2butene-opt.xyz
+pyGSM-xTB for pp_10_0 finished
+pyGSM-xTB for pp_11_0 finished
+pyGSM-xTB for pp_12_0 finished
+pyGSM-xTB for pp_1_0 finished
+pyGSM-xTB for pp_2_0 failed
+pyGSM-xTB for pp_3_0 finished
+pyGSM-xTB for pp_4_0 finished
+pyGSM-xTB for pp_5_0 finished
+pyGSM-xTB for pp_6_0 finished
+pyGSM-xTB for pp_7_0 finished
+pyGSM-xTB for pp_8_0 finished
+pyGSM-xTB for pp_9_0 finished
+	 running 11 Gaussian TS_opt jobs...
+TS for reaction payway to pp_10_0 is found with Energy barrier 41.83388999930685
+TS for reaction payway to pp_11_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_12_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_1_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_3_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_4_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_5_0 is found with Energy barrier 42.32528999949864
+TS for reaction payway to pp_6_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_7_0 is found with Energy barrier 56.32262999954037
+TS for reaction payway to pp_8_0 fails (either no imag freq or geo-opt fails)
+TS for reaction payway to pp_9_0 fails (either no imag freq or geo-opt fails)
+Total number of gradient calls is 44
+	 running 3 Gaussian IRC jobs...
+IRC for reaction payway to pp_10_0 is finished
+IRC for reaction payway to pp_5_0 is finished
+IRC for reaction payway to pp_7_0 is finished
