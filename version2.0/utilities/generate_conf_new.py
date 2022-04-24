@@ -276,6 +276,7 @@ def main(argv):
         if len(pass_obj_values) < N_max - 2 and len(obj_values) > 0:
 
             RG,PG = obj_values[0][1],obj_values[0][2]
+            Radj_mat = Table_generator(E, RG)
             tmp_reactant = '{}_reactant.xyz'.format(args.outputname)
             tmp_product  = '{}_product.xyz'.format(args.outputname)
             xyz_write(tmp_product,E,PG)
